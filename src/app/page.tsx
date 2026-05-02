@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { RequirementDrawer } from '@/components/detail/RequirementDrawer';
+import { TableScrollWrapper } from '@/components/tables/TableScrollWrapper';
 import { SeverityBadge, FlagBadge } from '@/components/badges';
 import { getRequirements, getRisks, getEvidence, getRequirementMap } from '@/lib/data';
 import type { Requirement, Risk } from '@/types';
@@ -439,7 +440,7 @@ export default function DashboardPage() {
         </div>
         <Card>
           <CardContent className="p-0">
-            <div className="overflow-x-auto">
+            <TableScrollWrapper stickyFirstCol>
               <table className="w-full text-xs">
                 <thead>
                   <tr className="border-b bg-muted/50">
@@ -490,7 +491,7 @@ export default function DashboardPage() {
                   })}
                 </tbody>
               </table>
-            </div>
+            </TableScrollWrapper>
           </CardContent>
         </Card>
       </section>
@@ -513,7 +514,7 @@ export default function DashboardPage() {
         </div>
         <Card>
           <CardContent className="p-0">
-            <div className="overflow-x-auto">
+            <TableScrollWrapper stickyFirstCol>
               <table className="w-full text-xs">
                 <thead>
                   <tr className="border-b bg-muted/50">
@@ -552,7 +553,7 @@ export default function DashboardPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </TableScrollWrapper>
           </CardContent>
         </Card>
       </section>

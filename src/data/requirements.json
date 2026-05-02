@@ -231,7 +231,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
     "sourceFile": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
     "confidenceLevel": "High",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the plain-English interpretation references clinical supply/IMP processes, but this row covers a non-clinical regulation. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – EU GMP importation primary source linked",
     "accuracyEnhancementNote": "EU Annex 21 importation content is directionally aligned with source material; applicability depends on MIA holder role and importation model.",
     "externalVerificationUrl": "https://health.ec.europa.eu/document/download/e2ddfe65-7b4e-4765-b71b-4681772d2949_en",
@@ -248,7 +248,7 @@
     "controlType": "Contract / QTA",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "FD&C Act § 801(d)(1)(B) & § 801(e)(4): Clinical supply processes must protect participants, trial integrity, blinding, and investigational product control. Action: Control IMP manufacturing/supply, maintain Product Specification File, and protect blinding. Owner: Head of Supply Chain / Supply Chain Lead",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {
@@ -357,7 +357,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
     "sourceFile": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
     "confidenceLevel": "High",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the plain-English interpretation references clinical supply/IMP processes, but this row covers a non-clinical regulation. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – EU GMP importation primary source linked",
     "accuracyEnhancementNote": "EU Annex 21 importation content is directionally aligned with source material; applicability depends on MIA holder role and importation model.",
     "externalVerificationUrl": "https://health.ec.europa.eu/document/download/e2ddfe65-7b4e-4765-b71b-4681772d2949_en",
@@ -374,7 +374,7 @@
     "controlType": "Contract / QTA",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "EudraLex Vol 4, Annex 21: Importation of medicinal products (Feb 2022): Clinical supply processes must protect participants, trial integrity, blinding, and investigational product control. Action: Maintain MIA/import documentation, customs clearance evidence, and EU GMP verification. Owner: Head of Supply Chain with QA oversight",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {
@@ -987,7 +987,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
     "sourceFile": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
     "confidenceLevel": "High",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the plain-English interpretation references clinical supply/IMP processes, but this row covers a non-clinical regulation. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – function mapping checked",
     "accuracyEnhancementNote": "Clinical Operations retained because the row appears to involve investigational products, clinical trials, blinding/randomization, or GCP/GMP interface controls.",
     "externalVerificationUrl": null,
@@ -1004,7 +1004,7 @@
     "controlType": "Contract / QTA",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "ICH Q13: Continuous Manufacturing of Drug Substances and Drug Products (Mar 2023): Clinical supply processes must protect participants, trial integrity, blinding, and investigational product control. Action: Control IMP manufacturing/supply, maintain Product Specification File, and protect blinding. Owner: Business owner not specified in source",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {
@@ -1680,7 +1680,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
     "sourceFile": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
     "confidenceLevel": "High",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the required action references API supplier qualification, but this row covers complaint/recall obligations. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – DSCSA current-state checked",
     "accuracyEnhancementNote": "DSCSA content is directionally aligned. FDA currently describes DSCSA as package-level interoperable/electronic tracing and confirms 24-hour FDA notification after an illegitimate-product determination.",
     "externalVerificationUrl": "https://www.fda.gov/drugs/drug-supply-chain-integrity/drug-supply-chain-security-act-dscsa",
@@ -1697,7 +1697,7 @@
     "controlType": "Notification / Reporting",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "EudraLex Vol 4, Part I, Chapter 8: Complaints, Quality Defects and Product Recalls (Aug 2014): Returned, defective, recalled, or suspect product must be segregated, investigated, documented, and dispositioned under Quality authority. Action: Qualify API suppliers, control receipt/quarantine, and maintain material/lab control evidence. Owner: Head of Quality / Quality Unit",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {
@@ -1932,7 +1932,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
     "sourceFile": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
     "confidenceLevel": "High",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the plain-English interpretation references clinical supply/IMP processes, but this row covers a non-clinical regulation. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – function mapping checked",
     "accuracyEnhancementNote": "Clinical Operations retained because the row appears to involve investigational products, clinical trials, blinding/randomization, or GCP/GMP interface controls.",
     "externalVerificationUrl": null,
@@ -1949,7 +1949,7 @@
     "controlType": "Contract / QTA",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "ICH Q10: Pharmaceutical Quality System (Step 4, Jun 2008): Clinical supply processes must protect participants, trial integrity, blinding, and investigational product control. Action: Assess changes against ECs/PACMPs and submit required supplements/variations before implementation when required. Owner: Head of Quality / Quality Unit",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": false
   },
   {
@@ -3003,7 +3003,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Regulatory and Supply Chain Compliance Matrix.md — Comprehensive global compliance matrix table",
     "sourceFile": "Global Pharmaceutical Regulatory and Supply Chain Compliance Matrix.md",
     "confidenceLevel": "Medium",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the required action references API supplier qualification, but this row covers complaint/recall obligations. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – DSCSA current-state checked",
     "accuracyEnhancementNote": "DSCSA content is directionally aligned. FDA currently describes DSCSA as package-level interoperable/electronic tracing and confirms 24-hour FDA notification after an illegitimate-product determination.",
     "externalVerificationUrl": "https://www.fda.gov/drugs/drug-supply-chain-integrity/drug-supply-chain-security-act-dscsa",
@@ -3020,7 +3020,7 @@
     "controlType": "Notification / Reporting",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "EudraLex Vol 4, Chapter 8: Returned, defective, recalled, or suspect product must be segregated, investigated, documented, and dispositioned under Quality authority. Action: Qualify API suppliers, control receipt/quarantine, and maintain material/lab control evidence. Owner: Head of Quality / Quality Unit",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {
@@ -3255,7 +3255,7 @@
     "sourceNoteSourceReference": "Global Pharmaceutical Regulatory and Supply Chain Compliance Matrix.md — Comprehensive global compliance matrix table",
     "sourceFile": "Global Pharmaceutical Regulatory and Supply Chain Compliance Matrix.md",
     "confidenceLevel": "Medium",
-    "openQuestionsMissingInformation": "Not specified in source",
+    "openQuestionsMissingInformation": "Potential content mapping mismatch — the plain-English interpretation references clinical supply/IMP processes, but this row covers a non-clinical regulation. Needs regulatory/content review.",
     "reviewStatus": "Reviewed – function mapping checked",
     "accuracyEnhancementNote": "Clinical Operations retained because the row appears to involve investigational products, clinical trials, blinding/randomization, or GCP/GMP interface controls.",
     "externalVerificationUrl": null,
@@ -3272,7 +3272,7 @@
     "controlType": "Contract / QTA",
     "evidenceCriticality": "Critical",
     "uiDisplaySummary": "ICH Q10: Clinical supply processes must protect participants, trial integrity, blinding, and investigational product control. Action: Control IMP manufacturing/supply, maintain Product Specification File, and protect blinding. Owner: Head of Quality / Quality Unit",
-    "needsReviewFlag": false,
+    "needsReviewFlag": true,
     "launchCriticalFlag": true
   },
   {

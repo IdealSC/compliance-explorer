@@ -18,6 +18,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { TableScrollWrapper } from '@/components/tables/TableScrollWrapper';
 import { cn } from '@/lib/utils';
 import { COLUMNS_ALL_REQUIREMENTS } from '@/lib/columns';
 import type { Requirement } from '@/types';
@@ -53,7 +54,7 @@ export function RequirementsTable({
 
   return (
     <div className="rounded-lg border border-border bg-card overflow-hidden">
-      <div className="overflow-x-auto">
+      <TableScrollWrapper stickyFirstCol>
         <Table className="table-fixed">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -120,7 +121,7 @@ export function RequirementsTable({
             )}
           </TableBody>
         </Table>
-      </div>
+      </TableScrollWrapper>
 
       {/* Footer with row count */}
       <div className="border-t bg-muted/30 px-4 py-2">

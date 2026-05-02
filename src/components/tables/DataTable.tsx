@@ -19,6 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { TableScrollWrapper } from '@/components/tables/TableScrollWrapper';
 import { cn } from '@/lib/utils';
 
 interface DataTableProps<T> {
@@ -60,7 +61,7 @@ export function DataTable<T>({
 
   return (
     <div className="rounded-lg border border-border bg-card overflow-hidden">
-      <div className="overflow-x-auto">
+      <TableScrollWrapper stickyFirstCol>
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -122,7 +123,7 @@ export function DataTable<T>({
             )}
           </TableBody>
         </Table>
-      </div>
+      </TableScrollWrapper>
 
       <div className="border-t bg-muted/30 px-4 py-2">
         <p className="text-xs text-muted-foreground">

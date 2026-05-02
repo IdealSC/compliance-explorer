@@ -128,3 +128,40 @@
     @apply font-sans;
   }
 }
+
+/* ── Sticky first column for wide tables ─────────────────── */
+.table-sticky-first-col th:first-child,
+.table-sticky-first-col td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: inherit;
+}
+/* Header row inherits muted bg, body rows inherit card bg */
+.table-sticky-first-col thead tr th:first-child {
+  z-index: 6;
+}
+/* Subtle right border on the frozen column */
+.table-sticky-first-col th:first-child::after,
+.table-sticky-first-col td:first-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+/* ── Top scrollbar styling — subtle, thin, professional ─── */
+.table-scroll-top::-webkit-scrollbar {
+  height: 8px;
+}
+.table-scroll-top::-webkit-scrollbar-track {
+  background: transparent;
+}
+.table-scroll-top::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+  opacity: 0.4;
+}
