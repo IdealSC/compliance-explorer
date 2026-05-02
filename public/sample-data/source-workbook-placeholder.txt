@@ -1,0 +1,5 @@
+This file is a placeholder. The actual source workbook is located at:
+C:\Users\brian\Downloads\regulatory_compliance_matrix_app_ready_source_model.xlsx
+
+Run the import script to generate JSON:
+  npx tsx scripts/importWorkbook.ts

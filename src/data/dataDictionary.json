@@ -1,0 +1,1322 @@
+[
+  {
+    "column": "Matrix Row ID",
+    "meaningUse": "Unique row identifier used for cross-referencing.",
+    "dataType": "Stable identifier",
+    "example": "CM-0001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Row Type",
+    "meaningUse": "Indicates whether row came from framework, crosswalk, SCOR control, SOP Level 5 obligation, or risk radar.",
+    "dataType": "Text",
+    "example": "Framework source row",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Regulatory Domain",
+    "meaningUse": "Normalized domain grouping for filtering and operating model design.",
+    "dataType": "Text",
+    "example": "Supply Chain Resilience / Quality Risk Management",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Jurisdiction / Region",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "United States",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "Jurisdiction / Region",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Regulator / Authority",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "US Congress / FDA",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Law / Regulation / Framework / Standard Name",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "FD&C Act § 506C(j) (amended by CARES Act)",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Specific Citation / Section / Clause",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "FD&C Act § 506C(j)",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Source Type",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Law",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "Source Type",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Regulatory Tier",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Tier 1 (Statutory Law)",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Regulatory Tier",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "SCOR Phase",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "PLAN",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "SCOR Phase",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Level 1 Category",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "PLAN",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Level 2 Subcategory",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Supply Chain Resilience & Shortages",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Level 3 Requirement Area",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Supply Chain Resilience & Shortages",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Level 4 Detailed Requirement",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Long text",
+    "example": "Requires manufacturers of life-supporting or life-sustaining drugs to develop, maintain, and implement redundancy Risk Management Plans (RMPs) to evaluate risk…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Level 5 Granular Obligation / Control / Action",
+    "meaningUse": "Most granular actionable control/action extracted or translated from source.",
+    "dataType": "Text",
+    "example": "Develop, approve, maintain, review, and implement a product-specific RMP with funded mitigations.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Exact Requirement or Source Language",
+    "meaningUse": "Source language from uploaded notebook files; not independently re-quoted from primary law unless present in source.",
+    "dataType": "Long text",
+    "example": "Requires manufacturers of life-supporting or life-sustaining drugs to develop, maintain, and implement redundancy Risk Management Plans (RMPs) to evaluate risk…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Plain-English Interpretation",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "The company must proactively map supply risks, define mitigations, and keep evidence that the plan is current and implemented.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Who Must Comply",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Drug manufacturers, product owners, quality unit, CMOs, and associated contract facilities",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Business Function Impacted",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Supply Chain; Regulatory Affairs",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Business Function",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Example Business Owner",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Regulatory Affairs Lead",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Operational Process Impacted",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Supply risk management, S&OP, inventory planning, continuity planning",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Required Action",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Develop, approve, maintain, review, and implement a product-specific RMP with funded mitigations.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Required Control",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Approved RMP SOP, risk scoring method, mitigation owner tracking, annual/event review",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Required Evidence / Documentation",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Approved RMP, risk register, vulnerability assessment, mitigation plan, management review record",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Reporting Requirement",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Regulatory Affairs notification to FDA within 5 business days if applicable shortage/discontinuance threshold is met.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Monitoring Requirement",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Review risk indicators, supplier performance, inventory, capacity, quality events, and shortage triggers",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Frequency / Timing",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Triggering Event",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Applicability Conditions",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Applicable to life-supporting/life-sustaining drugs and drugs for debilitating diseases, as described in source.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Exceptions / Exemptions",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Related Standards",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "ICH Q9(R1); ICH Q10",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Related Laws / Regulations",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "FD&C Act § 506C(j) / CARES Act",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Related Internal Policies or Procedures",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "SOP-RM-001 Supply Chain Resilience & RMP",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Dependencies",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Long text",
+    "example": "Supplier data; inventory policy; quality history; capacity data; finance funding",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Potential Conflicts or Ambiguities",
+    "meaningUse": "Flags duplicate, unclear, nonbinding guidance, applicability, or operating model ambiguity.",
+    "dataType": "Text",
+    "example": "No conflict identified in source; validate with legal/compliance before implementation.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Risk of Non-Compliance",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Drug shortage, inability to supply patients, FDA inspection observation, management review/CAPA exposure.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Severity / Priority",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "Severity / Priority",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Implementation Notes",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Embed in management review; connect risk scoring to funded mitigations and change control triggers.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Practical Example for a Business Leader",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "A sole-source API is identified as high risk; the business either qualifies a second source or funds safety stock and tracks the mitigation.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Source Note / Source Reference",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Source File",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Confidence Level",
+    "meaningUse": "Confidence in source extraction and mapping. Legal applicability still requires validation.",
+    "dataType": "Text",
+    "example": "High",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "Confidence Level",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Open Questions / Missing Information",
+    "meaningUse": "Compliance matrix field requested by user or added to preserve traceability, source, operating model, and implementation detail.",
+    "dataType": "Text",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Review Status",
+    "meaningUse": "Second-pass review classification: source-supported, current-state update required, citation validation required, mapping corrected, or similar.",
+    "dataType": "Text",
+    "example": "Reviewed – shortage/RMP current-state checked",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Accuracy / Enhancement Note",
+    "meaningUse": "Reviewer note explaining accuracy issue, contextual limitation, or enhancement opportunity.",
+    "dataType": "Long text",
+    "example": "RMP obligations are directionally aligned. The workbook should explicitly separate RMP development/maintenance from shortage notification timing. FDA states ma…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "External Verification URL",
+    "meaningUse": "Plain-text URL to official or primary source used in second-pass validation.",
+    "dataType": "Text",
+    "example": "https://www.fda.gov/drugs/drug-shortages/frequently-asked-questions-about-drug-shortages",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Recommended Enhancement / Control Gap",
+    "meaningUse": "Practical enhancement needed to convert the row into an audit-ready operating control.",
+    "dataType": "Text",
+    "example": "Define company-specific shortage trigger thresholds but do not present internal thresholds, such as 14 days, as the statutory trigger.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Target Remediation Owner",
+    "meaningUse": "Likely business owner for the enhancement or validation action.",
+    "dataType": "Text",
+    "example": "Supply Chain Lead / Regulatory Affairs / Quality",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Action Required",
+    "meaningUse": "Specific next step to close the review finding.",
+    "dataType": "Text",
+    "example": "Add product-level RMP governance, review cadence, and FDA notification decision tree.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Validation Date",
+    "meaningUse": "Date the row was reviewed or updated.",
+    "dataType": "Date or text date",
+    "example": "2026-05-02",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Primary Persona / Viewer",
+    "meaningUse": "Primary business persona or app viewer most likely to act on or interpret the row.",
+    "dataType": "Text",
+    "example": "Supply Chain Leader",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Persona / Primary Viewer",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Lifecycle Stage",
+    "meaningUse": "Normalized lifecycle stage for filtering launch, commercial, clinical, or post-approval views.",
+    "dataType": "Text",
+    "example": "Planning / Resilience",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Lifecycle Stage",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Process Type",
+    "meaningUse": "Normalized operating process type to support app navigation and dashboard grouping.",
+    "dataType": "Text",
+    "example": "Reporting / Notification",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Status",
+    "meaningUse": "Review and validation status of the row for app and operating model use.",
+    "dataType": "Text",
+    "example": "Reviewed – App Ready Pending Legal Sign-Off",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Status",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Actionability",
+    "meaningUse": "Categorizes the type of action required from the business.",
+    "dataType": "Text",
+    "example": "Reporting Obligation",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Actionability",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Digital System Owner",
+    "meaningUse": "System or digital process owner most likely to support control execution or evidence retention.",
+    "dataType": "Text",
+    "example": "QMS / Risk Register Owner",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Digital System Owner",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Control Type",
+    "meaningUse": "Normalized type of control required or implied by the row.",
+    "dataType": "Text",
+    "example": "Notification / Reporting",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Control Type",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Evidence Criticality",
+    "meaningUse": "Relative importance of evidence for inspection, release, launch, patient safety, or enforcement exposure.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Evidence Criticality",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "UI Display Summary",
+    "meaningUse": "Concise card/table summary for future web app list views and search results.",
+    "dataType": "Long text",
+    "example": "FD&C Act § 506C(j) (amended by CARES Act): The company must proactively map supply risks, define mitigations, and keep evidence that the plan is current and im…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Needs Review Flag",
+    "meaningUse": "TRUE/FALSE flag identifying rows that require legal, compliance, regulatory, or business validation.",
+    "dataType": "Boolean text",
+    "example": "FALSE",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Launch-Critical Flag",
+    "meaningUse": "TRUE/FALSE flag identifying rows especially relevant to launch readiness or first commercial launch.",
+    "dataType": "Boolean text",
+    "example": "TRUE",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Compliance Matrix"
+  },
+  {
+    "column": "Source ID",
+    "meaningUse": "Stable identifier for a source record.",
+    "dataType": "Stable identifier",
+    "example": "SRC-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Source File / Source Name",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Role in Matrix",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Primary global regulatory source table",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Jurisdiction",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Global / Multi-jurisdiction",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Regulator / Authority",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Multiple authorities",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Source Type",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Framework",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Source Type",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Document Date",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Date or text date",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Version / Revision",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Not specified in source",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Primary Topic",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Global pharmaceutical regulatory and supply chain framework",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Reliability / Authority Level",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Uploaded notebook source; consolidated framework",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Key Extracted Content",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Long text",
+    "example": "37 regulatory framework rows across PLAN, SOURCE, MAKE, DELIVER, RETURN, ENABLE; includes agencies, tiers, document nam…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Rows Created / Supported",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "37 direct rows plus related crosswalks",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Notes",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "Preserved from original workbook source inventory; primary citations should be validated before regulatory use.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "URL",
+    "meaningUse": "Field used in the Source Inventory sheet.",
+    "dataType": "Text",
+    "example": "https://www.fda.gov/drugs/drug-supply-chain-integrity/drug-supply-chain-security-act-dscsa",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Source Inventory"
+  },
+  {
+    "column": "Crosswalk ID",
+    "meaningUse": "Stable identifier for a crosswalk relationship record.",
+    "dataType": "Stable identifier",
+    "example": "CW-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Crosswalk Area",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Shortage/RMP",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Linked Laws / Standards / Guidance",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "FD&C Act § 506C(j); CARES Act; FDA RMP Guidance; ICH Q9; ICH Q10",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Business Meaning",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Supply continuity is a regulated quality/compliance obligation for applicable products, not only an operations KPI.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Primary Evidence / Control",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Approved RMP, risk register, funded mitigations, management review, FDA notification decision log",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Source Coverage",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Framework rows, RMP SOP",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Primary SCOR Phase",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "PLAN",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Primary Persona / Viewer",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Supply Chain Leader",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "Persona / Primary Viewer",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Related App View",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Text",
+    "example": "Crosswalk / Relationship View",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Linked Matrix Row IDs / Filter Logic",
+    "meaningUse": "Field used in the Crosswalk Summary sheet.",
+    "dataType": "Stable identifier",
+    "example": "Filter Compliance Matrix where crosswalk keywords include 'Shortage/RMP' or SCOR Phase = PLAN.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Crosswalk Summary"
+  },
+  {
+    "column": "Function Impact ID",
+    "meaningUse": "Stable identifier for business function impact row.",
+    "dataType": "Stable identifier",
+    "example": "FI-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Business Function",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "Supply Chain",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "What They Need to Understand",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Long text",
+    "example": "Supply chain decisions are regulated when they affect supply continuity, DSCSA traceability, cold-chain integrity, impo…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "What They Need to Act On",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "Own RMP inputs, customer GLNs/ATP status, EPCIS exception review, VRS/returns readiness, inventory buffers, carrier/3PL…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Primary Controls / Evidence",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "RMP, customer master data, EPCIS logs, failed transmission reports, VRS logs, carrier qualification, temperature profil…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Highest-Risk Questions",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "Can product move legally and physically, with matching data and evidence? Are shortage mitigations funded?",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Primary Persona / Viewer",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "Supply Chain Leader",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "Persona / Primary Viewer",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Primary SCOR Phase(s)",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "PLAN; SOURCE; DELIVER; RETURN",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Digital System / Evidence Dependencies",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Text",
+    "example": "ERP, WMS, 3PL portal, L4 serialization/EPCIS, VRS, temperature monitoring, QMS",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Linked Matrix Row ID Filter",
+    "meaningUse": "Field used in the Function Impact sheet.",
+    "dataType": "Stable identifier",
+    "example": "Business Function Impacted contains 'Supply Chain' or Primary Persona / Viewer = 'Supply Chain Leader'",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Function Impact"
+  },
+  {
+    "column": "Risk ID",
+    "meaningUse": "Stable identifier for risk dashboard row.",
+    "dataType": "Stable identifier",
+    "example": "RISK-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Linked Matrix Row ID",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Stable identifier",
+    "example": "CM-0001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Matrix Row ID",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Stable identifier",
+    "example": "CM-0001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Severity / Priority",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "Severity / Priority",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Risk Theme",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Supply Chain Resilience & Shortages",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Obligation",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Develop, approve, maintain, review, and implement a product-specific RMP with funded mitigations.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Why High Risk",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Drug shortage, inability to supply patients, FDA inspection observation, management review/CAPA exposure.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Owner",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Regulatory Affairs Lead",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Evidence",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Approved RMP, risk register, vulnerability assessment, mitigation plan, management review record",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Source",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Global Pharmaceutical Supply Chain Regulatory Compliance Framework.md — Global framework master table",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Risk Theme Category",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Shortage / Resilience",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Primary Function",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Supply Chain Leader",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Primary SCOR Phase",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "PLAN",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Primary Jurisdiction",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "United States",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Review Status",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Reviewed – App Ready Pending Legal Sign-Off",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Mitigation Status",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Mitigation plan required",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "App Dashboard Use",
+    "meaningUse": "Field used in the Highest Risk sheet.",
+    "dataType": "Text",
+    "example": "Highest-risk dashboard card and drill-through to matrix row",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Highest Risk"
+  },
+  {
+    "column": "Gap ID",
+    "meaningUse": "Stable identifier for gap or open question row.",
+    "dataType": "Stable identifier",
+    "example": "GAP-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Gap / Question",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Confirm exact legal applicability of each law/guidance to the company’s products, role, license status, jurisdiction, a…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Why It Matters",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "The source materials are broad; actual applicability depends on product type, market, MAH/manufacturer/distributor role…",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Suggested Owner",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Legal / Regulatory Affairs",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Source Basis",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "All source files",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Priority",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Gap Category",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Applicability / Legal Interpretation",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Status",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Open",
+    "required": "No",
+    "filterable": "Yes",
+    "controlledVocabulary": "Status",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "Linked Matrix Row ID / Filter",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Stable identifier",
+    "example": "Rows where Needs Review Flag = TRUE or relevant keyword filter applies",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "App Treatment",
+    "meaningUse": "Field used in the Gaps & Questions sheet.",
+    "dataType": "Text",
+    "example": "Open validation queue item",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Gaps & Questions"
+  },
+  {
+    "column": "List ID",
+    "meaningUse": "Stable identifier for controlled vocabulary row.",
+    "dataType": "Stable identifier",
+    "example": "LIST-SEVERITY_PRIORITY-001",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "List Category",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Text",
+    "example": "Severity / Priority",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "List Value",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "Yes",
+    "filterable": "Yes",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "Display Label",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Text",
+    "example": "Critical",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "Definition",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Text",
+    "example": "Material compliance, patient safety, launch, or enforcement exposure; executive attention required.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "Sort Order",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Integer",
+    "example": "1",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "Active Flag",
+    "meaningUse": "Field used in the Lists sheet.",
+    "dataType": "Boolean text",
+    "example": "TRUE",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "Active Flag",
+    "sourceSheet": "Lists"
+  },
+  {
+    "column": "Metadata Field",
+    "meaningUse": "Field used in the Metadata & Governance sheet.",
+    "dataType": "Text",
+    "example": "Workbook Version",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Metadata & Governance"
+  },
+  {
+    "column": "Value",
+    "meaningUse": "Field used in the Metadata & Governance sheet.",
+    "dataType": "Text",
+    "example": "v3.0",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Metadata & Governance"
+  },
+  {
+    "column": "Notes",
+    "meaningUse": "Field used in the Metadata & Governance sheet.",
+    "dataType": "Text",
+    "example": "App-ready relational source model revision.",
+    "required": "No",
+    "filterable": "No",
+    "controlledVocabulary": "No",
+    "sourceSheet": "Metadata & Governance"
+  }
+]

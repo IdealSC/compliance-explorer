@@ -1,0 +1,848 @@
+[
+  {
+    "listId": "LIST-SEVERITY_PRIORITY-001",
+    "listCategory": "Severity / Priority",
+    "listValue": "Critical",
+    "displayLabel": "Critical",
+    "definition": "Material compliance, patient safety, launch, or enforcement exposure; executive attention required.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-SEVERITY_PRIORITY-002",
+    "listCategory": "Severity / Priority",
+    "listValue": "High",
+    "displayLabel": "High",
+    "definition": "Important control or obligation with meaningful compliance or operational risk.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-SEVERITY_PRIORITY-003",
+    "listCategory": "Severity / Priority",
+    "listValue": "Medium",
+    "displayLabel": "Medium",
+    "definition": "Relevant control with moderate risk or dependent applicability.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-SEVERITY_PRIORITY-004",
+    "listCategory": "Severity / Priority",
+    "listValue": "Low",
+    "displayLabel": "Low",
+    "definition": "Lower-risk or supporting item.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONFIDENCE_LEVEL-001",
+    "listCategory": "Confidence Level",
+    "listValue": "High",
+    "displayLabel": "High",
+    "definition": "Strongly supported by uploaded source material and/or external verification.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONFIDENCE_LEVEL-002",
+    "listCategory": "Confidence Level",
+    "listValue": "Medium",
+    "displayLabel": "Medium",
+    "definition": "Directionally supported but may need primary-source citation or applicability review.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONFIDENCE_LEVEL-003",
+    "listCategory": "Confidence Level",
+    "listValue": "Low",
+    "displayLabel": "Low",
+    "definition": "Insufficient support; requires validation before operational use.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONFIDENCE_LEVEL-004",
+    "listCategory": "Confidence Level",
+    "listValue": "Needs Review",
+    "displayLabel": "Needs Review",
+    "definition": "Requires legal, compliance, regulatory, or business review.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-001",
+    "listCategory": "SCOR Phase",
+    "listValue": "PLAN",
+    "displayLabel": "PLAN",
+    "definition": "Planning, risk management, supply continuity, and resilience.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-002",
+    "listCategory": "SCOR Phase",
+    "listValue": "SOURCE",
+    "displayLabel": "SOURCE",
+    "definition": "Supplier, import, procurement, outsourcing, and material control.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-003",
+    "listCategory": "SCOR Phase",
+    "listValue": "MAKE",
+    "displayLabel": "MAKE",
+    "definition": "Manufacturing, CGMP, batch execution, release, and facility controls.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-004",
+    "listCategory": "SCOR Phase",
+    "listValue": "DELIVER",
+    "displayLabel": "DELIVER",
+    "definition": "Distribution, serialization, GDP, cold chain, and customer fulfillment.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-005",
+    "listCategory": "SCOR Phase",
+    "listValue": "RETURN",
+    "displayLabel": "RETURN",
+    "definition": "Returns, recalls, complaints, suspect product, and reverse logistics.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-SCOR_PHASE-006",
+    "listCategory": "SCOR Phase",
+    "listValue": "ENABLE",
+    "displayLabel": "ENABLE",
+    "definition": "PQS, data integrity, digital systems, change control, and governance.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-REGULATORY_TIER-001",
+    "listCategory": "Regulatory Tier",
+    "listValue": "Tier 1 (Statutory Law)",
+    "displayLabel": "Tier 1 – Statutory Law",
+    "definition": "Binding statute or enacted legal requirement.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-REGULATORY_TIER-002",
+    "listCategory": "Regulatory Tier",
+    "listValue": "Tier 2 (Regulation)",
+    "displayLabel": "Tier 2 – Regulation",
+    "definition": "Binding regulation or legally enforceable regulatory rule.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-REGULATORY_TIER-003",
+    "listCategory": "Regulatory Tier",
+    "listValue": "Tier 3 (Guideline)",
+    "displayLabel": "Tier 3 – Guideline",
+    "definition": "Regulatory or harmonized guidance used to interpret expectations.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-REGULATORY_TIER-004",
+    "listCategory": "Regulatory Tier",
+    "listValue": "Tier 4 (Guidance)",
+    "displayLabel": "Tier 4 – Guidance / Operational Expectation",
+    "definition": "Guidance, SOP, control, or implementation-layer expectation.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-001",
+    "listCategory": "Source Type",
+    "listValue": "Law",
+    "displayLabel": "Law",
+    "definition": "Statute or enacted law.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-002",
+    "listCategory": "Source Type",
+    "listValue": "Regulation",
+    "displayLabel": "Regulation",
+    "definition": "Binding regulation or rule.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-003",
+    "listCategory": "Source Type",
+    "listValue": "Standard",
+    "displayLabel": "Standard",
+    "definition": "Consensus, technical, or industry standard.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-004",
+    "listCategory": "Source Type",
+    "listValue": "Guidance / Framework",
+    "displayLabel": "Guidance / Framework",
+    "definition": "Regulatory guidance or governance framework.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-005",
+    "listCategory": "Source Type",
+    "listValue": "Internal Note / SOP",
+    "displayLabel": "Internal Note / SOP",
+    "definition": "Source-derived internal note or SOP logic.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-006",
+    "listCategory": "Source Type",
+    "listValue": "Framework / Operational Matrix",
+    "displayLabel": "Framework / Operational Matrix",
+    "definition": "Operational framework or matrix-derived mapping.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-007",
+    "listCategory": "Source Type",
+    "listValue": "External Verification Source",
+    "displayLabel": "External Verification Source",
+    "definition": "Official source used to validate current-state note.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-SOURCE_TYPE-008",
+    "listCategory": "Source Type",
+    "listValue": "Other",
+    "displayLabel": "Other",
+    "definition": "Other source type.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-001",
+    "listCategory": "Business Function",
+    "listValue": "Supply Chain",
+    "displayLabel": "Supply Chain",
+    "definition": "Planning, logistics, order fulfillment, 3PL oversight, inventory, and distribution.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-002",
+    "listCategory": "Business Function",
+    "listValue": "Quality Assurance",
+    "displayLabel": "Quality Assurance",
+    "definition": "Quality Unit, QMS, batch disposition, investigations, release, and records.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-003",
+    "listCategory": "Business Function",
+    "listValue": "Regulatory Affairs",
+    "displayLabel": "Regulatory Affairs",
+    "definition": "Regulatory submissions, notifications, agency communications, and filing impacts.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-004",
+    "listCategory": "Business Function",
+    "listValue": "Procurement / Supplier Management",
+    "displayLabel": "Procurement / Supplier Management",
+    "definition": "Supplier qualification, contracting, QTA support, and sourcing risk.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-005",
+    "listCategory": "Business Function",
+    "listValue": "Manufacturing / Technical Operations",
+    "displayLabel": "Manufacturing / Technical Operations",
+    "definition": "Manufacturing execution, process controls, sites, equipment, and batch records.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-006",
+    "listCategory": "Business Function",
+    "listValue": "IT / Digital Quality",
+    "displayLabel": "IT / Digital Quality",
+    "definition": "Computerized systems, validation, Part 11, access controls, and audit trails.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-007",
+    "listCategory": "Business Function",
+    "listValue": "Clinical Operations",
+    "displayLabel": "Clinical Operations",
+    "definition": "Clinical supply, IMP, blinding, randomization, and trial operations.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-008",
+    "listCategory": "Business Function",
+    "listValue": "Legal / Compliance",
+    "displayLabel": "Legal / Compliance",
+    "definition": "Legal interpretation, license obligations, contract compliance, and risk governance.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-BUSINESS_FUNCTION-009",
+    "listCategory": "Business Function",
+    "listValue": "Executive Leadership",
+    "displayLabel": "Executive Leadership",
+    "definition": "Oversight, funding, risk acceptance, and escalation.",
+    "sortOrder": 9,
+    "active": true
+  },
+  {
+    "listId": "LIST-JURISDICTION_REGIO-001",
+    "listCategory": "Jurisdiction / Region",
+    "listValue": "United States",
+    "displayLabel": "United States",
+    "definition": "US legal/regulatory applicability.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-JURISDICTION_REGIO-002",
+    "listCategory": "Jurisdiction / Region",
+    "listValue": "European Union",
+    "displayLabel": "European Union",
+    "definition": "EU legal/regulatory applicability.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-JURISDICTION_REGIO-003",
+    "listCategory": "Jurisdiction / Region",
+    "listValue": "Global / ICH member regions",
+    "displayLabel": "Global / ICH",
+    "definition": "ICH or global harmonized guidance context.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-JURISDICTION_REGIO-004",
+    "listCategory": "Jurisdiction / Region",
+    "listValue": "Global / Multi-jurisdiction",
+    "displayLabel": "Global / Multi-jurisdiction",
+    "definition": "Multiple regions or cross-regional applicability.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-JURISDICTION_REGIO-005",
+    "listCategory": "Jurisdiction / Region",
+    "listValue": "Not specified in source",
+    "displayLabel": "Not specified in source",
+    "definition": "Jurisdiction was not specified in source material.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-001",
+    "listCategory": "Control Type",
+    "listValue": "Governance Control",
+    "displayLabel": "Governance Control",
+    "definition": "Policy, operating model, or oversight control.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-002",
+    "listCategory": "Control Type",
+    "listValue": "SOP / Procedure",
+    "displayLabel": "SOP / Procedure",
+    "definition": "Documented procedure or work instruction.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-003",
+    "listCategory": "Control Type",
+    "listValue": "System Hard Stop / Quarantine",
+    "displayLabel": "System Hard Stop / Quarantine",
+    "definition": "Systemic or physical stop preventing use, shipment, or release.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-004",
+    "listCategory": "Control Type",
+    "listValue": "Review / Approval",
+    "displayLabel": "Review / Approval",
+    "definition": "Formal approval, disposition, release, or decision checkpoint.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-005",
+    "listCategory": "Control Type",
+    "listValue": "Monitoring / KPI",
+    "displayLabel": "Monitoring / KPI",
+    "definition": "Ongoing monitoring, dashboard, or periodic review.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-006",
+    "listCategory": "Control Type",
+    "listValue": "Notification / Reporting",
+    "displayLabel": "Notification / Reporting",
+    "definition": "Regulatory, trading partner, or management notification.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-007",
+    "listCategory": "Control Type",
+    "listValue": "Contract / QTA",
+    "displayLabel": "Contract / QTA",
+    "definition": "Contractual, supplier, or quality agreement control.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-008",
+    "listCategory": "Control Type",
+    "listValue": "Evidence Retention",
+    "displayLabel": "Evidence Retention",
+    "definition": "Documented evidence and record retention control.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-CONTROL_TYPE-009",
+    "listCategory": "Control Type",
+    "listValue": "Audit Trail / Access Control",
+    "displayLabel": "Audit Trail / Access Control",
+    "definition": "Electronic record, access, audit-trail, or data integrity control.",
+    "sortOrder": 9,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-001",
+    "listCategory": "Actionability",
+    "listValue": "Direct Operational Control",
+    "displayLabel": "Direct Operational Control",
+    "definition": "The business must implement or perform a concrete operating control.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-002",
+    "listCategory": "Actionability",
+    "listValue": "Governance Control",
+    "displayLabel": "Governance Control",
+    "definition": "Requires policy, governance, RACI, or oversight design.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-003",
+    "listCategory": "Actionability",
+    "listValue": "Monitoring Requirement",
+    "displayLabel": "Monitoring Requirement",
+    "definition": "Requires periodic or event-driven monitoring.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-004",
+    "listCategory": "Actionability",
+    "listValue": "Reporting Obligation",
+    "displayLabel": "Reporting Obligation",
+    "definition": "Requires notification, reporting, or regulatory communication.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-005",
+    "listCategory": "Actionability",
+    "listValue": "Evidence / Recordkeeping",
+    "displayLabel": "Evidence / Recordkeeping",
+    "definition": "Requires retained documentation or inspection-ready evidence.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-006",
+    "listCategory": "Actionability",
+    "listValue": "Decision / Approval Trigger",
+    "displayLabel": "Decision / Approval Trigger",
+    "definition": "Requires a formal review, disposition, or approval decision.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIONABILITY-007",
+    "listCategory": "Actionability",
+    "listValue": "Legal / Compliance Validation Needed",
+    "displayLabel": "Legal / Compliance Validation Needed",
+    "definition": "Needs review before being treated as a binding obligation.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-001",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Pre-Launch / Launch Readiness",
+    "displayLabel": "Pre-Launch / Launch Readiness",
+    "definition": "Before approval, first commercial shipment, or early launch execution.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-002",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Planning / Resilience",
+    "displayLabel": "Planning / Resilience",
+    "definition": "Supply continuity planning and risk management.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-003",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Supplier / Import Readiness",
+    "displayLabel": "Supplier / Import Readiness",
+    "definition": "Supplier qualification, import readiness, and outsourced activity setup.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-004",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Manufacturing / Release",
+    "displayLabel": "Manufacturing / Release",
+    "definition": "Commercial manufacturing, batch execution, and release.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-005",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Commercial Distribution / Postmarket",
+    "displayLabel": "Commercial Distribution / Postmarket",
+    "definition": "Distribution, returns, recalls, and postmarket operation.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-006",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Post-Approval Lifecycle",
+    "displayLabel": "Post-Approval Lifecycle",
+    "definition": "Change management and approved product lifecycle management.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-007",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Clinical Development",
+    "displayLabel": "Clinical Development",
+    "definition": "Clinical trial and investigational supply stage.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-008",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Enterprise Quality System",
+    "displayLabel": "Enterprise Quality System",
+    "definition": "PQS, data integrity, and enterprise governance.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-LIFECYCLE_STAGE-009",
+    "listCategory": "Lifecycle Stage",
+    "listValue": "Continuous / All Lifecycle Stages",
+    "displayLabel": "Continuous / All Lifecycle Stages",
+    "definition": "Applies across lifecycle stages.",
+    "sortOrder": 9,
+    "active": true
+  },
+  {
+    "listId": "LIST-STATUS-001",
+    "listCategory": "Status",
+    "listValue": "Source-Derived Draft",
+    "displayLabel": "Source-Derived Draft",
+    "definition": "Preserved from source material but not yet validated as app-ready.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-STATUS-002",
+    "listCategory": "Status",
+    "listValue": "Reviewed – App Ready Pending Legal Sign-Off",
+    "displayLabel": "Reviewed – App Ready Pending Legal Sign-Off",
+    "definition": "Structurally reviewed and usable for app modeling, pending formal legal/compliance sign-off.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-STATUS-003",
+    "listCategory": "Status",
+    "listValue": "Citation / Applicability Validation Required",
+    "displayLabel": "Citation / Applicability Validation Required",
+    "definition": "Requires primary-source citation and/or applicability validation.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-STATUS-004",
+    "listCategory": "Status",
+    "listValue": "Timing Clarification Required",
+    "displayLabel": "Timing Clarification Required",
+    "definition": "Requires validation of timing, trigger, or notification threshold.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-STATUS-005",
+    "listCategory": "Status",
+    "listValue": "Business Validation Required",
+    "displayLabel": "Business Validation Required",
+    "definition": "Requires business owner confirmation.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-001",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Supply Chain Leader",
+    "displayLabel": "Supply Chain Leader",
+    "definition": "Head of Supply Chain or operations owner.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-002",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Quality Leader",
+    "displayLabel": "Quality Leader",
+    "definition": "Quality Unit, QA, or PQS owner.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-003",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Regulatory Affairs Leader",
+    "displayLabel": "Regulatory Affairs Leader",
+    "definition": "Regulatory Affairs or submissions owner.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-004",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Procurement / Supplier Management Leader",
+    "displayLabel": "Procurement / Supplier Management Leader",
+    "definition": "Supplier, sourcing, or procurement owner.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-005",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Manufacturing / Technical Operations Leader",
+    "displayLabel": "Manufacturing / Technical Operations Leader",
+    "definition": "Manufacturing or technical operations owner.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-006",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "IT / Digital Quality Leader",
+    "displayLabel": "IT / Digital Quality Leader",
+    "definition": "IT, CSV, digital quality, or system owner.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-007",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Clinical Operations Leader",
+    "displayLabel": "Clinical Operations Leader",
+    "definition": "Clinical operations or clinical supply owner.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-008",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Legal / Compliance Leader",
+    "displayLabel": "Legal / Compliance Leader",
+    "definition": "Legal, compliance, or enterprise risk owner.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-PERSONA_PRIMARY_VI-009",
+    "listCategory": "Persona / Primary Viewer",
+    "listValue": "Executive / General Manager",
+    "displayLabel": "Executive / General Manager",
+    "definition": "Senior leader using summary and prioritization views.",
+    "sortOrder": 9,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-001",
+    "listCategory": "Digital System Owner",
+    "listValue": "QMS / Risk Register Owner",
+    "displayLabel": "QMS / Risk Register Owner",
+    "definition": "Owner of QMS risk register and management review workflows.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-002",
+    "listCategory": "Digital System Owner",
+    "listValue": "Serialization / DSCSA System Owner",
+    "displayLabel": "Serialization / DSCSA System Owner",
+    "definition": "Owner of L4 serialization, EPCIS, VRS, or DSCSA connectivity.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-003",
+    "listCategory": "Digital System Owner",
+    "listValue": "WMS / 3PL Systems Owner",
+    "displayLabel": "WMS / 3PL Systems Owner",
+    "definition": "Owner of warehouse, 3PL, inventory status, and quarantine execution systems.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-004",
+    "listCategory": "Digital System Owner",
+    "listValue": "ERP / Order Management Owner",
+    "displayLabel": "ERP / Order Management Owner",
+    "definition": "Owner of ERP, customer master, order release, or EDI processes.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-005",
+    "listCategory": "Digital System Owner",
+    "listValue": "QMS / Quality Systems Owner",
+    "displayLabel": "QMS / Quality Systems Owner",
+    "definition": "Owner of QMS workflows, deviations, CAPA, complaints, and document control.",
+    "sortOrder": 5,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-006",
+    "listCategory": "Digital System Owner",
+    "listValue": "MES / Manufacturing Systems Owner",
+    "displayLabel": "MES / Manufacturing Systems Owner",
+    "definition": "Owner of MES, EBR, equipment, and manufacturing execution systems.",
+    "sortOrder": 6,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-007",
+    "listCategory": "Digital System Owner",
+    "listValue": "Digital Quality / CSV Owner",
+    "displayLabel": "Digital Quality / CSV Owner",
+    "definition": "Owner of validation, audit trails, access management, and Part 11/Annex 11 evidence.",
+    "sortOrder": 7,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-008",
+    "listCategory": "Digital System Owner",
+    "listValue": "Clinical Systems Owner",
+    "displayLabel": "Clinical Systems Owner",
+    "definition": "Owner of clinical systems, IRT, EDC, or trial supply systems.",
+    "sortOrder": 8,
+    "active": true
+  },
+  {
+    "listId": "LIST-DIGITAL_SYSTEM_OWN-009",
+    "listCategory": "Digital System Owner",
+    "listValue": "Not System-Specific",
+    "displayLabel": "Not System-Specific",
+    "definition": "No specific digital system owner identified from the source row.",
+    "sortOrder": 9,
+    "active": true
+  },
+  {
+    "listId": "LIST-EVIDENCE_CRITICALI-001",
+    "listCategory": "Evidence Criticality",
+    "listValue": "Critical",
+    "displayLabel": "Critical",
+    "definition": "Evidence is essential for patient safety, product release, enforcement, or launch readiness.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-EVIDENCE_CRITICALI-002",
+    "listCategory": "Evidence Criticality",
+    "listValue": "High",
+    "displayLabel": "High",
+    "definition": "Evidence is important for inspection readiness or major operational decisions.",
+    "sortOrder": 2,
+    "active": true
+  },
+  {
+    "listId": "LIST-EVIDENCE_CRITICALI-003",
+    "listCategory": "Evidence Criticality",
+    "listValue": "Medium",
+    "displayLabel": "Medium",
+    "definition": "Evidence supports compliance but is less likely to be a standalone critical failure.",
+    "sortOrder": 3,
+    "active": true
+  },
+  {
+    "listId": "LIST-EVIDENCE_CRITICALI-004",
+    "listCategory": "Evidence Criticality",
+    "listValue": "Low",
+    "displayLabel": "Low",
+    "definition": "Evidence is supporting or contextual.",
+    "sortOrder": 4,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIVE_FLAG-001",
+    "listCategory": "Active Flag",
+    "listValue": "TRUE",
+    "displayLabel": "Active",
+    "definition": "Controlled value is currently active.",
+    "sortOrder": 1,
+    "active": true
+  },
+  {
+    "listId": "LIST-ACTIVE_FLAG-002",
+    "listCategory": "Active Flag",
+    "listValue": "FALSE",
+    "displayLabel": "Inactive",
+    "definition": "Controlled value is retained for history but not currently used.",
+    "sortOrder": 2,
+    "active": true
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "decisionId": "DEC-001",
+    "decisionArea": "Product scope",
+    "question": "Is the product a prescription drug, biological product, IMP, device, or combination product?",
+    "ifYes": "Apply product-specific laws and GMP/GDP/DSCSA/QMSR/clinical controls.",
+    "ifNo": "Exclude non-applicable rows or mark as not applicable.",
+    "likelyOwner": "Regulatory Affairs / Quality",
+    "matrixUse": "Filters rows by product type and jurisdiction.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-002",
+    "decisionArea": "US DSCSA role",
+    "question": "Does the company act as manufacturer, repackager, wholesale distributor, dispenser, or 3PL in the U.S. supply chain?",
+    "ifYes": "Apply role-specific DSCSA tracing, ATP, verification, returns, and illegitimate-product controls.",
+    "ifNo": "Do not assume DSCSA operating burden, but confirm indirect contractual obligations.",
+    "likelyOwner": "US Supply Chain / Legal / Quality",
+    "matrixUse": "Avoids applying wholesale-distributor controls to a pure MAH or sponsor role without license analysis.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-003",
+    "decisionArea": "3PL operating model",
+    "question": "Does a 3PL physically receive, store, pick, pack, ship, quarantine, scan, or process returns?",
+    "ifYes": "Quality Agreement and SOP must assign physical tasks to 3PL but retain regulated decision rights with company QA where applicable.",
+    "ifNo": "Internal warehousing SOPs and evidence controls apply instead.",
+    "likelyOwner": "Quality / Supply Chain",
+    "matrixUse": "Supports DSCSA virtual distributor and outsourced activity controls.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-004",
+    "decisionArea": "Shortage scope",
+    "question": "Is the product covered by FD&C Act 506C notification/RMP requirements?",
+    "ifYes": "Maintain product-level RMP and shortage notification decision tree.",
+    "ifNo": "Document rationale for non-applicability.",
+    "likelyOwner": "Supply Chain / Regulatory Affairs",
+    "matrixUse": "Separates RMP governance from optional business continuity planning.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-005",
+    "decisionArea": "EU importation",
+    "question": "Is product imported into the EU from a third country under an MIA holder model?",
+    "ifYes": "Apply Annex 21 documentation, QP/batch-release, and third-country GMP verification controls.",
+    "ifNo": "Mark EU importation controls as not applicable.",
+    "likelyOwner": "EU Quality / Regulatory Affairs",
+    "matrixUse": "Prevents over-application of EU importation controls to U.S.-only flows.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-006",
+    "decisionArea": "Electronic records",
+    "question": "Does the process generate regulated electronic records in ERP, WMS, MES, QMS, L4 serialization, temperature-monitoring, or supplier portals?",
+    "ifYes": "Apply Part 11/Annex 11/data integrity controls, including access, audit trails, validation, and review.",
+    "ifNo": "Retain paper/manual controls if applicable.",
+    "likelyOwner": "IT Quality / QA",
+    "matrixUse": "Turns high-level data integrity rows into system-specific control requirements.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-007",
+    "decisionArea": "Cold chain",
+    "question": "Is the product time- or temperature-sensitive?",
+    "ifYes": "Apply route qualification, shipper qualification, temperature monitoring, excursion handling, and evidence review.",
+    "ifNo": "Mark cold-chain controls not applicable but retain ambient distribution controls.",
+    "likelyOwner": "Supply Chain / Quality",
+    "matrixUse": "Clarifies GDP/WHO Annex 9 scope.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-008",
+    "decisionArea": "Post-approval change",
+    "question": "Could the operational change affect an Established Condition, registered site, process parameter, packaging configuration, label, or quality system commitment?",
+    "ifYes": "Trigger regulatory assessment before implementation/distribution.",
+    "ifNo": "Process through normal change control.",
+    "likelyOwner": "Regulatory Affairs / Quality",
+    "matrixUse": "Connects SCOR Level 4 operations to ICH Q12 and filing strategy.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-009",
+    "decisionArea": "Returns",
+    "question": "Can returned product be placed back into saleable inventory?",
+    "ifYes": "Apply DSCSA/VRS, GDP, returned-drug, quarantine, investigation, and disposition controls.",
+    "ifNo": "Apply destruction/reject/disposal controls.",
+    "likelyOwner": "Quality / Supply Chain",
+    "matrixUse": "Prevents unsafe restocking and clarifies evidence needs.",
+    "appUse": "Applicability wizard / row filter logic"
+  },
+  {
+    "decisionId": "DEC-010",
+    "decisionArea": "Evidence readiness",
+    "question": "Can the company produce the control evidence within inspection timelines?",
+    "ifYes": "Control is operating and audit-ready.",
+    "ifNo": "Gap needs remediation, owner, due date, and CAPA/project tracking.",
+    "likelyOwner": "Compliance Operations",
+    "matrixUse": "Turns the matrix into an inspection-readiness checklist.",
+    "appUse": "Applicability wizard / row filter logic"
+  }
+]

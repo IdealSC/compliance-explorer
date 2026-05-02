@@ -1,0 +1,92 @@
+[
+  {
+    "metric": "Workbook Version",
+    "value": "v3.0",
+    "interpretation": "App-ready relational source model"
+  },
+  {
+    "metric": "Revision Date",
+    "value": "2026-05-02",
+    "interpretation": "Date of structural revision"
+  },
+  {
+    "metric": "Total Compliance Matrix Rows",
+    "value": "110",
+    "interpretation": "Primary obligation/control rows"
+  },
+  {
+    "metric": "Compliance Matrix Columns",
+    "value": "61",
+    "interpretation": "Original fields plus app-oriented fields"
+  },
+  {
+    "metric": "Critical Rows",
+    "value": "70",
+    "interpretation": "Highest-priority obligations or controls"
+  },
+  {
+    "metric": "High Rows",
+    "value": "23",
+    "interpretation": "High-priority obligations or controls"
+  },
+  {
+    "metric": "Needs Review Rows",
+    "value": "35",
+    "interpretation": "Rows flagged for legal/compliance/regulatory/business validation"
+  },
+  {
+    "metric": "Launch-Critical Rows",
+    "value": "99",
+    "interpretation": "Rows especially relevant to launch readiness or first commercial launch"
+  },
+  {
+    "metric": "Highest Risk Dashboard Rows",
+    "value": "71",
+    "interpretation": "Rows available for dashboard cards"
+  },
+  {
+    "metric": "Controlled Vocabulary Rows",
+    "value": "94",
+    "interpretation": "Pick-list values available for app filters"
+  },
+  {
+    "metric": "Source Inventory Rows",
+    "value": "13",
+    "interpretation": "Source provenance and traceability records"
+  },
+  {
+    "metric": "Status",
+    "value": "Count",
+    "interpretation": "Use"
+  },
+  {
+    "metric": "Reviewed – App Ready Pending Legal Sign-Off",
+    "value": "75",
+    "interpretation": "Filter Compliance Matrix by Status"
+  },
+  {
+    "metric": "Citation / Applicability Validation Required",
+    "value": "34",
+    "interpretation": "Filter Compliance Matrix by Status"
+  },
+  {
+    "metric": "Timing Clarification Required",
+    "value": "1",
+    "interpretation": "Filter Compliance Matrix by Status"
+  },
+  {
+    "metric": "Primary Persona / Viewer",
+    "value": "Count",
+    "interpretation": "Use"
+  },
+  {
+    "metric": "Supply Chain Leader",
+    "value": "88",
+    "interpretation": "Role-based app view"
+  },
+  {
+    "metric": "Quality Leader",
+    "value": "22",
+    "interpretation": "Role-based app view"
+  }
+]

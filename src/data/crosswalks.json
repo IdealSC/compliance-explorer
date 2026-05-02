@@ -1,0 +1,122 @@
+[
+  {
+    "crosswalkId": "CW-001",
+    "crosswalkArea": "Shortage/RMP",
+    "linkedLawsStandardsGuidance": "FD&C Act § 506C(j); CARES Act; FDA RMP Guidance; ICH Q9; ICH Q10",
+    "businessMeaning": "Supply continuity is a regulated quality/compliance obligation for applicable products, not only an operations KPI.",
+    "primaryEvidenceControl": "Approved RMP, risk register, funded mitigations, management review, FDA notification decision log",
+    "sourceCoverage": "Framework rows, RMP SOP",
+    "primaryScorPhase": "PLAN",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Shortage/RMP' or SCOR Phase = PLAN."
+  },
+  {
+    "crosswalkId": "CW-002",
+    "crosswalkArea": "Outsourcing / 3PL / CMO",
+    "linkedLawsStandardsGuidance": "EudraLex Chapter 7; 21 CFR 211.22(a); FDA Quality Agreements Guidance; ICH Q10",
+    "businessMeaning": "Regulated accountability remains with the product owner/quality unit even when activity is outsourced.",
+    "primaryEvidenceControl": "Executed QTA, audit reports, deviation/escalation clauses, data ownership clauses",
+    "sourceCoverage": "Framework rows, SCOR L4, DSCSA SOP",
+    "primaryScorPhase": "SOURCE",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Outsourcing / 3PL / CMO' or SCOR Phase = SOURCE."
+  },
+  {
+    "crosswalkId": "CW-003",
+    "crosswalkArea": "Importation / Pre-launch Inventory",
+    "linkedLawsStandardsGuidance": "FD&C Act § 801; FDA PLAIR Guidance; EudraLex Annex 21",
+    "businessMeaning": "Import and warehouse activities need regulatory gating before commercial release or EU batch release.",
+    "primaryEvidenceControl": "PLAIR/import records, customs clearance, MIA documentation, release holds",
+    "sourceCoverage": "Global framework",
+    "primaryScorPhase": "SOURCE",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Importation / Pre-launch Inventory' or SCOR Phase = SOURCE."
+  },
+  {
+    "crosswalkId": "CW-004",
+    "crosswalkArea": "CGMP / Manufacturing",
+    "linkedLawsStandardsGuidance": "FD&C Act § 501(a)(2)(B); 21 CFR Parts 210/211; 21 CFR Parts 600-680; EU Annex 1; Annex 16; ICH Q7/Q13",
+    "businessMeaning": "Manufacturing and release controls determine whether product is legally marketable even if operations are outsourced.",
+    "primaryEvidenceControl": "Batch records, equipment logs, QP certification, contamination controls, validation evidence",
+    "sourceCoverage": "Global framework, SCOR L4",
+    "primaryScorPhase": "MAKE",
+    "primaryPersonaViewer": "Quality Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'CGMP / Manufacturing' or SCOR Phase = MAKE."
+  },
+  {
+    "crosswalkId": "CW-005",
+    "crosswalkArea": "DSCSA / Serialization / ATP",
+    "linkedLawsStandardsGuidance": "FD&C Act § 582; FDA DSCSA Interoperable Exchange Guidance; Form FDA 3911",
+    "businessMeaning": "Physical product movement and electronic product tracing are inseparable for US prescription drug distribution.",
+    "primaryEvidenceControl": "ATP checks, EPCIS TI/TS, L4 repository, VRS logs, quarantine records, Form 3911",
+    "sourceCoverage": "Global framework, DSCSA SOP, SCOR L4",
+    "primaryScorPhase": "DELIVER",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'DSCSA / Serialization / ATP' or SCOR Phase = DELIVER."
+  },
+  {
+    "crosswalkId": "CW-006",
+    "crosswalkArea": "Cold Chain / GDP",
+    "linkedLawsStandardsGuidance": "EU GDP 2013/C 343/01; WHO TRS 961 Annex 9",
+    "businessMeaning": "Temperature control must be designed, qualified, monitored, and documented from storage through transport.",
+    "primaryEvidenceControl": "Lane qualification, route profile, data logger record, excursion assessment, carrier SLA",
+    "sourceCoverage": "Global framework, SCOR L4",
+    "primaryScorPhase": "DELIVER",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Cold Chain / GDP' or SCOR Phase = DELIVER."
+  },
+  {
+    "crosswalkId": "CW-007",
+    "crosswalkArea": "Returns / Recalls / Defects",
+    "linkedLawsStandardsGuidance": "DSCSA § 582; 21 CFR 211.204/211.208; EudraLex Chapter 8; EMA MAH reflection paper",
+    "businessMeaning": "Returns and defects require Quality-controlled segregation, investigation, notification, and final disposition.",
+    "primaryEvidenceControl": "Quarantine records, return verification, complaint/defect file, recall file, disposition record",
+    "sourceCoverage": "Global framework, DSCSA SOP, SCOR L4",
+    "primaryScorPhase": "DELIVER",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Returns / Recalls / Defects' or SCOR Phase = DELIVER."
+  },
+  {
+    "crosswalkId": "CW-008",
+    "crosswalkArea": "Data Integrity / Electronic Records",
+    "linkedLawsStandardsGuidance": "21 CFR Part 11; EU Annex 11; FDA Data Integrity Guidance; ALCOA",
+    "businessMeaning": "WMS, ERP, MES, L4 serialization, temperature systems, and QMS records are regulated evidence if used for decisions.",
+    "primaryEvidenceControl": "CSV/CSA package, unique user IDs, audit trails, access reviews, record retention",
+    "sourceCoverage": "Global framework, SCOR L4, risk radar",
+    "primaryScorPhase": "ENABLE",
+    "primaryPersonaViewer": "Legal / Compliance Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Data Integrity / Electronic Records' or SCOR Phase = ENABLE."
+  },
+  {
+    "crosswalkId": "CW-009",
+    "crosswalkArea": "Lifecycle / Post-approval Changes",
+    "linkedLawsStandardsGuidance": "ICH Q12; FDA Changes to Approved NDA/ANDA Guidance",
+    "businessMeaning": "Operational changes can trigger regulatory submissions if they affect established conditions.",
+    "primaryEvidenceControl": "Change controls, EC/PACMP mapping, regulatory impact assessment, PAS/CBE/annual report decision",
+    "sourceCoverage": "Global framework, global matrix, SCOR L4",
+    "primaryScorPhase": "ENABLE",
+    "primaryPersonaViewer": "Legal / Compliance Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Lifecycle / Post-approval Changes' or SCOR Phase = ENABLE."
+  },
+  {
+    "crosswalkId": "CW-010",
+    "crosswalkArea": "Clinical Supply",
+    "linkedLawsStandardsGuidance": "EU Regulation 536/2014; Delegated Regulation 2017/1569; ICH E6(R3)",
+    "businessMeaning": "Clinical supply must protect IMP quality, chain of custody, product specification file, and blinding/randomization.",
+    "primaryEvidenceControl": "Product Specification File, IMP batch documentation, blinding controls, clinical supply records",
+    "sourceCoverage": "Global framework, global matrix risk radar",
+    "primaryScorPhase": "ENABLE",
+    "primaryPersonaViewer": "Legal / Compliance Leader",
+    "relatedAppView": "Crosswalk / Relationship View",
+    "linkedMatrixRowIdsFilterLogic": "Filter Compliance Matrix where crosswalk keywords include 'Clinical Supply' or SCOR Phase = ENABLE."
+  }
+]

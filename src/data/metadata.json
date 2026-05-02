@@ -1,0 +1,99 @@
+{
+  "workbookVersion": "v3.0",
+  "revisionDate": "2026-05-02",
+  "importedAt": "2026-05-02T19:13:57.855Z",
+  "sourceFile": "regulatory_compliance_matrix_app_ready_source_model.xlsx",
+  "rowCounts": {
+    "requirements": 110,
+    "risks": 71,
+    "evidence": 16,
+    "sources": 13,
+    "gaps": 12,
+    "crosswalks": 10,
+    "functionImpact": 9,
+    "lists": 94,
+    "decisionTree": 10,
+    "roadmap": 10,
+    "verificationSources": 8,
+    "dataDictionary": 132,
+    "reviewDashboard": 18
+  },
+  "warnings": [],
+  "governanceRaw": [
+    {
+      "metadataField": "Workbook Version",
+      "value": "v3.0",
+      "notes": "App-ready relational source model revision."
+    },
+    {
+      "metadataField": "Revision Date",
+      "value": "2026-05-02",
+      "notes": "User timezone and current conversation date."
+    },
+    {
+      "metadataField": "Last Updated By",
+      "value": "ChatGPT",
+      "notes": "Structured revision based on uploaded revision brief."
+    },
+    {
+      "metadataField": "Prior Workbook Input",
+      "value": "regulatory_compliance_matrix_operating_model_reviewed.xlsx",
+      "notes": "Reviewed version generated earlier in the conversation."
+    },
+    {
+      "metadataField": "Intended Use",
+      "value": "Compliance operating model and backend source model for future web app",
+      "notes": "Supports business user analysis, filtering, role-based UI design, and dashboard source tables."
+    },
+    {
+      "metadataField": "Validation Status",
+      "value": "Structural revision complete; legal/compliance validation pending where flagged",
+      "notes": "No new legal obligations invented."
+    },
+    {
+      "metadataField": "Primary Content Constraint",
+      "value": "Preserve existing substantive content",
+      "notes": "Normalization and app-readiness enhancements were applied without materially changing obligations."
+    },
+    {
+      "metadataField": "Change Log ID",
+      "value": "Change Summary",
+      "notes": "Impact"
+    },
+    {
+      "metadataField": "CHG-001",
+      "value": "Added 11 app-oriented fields to Compliance Matrix.",
+      "notes": "Enables role-based views, lifecycle filtering, card summaries, validation queues, and launch-critical filtering."
+    },
+    {
+      "metadataField": "CHG-002",
+      "value": "Added stable IDs to supporting sheets.",
+      "notes": "Improves relational linking and downstream app data modeling."
+    },
+    {
+      "metadataField": "CHG-003",
+      "value": "Expanded Lists into controlled vocabulary layer.",
+      "notes": "Supports normalized filtering and dropdown values."
+    },
+    {
+      "metadataField": "CHG-004",
+      "value": "Enhanced Source Inventory with traceability metadata.",
+      "notes": "Supports source provenance and reliability review."
+    },
+    {
+      "metadataField": "CHG-005",
+      "value": "Enhanced Highest Risk for dashboard use.",
+      "notes": "Supports risk cards, dashboard slicing, and matrix drill-through."
+    },
+    {
+      "metadataField": "CHG-006",
+      "value": "Expanded Data Dictionary into explicit field model.",
+      "notes": "Improves developer handoff and app schema generation."
+    },
+    {
+      "metadataField": "CHG-007",
+      "value": "Preserved existing reviewed tabs and added relational metadata.",
+      "notes": "Keeps prior review work while strengthening app-readiness."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "functionImpactId": "FI-001",
+    "businessFunction": "Supply Chain",
+    "whatTheyNeedToUnderstand": "Supply chain decisions are regulated when they affect supply continuity, DSCSA traceability, cold-chain integrity, import readiness, customer ATP status, or product release/disposition.",
+    "whatTheyNeedToActOn": "Own RMP inputs, customer GLNs/ATP status, EPCIS exception review, VRS/returns readiness, inventory buffers, carrier/3PL oversight, and system hard-stops.",
+    "primaryControlsEvidence": "RMP, customer master data, EPCIS logs, failed transmission reports, VRS logs, carrier qualification, temperature profiles, QTA obligations.",
+    "highestRiskQuestions": "Can product move legally and physically, with matching data and evidence? Are shortage mitigations funded?",
+    "primaryPersonaViewer": "Supply Chain Leader",
+    "primaryScorPhases": "PLAN; SOURCE; DELIVER; RETURN",
+    "digitalSystemEvidenceDependencies": "ERP, WMS, 3PL portal, L4 serialization/EPCIS, VRS, temperature monitoring, QMS",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Supply Chain' or Primary Persona / Viewer = 'Supply Chain Leader'"
+  },
+  {
+    "functionImpactId": "FI-002",
+    "businessFunction": "Quality Assurance",
+    "whatTheyNeedToUnderstand": "QA remains final authority for product quality, suspect/illegitimate product determinations, batch release, quarantine, outsourced activity oversight, and data integrity.",
+    "whatTheyNeedToActOn": "Approve QTAs, review investigations, approve release/disposition, ensure RMP/QMS integration, validate data integrity evidence, retain records.",
+    "primaryControlsEvidence": "QA approvals, batch records, deviation/CAPA, Form 3911 package, audit trail review, QTA, RMP approval.",
+    "highestRiskQuestions": "Can QA prove that evidence supports each decision?",
+    "primaryPersonaViewer": "Quality Leader",
+    "primaryScorPhases": "SOURCE; MAKE; DELIVER; RETURN; ENABLE",
+    "digitalSystemEvidenceDependencies": "QMS, validated repositories, audit trails, batch records, deviation/CAPA, investigation records",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Quality Assurance' or Primary Persona / Viewer = 'Quality Leader'"
+  },
+  {
+    "functionImpactId": "FI-003",
+    "businessFunction": "Regulatory Affairs",
+    "whatTheyNeedToUnderstand": "Operational changes, imports, shortages, and illegitimate product notifications can trigger regulatory communication or filing obligations.",
+    "whatTheyNeedToActOn": "Assess EC/PACMP impacts, manage PLAIR/import communications, determine PAS/CBE/annual report route, notify FDA for shortages and DSCSA events as assigned.",
+    "primaryControlsEvidence": "Regulatory impact assessments, FDA communications, PLAIR records, shortage notifications, Form 3911 support.",
+    "highestRiskQuestions": "Did the business implement a change or distribution action before regulatory clearance?",
+    "primaryPersonaViewer": "Regulatory Affairs Leader",
+    "primaryScorPhases": "PLAN; SOURCE; MAKE; ENABLE",
+    "digitalSystemEvidenceDependencies": "Regulatory information management, submission records, FDA/agency correspondence, change-control system",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Regulatory Affairs' or Primary Persona / Viewer = 'Regulatory Affairs Leader'"
+  },
+  {
+    "functionImpactId": "FI-004",
+    "businessFunction": "Procurement / Supplier Management",
+    "whatTheyNeedToUnderstand": "Supplier choices can create CGMP, shortage, quality agreement, and regulatory filing risk.",
+    "whatTheyNeedToActOn": "Qualify suppliers, maintain QTAs, monitor supplier performance, support second-source and surge capacity mitigations.",
+    "primaryControlsEvidence": "Supplier qualification file, audit report, QTA, supplier scorecard, supply risk assessment.",
+    "highestRiskQuestions": "Are critical suppliers single-source or under-controlled?",
+    "primaryPersonaViewer": "Procurement / Supplier Management Leader",
+    "primaryScorPhases": "SOURCE; PLAN",
+    "digitalSystemEvidenceDependencies": "Supplier master, contract repository, QTA repository, audit/CAPA tracking",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Procurement / Supplier Management' or Primary Persona / Viewer = 'Procurement / Supplier Management Leader'"
+  },
+  {
+    "functionImpactId": "FI-005",
+    "businessFunction": "Manufacturing / Technical Operations",
+    "whatTheyNeedToUnderstand": "Manufacturing parameters, equipment, sterile controls, batch execution, and site changes may be legally binding or quality-critical.",
+    "whatTheyNeedToActOn": "Execute batch and equipment controls, assess ECs, manage deviations, support process/site change controls.",
+    "primaryControlsEvidence": "Executed batch records, equipment logs, validation, deviation/CAPA, change controls.",
+    "highestRiskQuestions": "Could an operational optimization unintentionally breach an Established Condition?",
+    "primaryPersonaViewer": "Manufacturing / Technical Operations Leader",
+    "primaryScorPhases": "MAKE",
+    "digitalSystemEvidenceDependencies": "MES, EBR, equipment logs, cleaning/line clearance records, deviation system",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Manufacturing / Technical Operations' or Primary Persona / Viewer = 'Manufacturing / Technical Operations Leader'"
+  },
+  {
+    "functionImpactId": "FI-006",
+    "businessFunction": "IT / Digital Quality",
+    "whatTheyNeedToUnderstand": "Regulated decisions depend on system data from ERP/WMS/MES/L4/QMS/temperature systems; data integrity must be designed and monitored.",
+    "whatTheyNeedToActOn": "Validate or assure computerized systems, maintain access controls, support audit trails, prevent shadow IT, enforce backup/retention.",
+    "primaryControlsEvidence": "CSV/CSA, audit trails, access reviews, incident logs, data backup and retention evidence.",
+    "highestRiskQuestions": "Can the company trust and defend the electronic data behind release, quarantine, traceability, and distribution?",
+    "primaryPersonaViewer": "Quality Leader",
+    "primaryScorPhases": "SOURCE; MAKE; DELIVER; RETURN; ENABLE",
+    "digitalSystemEvidenceDependencies": "QMS, validated repositories, audit trails, batch records, deviation/CAPA, investigation records",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'IT / Digital Quality' or Primary Persona / Viewer = 'Quality Leader'"
+  },
+  {
+    "functionImpactId": "FI-007",
+    "businessFunction": "Legal / Compliance",
+    "whatTheyNeedToUnderstand": "Contracts and interpretations control risk allocation but cannot transfer regulatory accountability away from the regulated entity.",
+    "whatTheyNeedToActOn": "Review QTAs, supplier contracts, 3PL decision-right clauses, guidance interpretation, exemptions, and ambiguities.",
+    "primaryControlsEvidence": "Executed contracts, legal assessments, compliance review records, escalation clauses.",
+    "highestRiskQuestions": "Do contracts align with actual regulatory decision rights and evidence requirements?",
+    "primaryPersonaViewer": "Legal / Compliance Leader",
+    "primaryScorPhases": "All",
+    "digitalSystemEvidenceDependencies": "Contract repository, licensing records, legal/compliance review logs",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Legal / Compliance' or Primary Persona / Viewer = 'Legal / Compliance Leader'"
+  },
+  {
+    "functionImpactId": "FI-008",
+    "businessFunction": "Clinical Operations",
+    "whatTheyNeedToUnderstand": "Clinical supply controls protect participants and trial validity, including IMP quality and blinding/randomization.",
+    "whatTheyNeedToActOn": "Maintain Product Specification File, protect blinding in labels/docs/shipments, control IMP documentation.",
+    "primaryControlsEvidence": "PSF, clinical supply records, blinding controls, IMP batch records.",
+    "highestRiskQuestions": "Could a supply document or label unblind the study?",
+    "primaryPersonaViewer": "Clinical Operations Leader",
+    "primaryScorPhases": "ENABLE; SOURCE; DELIVER",
+    "digitalSystemEvidenceDependencies": "IRT, clinical supply systems, IMP documentation, blinding controls",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Clinical Operations' or Primary Persona / Viewer = 'Clinical Operations Leader'"
+  },
+  {
+    "functionImpactId": "FI-009",
+    "businessFunction": "Finance",
+    "whatTheyNeedToUnderstand": "Compliance mitigations often require funded inventory, redundancy, technology, supplier audits, and capacity arrangements.",
+    "whatTheyNeedToActOn": "Approve and track funding for high-risk RMP mitigations and compliance-critical system/3PL capabilities.",
+    "primaryControlsEvidence": "Budget approvals, mitigation tracker, management review decisions.",
+    "highestRiskQuestions": "Is the company carrying a known high risk because mitigation is unfunded?",
+    "primaryPersonaViewer": "Executive / General Manager",
+    "primaryScorPhases": "All",
+    "digitalSystemEvidenceDependencies": "Dashboard summaries and escalation records",
+    "linkedMatrixRowIdFilter": "Business Function Impacted contains 'Finance' or Primary Persona / Viewer = 'Executive / General Manager'"
+  }
+]

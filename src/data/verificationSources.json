@@ -1,0 +1,74 @@
+[
+  {
+    "verificationSourceId": "VSRC-001",
+    "sourceName": "FDA DSCSA main page",
+    "type": "Official FDA web page",
+    "whyUsed": "Current DSCSA overview and 24-hour illegitimate product notification reference",
+    "url": "https://www.fda.gov/drugs/drug-supply-chain-integrity/drug-supply-chain-security-act-dscsa",
+    "reviewNote": "Used to confirm DSCSA purpose, current DSCSA portal links, and 24-hour illegitimate product notification positioning.",
+    "linkedSourceId": "SRC-006"
+  },
+  {
+    "verificationSourceId": "VSRC-002",
+    "sourceName": "FDA DSCSA waivers/exemptions beyond stabilization",
+    "type": "Official FDA web page",
+    "whyUsed": "Current-state correction for DSCSA stabilization/exemption language",
+    "url": "https://www.fda.gov/drugs/drug-supply-chain-security-act-dscsa/waivers-and-exemptions-beyond-stabilization-period",
+    "reviewNote": "Used to replace generic stabilization language with partner-specific exemption logic and small-dispenser exemption date.",
+    "linkedSourceId": "SRC-007"
+  },
+  {
+    "verificationSourceId": "VSRC-003",
+    "sourceName": "FDA Notify FDA of Illegitimate Products",
+    "type": "Official FDA web page",
+    "whyUsed": "Form FDA 3911 process support",
+    "url": "https://www.fda.gov/drugs/drug-supply-chain-security-act-dscsa/notify-fda-illegitimate-products",
+    "reviewNote": "Used to validate 24-hour illegitimate-product notification control and Form 3911 handling.",
+    "linkedSourceId": "SRC-008"
+  },
+  {
+    "verificationSourceId": "VSRC-004",
+    "sourceName": "FDA WDD/3PL licensure check page",
+    "type": "Official FDA web page",
+    "whyUsed": "ATP verification support",
+    "url": "https://www.fda.gov/drugs/drug-supply-chain-integrity/check-licensure-wholesale-drug-distributors-and-third-party-logistics-providers",
+    "reviewNote": "Used to enhance ATP verification controls with state licensure and FDA annual reporting database checks.",
+    "linkedSourceId": "SRC-009"
+  },
+  {
+    "verificationSourceId": "VSRC-005",
+    "sourceName": "FDA DSCSA Interoperable Exchange Guidance",
+    "type": "Official FDA guidance PDF",
+    "whyUsed": "EPCIS and interoperable data exchange support",
+    "url": "https://www.fda.gov/media/171796/download",
+    "reviewNote": "Used to validate EPCIS as suitable standard for enhanced drug distribution security data exchange.",
+    "linkedSourceId": "SRC-010"
+  },
+  {
+    "verificationSourceId": "VSRC-006",
+    "sourceName": "FDA Drug Shortages Non-Compliance page",
+    "type": "Official FDA web page",
+    "whyUsed": "506C notification timing support",
+    "url": "https://www.fda.gov/drugs/drug-shortages/drug-shortages-non-compliance-notification-requirement",
+    "reviewNote": "Used to validate 6-month/as-soon-as-practicable/no-later-than-5-business-day notification requirements for covered products.",
+    "linkedSourceId": "SRC-011"
+  },
+  {
+    "verificationSourceId": "VSRC-007",
+    "sourceName": "FDA Drug Shortage FAQ",
+    "type": "Official FDA web page",
+    "whyUsed": "Shortage/RMP context and notification scope",
+    "url": "https://www.fda.gov/drugs/drug-shortages/frequently-asked-questions-about-drug-shortages",
+    "reviewNote": "Used to clarify shortage notification scope for finished products and APIs.",
+    "linkedSourceId": "SRC-012"
+  },
+  {
+    "verificationSourceId": "VSRC-008",
+    "sourceName": "European Commission EudraLex Annex 21",
+    "type": "Official EC PDF",
+    "whyUsed": "EU importation control support",
+    "url": "https://health.ec.europa.eu/document/download/e2ddfe65-7b4e-4765-b71b-4681772d2949_en",
+    "reviewNote": "Used to support EU importation role/applicability notes.",
+    "linkedSourceId": "SRC-013"
+  }
+]
