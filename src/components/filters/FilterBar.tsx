@@ -94,7 +94,7 @@ export function FilterBar({
           onChange={(v) => update('severityPriority', v)}
         />
         <MultiSelectFilter
-          label="Persona"
+          label="Persona View"
           options={options.primaryPersona}
           selected={filters.primaryPersona}
           onChange={(v) => update('primaryPersona', v)}

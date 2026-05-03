@@ -3,6 +3,7 @@
  * Provides typed accessors for each entity with deduplication utilities.
  */
 import type { Requirement, Risk, Evidence } from '@/types';
+import { getAllPersonaOptions } from '@/lib/persona-matching';
 import requirementsData from '@/data/requirements.json';
 import risksData from '@/data/risks.json';
 import evidenceData from '@/data/evidence.json';
@@ -87,10 +88,11 @@ export function getUniqueFieldValues<T>(
 export function getFilterOptions() {
   return {
     businessFunction: getUniqueValues('businessFunctionImpacted', { split: true }),
-    primaryPersona: getUniqueValues('primaryPersonaViewer'),
+    primaryPersona: getAllPersonaOptions(getRequirements()),
     lifecycleStage: getUniqueValues('lifecycleStage'),
     severityPriority: ['Critical', 'High', 'Medium'], // Explicit ordering
     jurisdictionRegion: getUniqueValues('jurisdictionRegion'),
     regulatoryDomain: getUniqueValues('regulatoryDomain'),
   };
 }
+

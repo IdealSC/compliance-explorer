@@ -2,6 +2,7 @@
  * Filter utilities for multi-value fields and controlled vocabulary matching.
  */
 import type { Requirement } from '@/types';
+import { matchesPersonaFilter } from '@/lib/persona-matching';
 
 /** Split semicolon-delimited fields into individual values */
 export function splitMultiValue(value: string | null): string[] {
@@ -65,10 +66,8 @@ export function matchesFilters(req: Requirement, filters: FilterState): boolean 
     if (!filters.businessFunction.some((f) => reqFunctions.includes(f))) return false;
   }
 
-  // Single-value filters
-  if (filters.primaryPersona.length > 0) {
-    if (!req.primaryPersonaViewer || !filters.primaryPersona.includes(req.primaryPersonaViewer)) return false;
-  }
+  // Derived persona matching (scans multiple fields, not just primaryPersonaViewer)
+  if (!matchesPersonaFilter(req, filters.primaryPersona)) return false;
 
   if (filters.lifecycleStage.length > 0) {
     if (!req.lifecycleStage || !filters.lifecycleStage.includes(req.lifecycleStage)) return false;
