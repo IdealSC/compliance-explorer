@@ -65,7 +65,7 @@ function SectionWhatThisIs({ data }: { data?: WhatThisIsContent }) {
 
       <p className="topic-sc-relevance">
         <span className="topic-sc-relevance-label">
-          Why this matters for supply chain:
+          Common misunderstanding:
         </span>{' '}
         {data.supplyChainRelevance}
       </p>
@@ -89,9 +89,9 @@ function SectionOwnershipBoundaries({
         <table className="topic-ownership-table">
           <thead>
             <tr>
-              <th>Supply Chain Owns</th>
-              <th>Adjacent / Shared</th>
-              <th>Other Function Owns</th>
+              <th>Supply Chain Typically Owns</th>
+              <th>Adjacent Ownership</th>
+              <th>Other / Handoff Risk</th>
             </tr>
           </thead>
           <tbody>
@@ -106,19 +106,86 @@ function SectionOwnershipBoundaries({
         </table>
       </div>
 
-      {/* Handoff callouts */}
-      {data.handoffs.length > 0 && (
-        <div className="topic-handoffs">
-          <h4 className="topic-subsection-label">Key handoffs</h4>
-          <ul className="topic-handoff-list">
-            {data.handoffs.map((h, i) => (
-              <li key={i} className="topic-handoff-item">
-                {h}
-              </li>
-            ))}
-          </ul>
+      {/* Decision rights */}
+      {data.decisionRights && (
+        <div className="topic-decision-rights">
+          <h4 className="topic-subsection-label">Decision rights</h4>
+          <div className="topic-decision-rights-grid">
+            <div className="topic-decision-rights-col">
+              <h5 className="topic-decision-rights-heading">
+                Supply chain usually decides or leads
+              </h5>
+              <ul className="topic-decision-list">
+                {data.decisionRights.leads.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="topic-decision-rights-col">
+              <h5 className="topic-decision-rights-heading">
+                Supply chain strongly influences
+              </h5>
+              <ul className="topic-decision-list">
+                {data.decisionRights.influences.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="topic-decision-rights-col">
+              <h5 className="topic-decision-rights-heading">
+                Supply chain does not usually own
+              </h5>
+              <ul className="topic-decision-list">
+                {data.decisionRights.doesNotOwn.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       )}
+
+      {/* Structured handoff details */}
+      {data.handoffDetails && data.handoffDetails.length > 0 && (
+        <div className="topic-handoff-details">
+          <h4 className="topic-subsection-label">Key handoffs</h4>
+          <div className="topic-handoff-details-table-wrap">
+            <table className="topic-handoff-details-table">
+              <thead>
+                <tr>
+                  <th>Handoff</th>
+                  <th>Why It Matters</th>
+                  <th>Typical Owner</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.handoffDetails.map((h, i) => (
+                  <tr key={i}>
+                    <td>{h.handoff}</td>
+                    <td>{h.whyItMatters}</td>
+                    <td>{h.typicalOwner}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Simple handoff callouts (fallback for topics without handoffDetails) */}
+      {(!data.handoffDetails || data.handoffDetails.length === 0) &&
+        data.handoffs.length > 0 && (
+          <div className="topic-handoffs">
+            <h4 className="topic-subsection-label">Key handoffs</h4>
+            <ul className="topic-handoff-list">
+              {data.handoffs.map((h, i) => (
+                <li key={i} className="topic-handoff-item">
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
       {/* Common blindspot */}
       {data.commonBlindspot && (
@@ -138,62 +205,98 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
 
   return (
     <div className="topic-section-body">
-      {/* Context reminder */}
-      <div className="topic-context-reminder">
-        <span className="topic-context-reminder-label">
-          Your current context:
-        </span>
-        <div className="topic-context-reminder-chips">
-          <span className="topic-context-chip">
-            <Globe className="topic-chip-icon" aria-hidden="true" />
-            US + EU
-          </span>
-          <span className="topic-context-chip">
-            <Building2 className="topic-chip-icon" aria-hidden="true" />
-            NDA Holder
-          </span>
-          <span className="topic-context-chip">
-            <Clock className="topic-chip-icon" aria-hidden="true" />
-            Pre-commercial
-          </span>
+      {/* Context highlight */}
+      {data.contextHighlight && (
+        <div className="topic-context-highlight">
+          <p className="topic-context-highlight-text">
+            {data.contextHighlight}
+          </p>
         </div>
-      </div>
+      )}
 
       {/* Jurisdiction comparison */}
       <div className="topic-jurisdiction">
         <h4 className="topic-subsection-label">By jurisdiction</h4>
-        <div className="topic-jurisdiction-table-wrap">
-          <table className="topic-jurisdiction-table">
-            <thead>
-              <tr>
-                <th>US</th>
-                <th>EU</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.jurisdictionUS.map((us, i) => (
-                <tr key={i}>
-                  <td>{us}</td>
-                  <td>{data.jurisdictionEU[i] ?? '—'}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+
+        {/* US */}
+        <div className="topic-jurisdiction-block">
+          <h5 className="topic-jurisdiction-heading">United States</h5>
+          {data.jurisdictionUSIntro && (
+            <p className="topic-jurisdiction-intro">
+              {data.jurisdictionUSIntro}
+            </p>
+          )}
+          {data.jurisdictionUS.length > 0 && (
+            <>
+              <p className="topic-jurisdiction-attention-label">
+                Supply chain should pay attention to:
+              </p>
+              <ul className="topic-jurisdiction-list">
+                {data.jurisdictionUS.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
+
+        {/* EU */}
+        <div className="topic-jurisdiction-block">
+          <h5 className="topic-jurisdiction-heading">European Union</h5>
+          {data.jurisdictionEUIntro && (
+            <p className="topic-jurisdiction-intro">
+              {data.jurisdictionEUIntro}
+            </p>
+          )}
+          {data.jurisdictionEU.length > 0 && (
+            <>
+              <p className="topic-jurisdiction-attention-label">
+                Supply chain should pay attention to:
+              </p>
+              <ul className="topic-jurisdiction-list">
+                {data.jurisdictionEU.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+
+        {/* Consistent across */}
+        {data.jurisdictionConsistent && data.jurisdictionConsistent.length > 0 && (
+          <div className="topic-jurisdiction-block">
+            <h5 className="topic-jurisdiction-heading">
+              What stays consistent across US and EU
+            </h5>
+            <ul className="topic-jurisdiction-list">
+              {data.jurisdictionConsistent.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* Entity roles */}
       {data.entityRoles.length > 0 && (
         <div className="topic-entity-roles">
           <h4 className="topic-subsection-label">By entity role</h4>
-          <ul className="topic-role-list">
-            {data.entityRoles.map(({ role, description }) => (
-              <li key={role} className="topic-role-item">
-                <span className="topic-role-name">{role}:</span>{' '}
-                {description}
-              </li>
+          <div className="topic-entity-role-cards">
+            {data.entityRoles.map(({ role, description, focusAreas }) => (
+              <div key={role} className="topic-entity-role-card">
+                <h5 className="topic-entity-role-name">{role}</h5>
+                <p className="topic-entity-role-desc">{description}</p>
+                {focusAreas && (
+                  <p className="topic-entity-role-focus">
+                    <span className="topic-entity-role-focus-label">
+                      Supply chain focus:
+                    </span>{' '}
+                    {focusAreas}
+                  </p>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
 
@@ -201,23 +304,22 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
       {data.lifecycleStages.length > 0 && (
         <div className="topic-lifecycle">
           <h4 className="topic-subsection-label">By lifecycle stage</h4>
-          <ul className="topic-lifecycle-list">
-            {data.lifecycleStages.map(({ stage, description }) => (
-              <li key={stage} className="topic-lifecycle-item">
-                <span className="topic-lifecycle-name">{stage}:</span>{' '}
-                {description}
-              </li>
+          <div className="topic-lifecycle-cards">
+            {data.lifecycleStages.map(({ stage, description, focusAreas }) => (
+              <div key={stage} className="topic-lifecycle-card">
+                <h5 className="topic-lifecycle-card-name">{stage}</h5>
+                <p className="topic-lifecycle-card-desc">{description}</p>
+                {focusAreas && (
+                  <p className="topic-lifecycle-card-focus">
+                    <span className="topic-lifecycle-card-focus-label">
+                      Focus:
+                    </span>{' '}
+                    {focusAreas}
+                  </p>
+                )}
+              </div>
             ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Context highlight */}
-      {data.contextHighlight && (
-        <div className="topic-context-highlight">
-          <p className="topic-context-highlight-text">
-            {data.contextHighlight}
-          </p>
+          </div>
         </div>
       )}
     </div>
@@ -235,10 +337,15 @@ function SectionRegulatoryChain({
 
   return (
     <div className="topic-section-body">
+      {/* Plain-language framing */}
+      {data.plainLanguageFraming && (
+        <p className="topic-lead-paragraph">{data.plainLanguageFraming}</p>
+      )}
+
       {/* Source chain visualization */}
       {data.chain.length > 0 && (
         <div className="topic-source-chain">
-          <h4 className="topic-subsection-label">Source chain</h4>
+          <h4 className="topic-subsection-label">Regulatory chain</h4>
           <div className="topic-chain-levels">
             {data.chain.map(({ level, description }, i) => (
               <div
@@ -248,7 +355,7 @@ function SectionRegulatoryChain({
               >
                 <span className="topic-chain-level-name">{level}</span>
                 <span className="topic-chain-level-desc">
-                  ({description})
+                  {description}
                 </span>
               </div>
             ))}
@@ -266,19 +373,29 @@ function SectionRegulatoryChain({
                 <tr>
                   <th>Source</th>
                   <th>Type</th>
+                  {data.keySources.some((s) => s.jurisdiction) && (
+                    <th>Jurisdiction</th>
+                  )}
                   <th>Relevance</th>
                 </tr>
               </thead>
               <tbody>
-                {data.keySources.map(({ source, type, relevance }) => (
-                  <tr key={source}>
-                    <td>{source}</td>
-                    <td>
-                      <span className="topic-source-type-badge">{type}</span>
-                    </td>
-                    <td>{relevance}</td>
-                  </tr>
-                ))}
+                {data.keySources.map(
+                  ({ source, type, jurisdiction, relevance }) => (
+                    <tr key={source}>
+                      <td>{source}</td>
+                      <td>
+                        <span className="topic-source-type-badge">
+                          {type}
+                        </span>
+                      </td>
+                      {data.keySources.some((s) => s.jurisdiction) && (
+                        <td>{jurisdiction ?? '—'}</td>
+                      )}
+                      <td>{relevance}</td>
+                    </tr>
+                  )
+                )}
               </tbody>
             </table>
           </div>

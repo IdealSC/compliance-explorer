@@ -1,6 +1,7 @@
 /* ─── Topic Page Template — Type Definitions ─────────────────────────
    Phase 5.1-C: Reusable type interfaces for the 5-section topic page
    structure defined in TOPIC_PAGE_TEMPLATE.md.
+   Phase 5.1-D: Extended with optional fields for richer approved content.
    ──────────────────────────────────────────────────────────────────── */
 
 /** A key term with inline definition (Section 1). */
@@ -26,26 +27,50 @@ export interface OwnershipRow {
   otherFunctionOwns: string;
 }
 
+/** A structured handoff with context (Section 2). */
+export interface HandoffDetail {
+  handoff: string;
+  whyItMatters: string;
+  typicalOwner: string;
+}
+
+/** Decision rights breakdown (Section 2). */
+export interface DecisionRights {
+  leads: string[];
+  influences: string[];
+  doesNotOwn: string[];
+}
+
 /** Section 2 — Ownership boundaries. */
 export interface OwnershipBoundariesContent {
   /** 3-column table rows: Owns / Adjacent / Other. */
   table: OwnershipRow[];
-  /** 2–3 specific handoff callouts. */
+  /** 2–3 specific handoff callouts (simple text). */
   handoffs: string[];
+  /** Structured handoff details with context. */
+  handoffDetails?: HandoffDetail[];
+  /** Decision rights breakdown. */
+  decisionRights?: DecisionRights;
   /** One common misunderstanding about who owns what. */
   commonBlindspot: string;
 }
 
 /** Section 3 — How applicability changes it. */
 export interface ApplicabilityContent {
-  /** US-specific requirements. */
+  /** Introductory paragraph for US jurisdiction. */
+  jurisdictionUSIntro?: string;
+  /** US-specific attention items. */
   jurisdictionUS: string[];
-  /** EU-specific requirements. */
+  /** Introductory paragraph for EU jurisdiction. */
+  jurisdictionEUIntro?: string;
+  /** EU-specific attention items. */
   jurisdictionEU: string[];
-  /** Entity role impact descriptions (role → one sentence). */
-  entityRoles: { role: string; description: string }[];
-  /** Lifecycle stage impact descriptions (stage → one sentence). */
-  lifecycleStages: { stage: string; description: string }[];
+  /** Items that stay consistent across jurisdictions. */
+  jurisdictionConsistent?: string[];
+  /** Entity role impact descriptions (role → description + optional focus areas). */
+  entityRoles: { role: string; description: string; focusAreas?: string }[];
+  /** Lifecycle stage impact descriptions (stage → description + optional focus areas). */
+  lifecycleStages: { stage: string; description: string; focusAreas?: string }[];
   /** Context-specific highlight based on current selection. */
   contextHighlight?: string;
 }
@@ -54,14 +79,18 @@ export interface ApplicabilityContent {
 export interface KeySource {
   source: string;
   type: string;
+  /** Jurisdiction (e.g. "US", "EU", "Global"). */
+  jurisdiction?: string;
   relevance: string;
 }
 
 /** Section 4 — Where it sits in the regulatory chain. */
 export interface RegulatoryChainContent {
+  /** Plain-language framing paragraph. */
+  plainLanguageFraming?: string;
   /** Source chain levels: Law → Regulation → Standard → Guidance. */
   chain: { level: string; description: string }[];
-  /** 3–5 most relevant sources. */
+  /** Key sources with optional jurisdiction. */
   keySources: KeySource[];
   /** Advisory note about source completeness. */
   confidenceNote: string;

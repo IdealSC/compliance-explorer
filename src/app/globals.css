@@ -1544,3 +1544,232 @@ select:focus-visible,
   background: white;
   line-height: 1.5;
 }
+
+/* ─── Phase 5.1-D: Decision Rights ──────────────────────────────── */
+
+.topic-decision-rights {
+  margin-top: 2rem;
+}
+.topic-decision-rights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+@media (max-width: 768px) {
+  .topic-decision-rights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.topic-decision-rights-col {
+  background: var(--topic-surface);
+  border: 1px solid var(--topic-border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+.topic-decision-rights-heading {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--topic-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin: 0 0 0.75rem;
+}
+.topic-decision-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.topic-decision-list li {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--topic-text);
+  padding-left: 1rem;
+  position: relative;
+}
+.topic-decision-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--topic-muted);
+  font-weight: 700;
+}
+
+/* ─── Phase 5.1-D: Handoff Details Table ────────────────────────── */
+
+.topic-handoff-details {
+  margin-top: 2rem;
+}
+.topic-handoff-details-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+.topic-handoff-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.topic-handoff-details-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--topic-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.75rem;
+  padding: 0.625rem 1rem;
+  border-bottom: 2px solid var(--topic-border);
+  background: var(--topic-surface);
+}
+.topic-handoff-details-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--topic-border);
+  color: var(--topic-text);
+  line-height: 1.5;
+  vertical-align: top;
+}
+.topic-handoff-details-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── Phase 5.1-D: Jurisdiction Blocks ──────────────────────────── */
+
+.topic-jurisdiction-block {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--topic-surface);
+  border: 1px solid var(--topic-border);
+  border-radius: 0.5rem;
+}
+.topic-jurisdiction-block + .topic-jurisdiction-block {
+  margin-top: 1rem;
+}
+.topic-jurisdiction-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--topic-heading);
+  margin: 0 0 0.625rem;
+}
+.topic-jurisdiction-intro {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--topic-text);
+  margin: 0 0 0.75rem;
+}
+.topic-jurisdiction-attention-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--topic-muted);
+  margin: 0.75rem 0 0.375rem;
+}
+.topic-jurisdiction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.topic-jurisdiction-list li {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--topic-text);
+  padding-left: 1rem;
+  position: relative;
+}
+.topic-jurisdiction-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--topic-muted);
+}
+
+/* ─── Phase 5.1-D: Entity Role Cards ────────────────────────────── */
+
+.topic-entity-role-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+@media (max-width: 768px) {
+  .topic-entity-role-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.topic-entity-role-card {
+  background: var(--topic-surface);
+  border: 1px solid var(--topic-border);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+.topic-entity-role-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--topic-heading);
+  margin: 0 0 0.5rem;
+}
+.topic-entity-role-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--topic-text);
+  margin: 0 0 0.625rem;
+}
+.topic-entity-role-focus {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--topic-muted);
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--topic-border);
+}
+.topic-entity-role-focus-label {
+  font-weight: 600;
+  color: var(--topic-accent);
+}
+
+/* ─── Phase 5.1-D: Lifecycle Cards ──────────────────────────────── */
+
+.topic-lifecycle-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+@media (max-width: 768px) {
+  .topic-lifecycle-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.topic-lifecycle-card {
+  background: var(--topic-surface);
+  border: 1px solid var(--topic-border);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+.topic-lifecycle-card-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--topic-heading);
+  margin: 0 0 0.5rem;
+}
+.topic-lifecycle-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--topic-text);
+  margin: 0 0 0.625rem;
+}
+.topic-lifecycle-card-focus {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--topic-muted);
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--topic-border);
+}
+.topic-lifecycle-card-focus-label {
+  font-weight: 600;
+  color: var(--topic-accent);
+}

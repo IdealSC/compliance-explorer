@@ -12,4 +12,6 @@ export type {
   KeySource,
   ConnectedTopic,
   OwnershipHandoff,
+  HandoffDetail,
+  DecisionRights,
 } from './types';
