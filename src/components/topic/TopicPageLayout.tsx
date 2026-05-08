@@ -471,6 +471,20 @@ function SectionWhatItTouchesNext({
         </div>
       )}
 
+      {/* Common pitfalls */}
+      {data.commonPitfalls && data.commonPitfalls.length > 0 && (
+        <div className="topic-pitfalls">
+          <h4 className="topic-subsection-label">Common pitfalls</h4>
+          <ul className="topic-pitfall-list">
+            {data.commonPitfalls.map((pitfall, i) => (
+              <li key={i} className="topic-pitfall-item">
+                {pitfall}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* What to ask next */}
       {data.askNextPrompts.length > 0 && (
         <div className="topic-ask-next">

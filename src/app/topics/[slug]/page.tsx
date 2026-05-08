@@ -500,6 +500,205 @@ const PACKAGING_HEADER = {
     'Source-backed orientation \u00B7 FDA / EMA / European Commission / USP / ICH references listed below',
 };
 
+/* ─── Serialization Content (TOPIC_SERIALIZATION.md) ─────────────── */
+
+const SERIALIZATION_CONTENT: TopicPageContent = {
+  whatThisIs: {
+    leadParagraph:
+      'Serialization in the pharmaceutical supply chain means assigning a unique product identifier \u2014 typically a serial number encoded alongside lot number, expiry date, and product code \u2014 to each saleable unit, and then connecting that identifier to electronic data systems that support tracing, verification, and exception management.\n\nIn the United States, the Drug Supply Chain Security Act (DSCSA) requires product identifiers on each package, encoded in a 2D Data Matrix, with electronic transaction data (Transaction Information, Transaction History, Transaction Statement) exchanged between trading partners. This is a track-and-trace model. In the European Union, the Falsified Medicines Directive (FMD) requires a Unique Identifier uploaded to the European Medicines Verification System (EMVS) and verified at point of dispense. This is a verification and decommissioning model.\n\nFor supply chain leaders, serialization matters because it connects packaging execution, master data, trading partner relationships, distribution operations, returns handling, and recall capability. It is not a one-time project \u2014 it is an ongoing operational layer.',
+    keyTerms: [
+      { term: 'Product identifier', definition: 'The combination of NDC/GTIN, serial number, lot number, and expiry date encoded on each saleable unit.' },
+      { term: 'Unique Identifier (UI)', definition: 'The EU equivalent \u2014 product code, serial number, batch number, and expiry \u2014 uploaded to EMVS.' },
+      { term: 'EPCIS', definition: 'Electronic Product Code Information Services \u2014 the GS1 standard for interoperable electronic exchange of tracking events.' },
+      { term: 'Transaction Information / Transaction Statement (TI / TS)', definition: 'The data elements exchanged between US trading partners under DSCSA.' },
+      { term: 'Verification / decommissioning', definition: 'The EU process of checking a product\u2019s identifier against the repository and marking it as dispensed.' },
+      { term: 'Aggregation', definition: 'The parent-child relationship between individual units, cases, and pallets.' },
+      { term: 'Authorized Trading Partner (ATP)', definition: 'Under DSCSA, an entity authorized to engage in transactions \u2014 verification required before transacting.' },
+      { term: 'VRS', definition: 'Verification Router Service \u2014 the system used to verify product identifiers for saleable returns in the US.' },
+    ],
+    supplyChainRelevance:
+      'EPCIS event posting that lags physical movement creates traceability gaps that can be treated as data-integrity findings in inspection. Contemporaneous event posting is typically expected.',
+  },
+
+  ownershipBoundaries: {
+    table: [
+      { supplyChainOwns: 'EPCIS data exchange \u2014 onboarding and continuous management with 3PLs, wholesalers, and dispensers; range planning, event posting, exception queues', adjacentShared: 'IT, Serialization Provider, Quality', otherFunctionOwns: 'Event posting that lags physical movement creates traceability gaps.' },
+      { supplyChainOwns: 'Physical receipt and verification against electronic Transaction Information and Statements', adjacentShared: 'Quality, 3PL / Distributor', otherFunctionOwns: 'Verification failures require quarantine and investigation paths.' },
+      { supplyChainOwns: 'Quarantine and segregation of suspect, illegitimate, expired, or recalled product', adjacentShared: 'Quality', otherFunctionOwns: 'Electronic segregation in the WMS or ERP without validation equivalent to physical segregation can result in inspection findings.' },
+      { supplyChainOwns: 'Master data \u2014 NDC and GTIN allocation, hierarchy, product code for EU presentations', adjacentShared: 'Regulatory, IT', otherFunctionOwns: 'Master data errors propagate through the entire serialization chain.' },
+      { supplyChainOwns: 'Serial number management \u2014 range planning, no-reuse, lot-to-serial reconciliation', adjacentShared: 'IT, CDMO / CMO', otherFunctionOwns: 'Serial number governance failures create downstream verification failures.' },
+      { supplyChainOwns: 'Line-side execution coordination \u2014 oversight of CDMO print-and-verify and aggregation', adjacentShared: 'CDMO / CMO, Quality', otherFunctionOwns: 'Supply chain owns the data flow even where it does not own the packaging line.' },
+      { supplyChainOwns: 'Trading partner connectivity \u2014 ATP confirmation and T3 capture and transmission', adjacentShared: '3PL / Distributor, Serialization Provider', otherFunctionOwns: 'Connectivity must be tested before first commercial transaction.' },
+      { supplyChainOwns: 'Saleable return verification \u2014 VRS configuration and operational handling', adjacentShared: 'Quality, 3PL / Distributor', otherFunctionOwns: 'VRS must be operational before saleable returns enter the commercial flow.' },
+      { supplyChainOwns: 'Suspect / illegitimate product handling \u2014 quarantine, investigation, FDA Form 3911, disposition', adjacentShared: 'Quality, Regulatory', otherFunctionOwns: 'Suspect product investigations sit with the entity that takes ownership, not with the 3PL providing logistics services.' },
+      { supplyChainOwns: 'Country reporting \u2014 EMVO upload for EU presentations; country-specific portals where applicable', adjacentShared: 'Regulatory, Serialization Provider', otherFunctionOwns: 'Each new country is a new regime and project.' },
+      { supplyChainOwns: 'Recall execution \u2014 pulling lot- and serial-level distribution data from serialized records', adjacentShared: 'Quality, Regulatory', otherFunctionOwns: 'Serialization data is a pre-built recall communication tool.' },
+      { supplyChainOwns: 'Annual reporting under DSCSA for distributors and 3PLs', adjacentShared: 'Quality, Regulatory', otherFunctionOwns: 'Reporting cadence and content must be tracked.' },
+    ],
+    decisionRights: {
+      leads: [
+        'EPCIS data exchange operations and trading partner onboarding',
+        'Serial number range planning and lot-to-serial reconciliation',
+        'Saleable return verification configuration',
+        'Trading partner connectivity testing',
+        'Recall execution data assembly',
+        'Exception queue management',
+      ],
+      influences: [
+        'Master data setup and hierarchy decisions',
+        'Line-side serialization execution coordination',
+        'Service provider selection and integration',
+        'Country reporting coordination',
+        'Annual reporting preparation',
+        'Suspect product handling workflows',
+      ],
+      doesNotOwn: [
+        'Quality disposition of serialized batches',
+        'Regulatory product code registration and filings',
+        'Serialization system validation (CSV / CSA)',
+        'Line equipment IQ / OQ / PQ',
+        'Serialization architecture and policy decisions',
+        'Legal interpretation of serialization obligations',
+      ],
+    },
+    handoffs: [],
+    handoffDetails: [
+      { handoff: 'Supply Chain \u2194 Quality', whyItMatters: 'Disposition, suspect product investigations, deviation handling, and validation of serialization systems require quality-system control.', typicalOwner: 'Quality' },
+      { handoff: 'Supply Chain \u2194 Regulatory', whyItMatters: 'NDC registration, product code publication, country filings, and ATP registration require regulatory ownership.', typicalOwner: 'Regulatory' },
+      { handoff: 'Supply Chain \u2194 CDMO / CMO', whyItMatters: 'Line-side execution, print-and-verify, aggregation, master data exchange, and batch reconciliation require coordinated quality and technical agreements.', typicalOwner: 'CDMO / CMO' },
+      { handoff: 'Supply Chain \u2194 3PL / Distributor', whyItMatters: 'T3 receipt, storage, downstream transmission, aggregation handling, and saleable return verification require connected systems and clear contractual boundaries.', typicalOwner: '3PL / Distributor' },
+      { handoff: 'Supply Chain \u2194 Serialization Provider', whyItMatters: 'Hub services, data normalization, country reporting connectors, EMVO / NMVO connectivity, and API / EDI / EPCIS integration require provider execution.', typicalOwner: 'Serialization Provider' },
+    ],
+    commonBlindspot:
+      'Paper release that does not propagate to the 3PL system status creates pressure for manual workarounds that can compromise serialization controls at the shipping interface. Quality release status and 3PL system status should be aligned before distribution.',
+  },
+
+  applicability: {
+    contextHighlight:
+      'For this context, Serialization should be treated as a high-priority shared-ownership topic. The key supply chain focus is readiness: master data setup, trading partner connectivity, service provider integration, CDMO / CMO coordination, EMVO onboarding, VRS configuration, and pilot runs through the full transaction data path before commercial launch.',
+    jurisdictionUSIntro:
+      'US serialization expectations are shaped by the Drug Supply Chain Security Act (DSCSA), which requires product identifiers encoded in a 2D Data Matrix on each lowest saleable unit, with electronic transaction data exchanged between trading partners. The model is track-and-trace: Transaction Information and Transaction Statements move with the product through the supply chain.',
+    jurisdictionUS: [
+      '2D Data Matrix on lowest saleable unit encoding NDC, serial, lot, and expiry',
+      'TI / TS exchange between trading partners at every transaction',
+      'Verification triggered on suspect product and saleable returns',
+      'Authorized Trading Partner regime \u2014 ATP verification before transacting',
+      'Annual reporting for wholesale distributors and 3PLs',
+      '21 CFR 201.25 linear barcode running concurrently with DSCSA \u2014 both required',
+      'State Boards of Pharmacy and 21 CFR 205 adding a state-level layer',
+    ],
+    jurisdictionEUIntro:
+      'EU serialization expectations are shaped by the Falsified Medicines Directive (FMD) and Delegated Regulation (EU) 2016/161, which require a Unique Identifier uploaded to the European Medicines Verification System (EMVS) and verified at point of dispense. The model is verification and decommissioning: the MAH uploads UI data to repositories, and pharmacies verify before dispensing.',
+    jurisdictionEU: [
+      'UI containing product code, serial, batch, and expiry uploaded to EU Hub / EMVS',
+      'Endpoint verification and decommissioning at point of dispense',
+      'Two safety features mandated: UI plus anti-tampering device (ATD)',
+      'Wholesaler verification is risk-based, not mandatory at every transaction',
+      'MAH uploads UI master data to EMVO before pack release',
+      'Live since February 9, 2019, with ongoing Q&A revisions from Commission and EMA',
+    ],
+    jurisdictionConsistent: [
+      'Strict master data governance and reliance on GS1 standards (GTINs, SGTINs)',
+      '2D GS1 Data Matrix at saleable presentation level',
+      'Immediate isolation and reporting of suspected falsified or illegitimate medicines',
+      'GS1 EPCIS as the dominant event-based exchange standard',
+      'Serialization service providers operate across both regimes',
+    ],
+    entityRoles: [
+      { role: 'NDA Holder', description: 'For a US NDA holder, serialization typically includes ensuring product identifiers are applied and that transaction data moves with the first commercial transaction. The NDA holder typically originates the first T3 transaction at first commercial sale. The NDA holder is an Authorized Trading Partner under \u00A7581(2)(A) and requires FDA Establishment Registration.', focusAreas: 'Product identifier application \u00B7 First T3 origination \u00B7 ATP registration \u00B7 CDMO coordination \u00B7 Master data and serial number governance' },
+      { role: 'MAH', description: 'For an EU MAH, serialization typically includes uploading UI data to the repositories before release and managing decommissioning during recalls. FMD accountability typically applies to the MAH for each EU member state where the product is marketed. Delegating EMVS upload execution to a CDMO does not transfer the underlying responsibility \u2014 upload failures upstream are typically treated as MAH responsibility under the EU framework. The MAH may contract with a serialization service provider for EMVO connectivity, but accountability does not transfer.', focusAreas: 'UI upload to EMVS \u00B7 Country-by-country FMD accountability \u00B7 Service provider contracting \u00B7 Recall decommissioning \u00B7 Master data ownership' },
+      { role: 'Licensed US Distributor', description: 'A licensed US distributor is a wholesale distributor under DSCSA \u00A7581(29) and 21 CFR 205. For a licensed US distributor, ATP verification is typically performed before transacting with another trading partner. Distributors handle T3 capture, storage, and transmission, saleable return verification, suspect product handling, and annual reporting under \u00A7582(d)(3). VAWD / NABP DSAC accreditation often appears in customer or contracting requirements as a commercial expectation, rather than as a federal regulatory requirement.', focusAreas: 'ATP verification \u00B7 T3 operations \u00B7 Saleable return VRS \u00B7 Suspect product handling \u00B7 Annual reporting \u00B7 Commercial accreditation expectations' },
+      { role: 'Importer', description: 'For EU markets, importers typically verify qualitative and quantitative analysis of imported batches and segregate product received from third countries not intended for the local market. For the US, the FDA importer of record has obligations, but the trading-partner obligation lies with the entity introducing product into US commerce. Pre-launch importation requires a Pre-Approval Inspection and Regulatory (PLAIR) process for non-approved product.', focusAreas: 'Import verification \u00B7 Segregation of third-country product \u00B7 Trading-partner obligation clarity \u00B7 PLAIR for pre-launch' },
+      { role: '3PL', description: 'A 3PL under DSCSA \u00A7581(22) provides logistics services without taking ownership of product. 3PLs typically report licensure status, facility names, and addresses to FDA annually under FD&C Act \u00A7584(b). 3PLs have ATP responsibilities under \u00A7582(a), handle T3 storage but not T3 origination (no ownership change), and cannot take ownership without becoming a wholesale distributor.', focusAreas: 'Logistics without ownership \u00B7 Annual \u00A7584 reporting \u00B7 ATP obligations \u00B7 T3 storage \u00B7 Ownership boundary clarity' },
+      { role: 'CDMO Relationship', description: 'The CDMO relationship is governed by the Quality / Technical Agreement detailing labeling compliance and batch certification. The CDMO is the manufacturer of record; the NDA holder is the DSCSA trading partner originating T3. Line equipment ownership and qualification varies by deal. Master data exchange agreements specify fields, timing, and failure-handling. Serial number range assignment is typically sponsor-allocated.', focusAreas: 'Quality agreement boundaries \u00B7 Line equipment qualification \u00B7 Master data exchange \u00B7 Serial range assignment \u00B7 Batch reconciliation' },
+    ],
+    lifecycleStages: [
+      { stage: 'Preclinical', description: 'Serialization is usually not central in preclinical supply unless the company is voluntarily using serialization-like controls for chain-of-custody or future readiness.', focusAreas: 'Awareness of future serialization requirements \u00B7 Early architecture decisions if applicable' },
+      { stage: 'Late-Stage Clinical', description: 'Investigational product is typically governed by clinical trial labeling rules; commercial serialization usually applies only when product is intended for commercial introduction. Some sponsors voluntarily serialize for chain-of-custody and ease of commercial transition.', focusAreas: 'Voluntary serialization for transition readiness \u00B7 Clinical labeling alignment \u00B7 Future commercial architecture awareness' },
+      { stage: 'Pre-Commercial', description: 'Pre-commercial is the highest-intensity serialization readiness stage. Activities include master data setup (GTIN / GLN via GDSN, EPCIS onboarding), NDC application, product hierarchy decisions (case-level and pallet aggregation), line qualification (vendor selection, IQ / OQ / PQ), ATP registration and FDA Establishment Registration, pilot runs through the full T3 path, quality agreements with CMO / CDMO covering serialization, and SOPs, training, and change-control framework. Service provider selection and integration, including EMVO onboarding, typically takes 3\u20136 months and can become a critical path item for launch timing.', focusAreas: 'Master data \u00B7 Line qualification \u00B7 Trading partner connectivity \u00B7 EMVO onboarding \u00B7 Pilot runs \u00B7 Quality agreements \u00B7 SOPs and training' },
+      { stage: 'Launch', description: 'Launch is the execution-stability stage. Activities include uploading UI to EMVS (EU) or generating and transmitting T3 streams alongside first physical shipment (US), trading partner connectivity testing with launch wholesalers, VRS configuration and saleable return readiness, and recall execution capability validation.', focusAreas: 'First commercial transaction \u00B7 Trading partner go-live \u00B7 VRS readiness \u00B7 Recall capability confirmation' },
+      { stage: 'Post-Commercial', description: 'Post-commercial serialization is ongoing operational maintenance. Activities include saleable return verification, change management (packaging, lines, software releases, label updates \u2014 each can require EMVO re-upload), new country expansion, annual reporting cadence, VRS volume management and exception handling, aggregation governance (discrepancies, parent-child re-aggregation events), and continuous improvement on master data quality, exception rates, and latency. Returning unverified stock to active inventory because of a system or scanner outage creates a saleable-return verification gap that can be treated as a finding.', focusAreas: 'Saleable returns \u00B7 Change management \u00B7 Country expansion \u00B7 Annual reporting \u00B7 VRS operations \u00B7 Aggregation governance \u00B7 Continuous improvement' },
+    ],
+  },
+
+  regulatoryChain: {
+    plainLanguageFraming:
+      'Serialization sits at the intersection of product identification, supply chain security, anti-counterfeiting, and distribution controls. Regulators and standards do not describe serialization as a single supply chain workstream. Instead, serialization expectations appear across drug supply chain security legislation, product identification rules, GMP and GDP requirements, verification and decommissioning rules, and data exchange standards.\n\nFor supply chain leaders, the practical question is not "Which regulation owns serialization?" The better question is: "Which source expectations shape the serialization system, and which function owns each handoff?"',
+    chain: [
+      { level: 'Law / Statute', description: 'Sets the authority for drug supply chain security, product identification, trading partner obligations, and anti-counterfeiting controls.' },
+      { level: 'Regulation', description: 'Defines enforceable requirements for product identifiers, verification, data exchange, reporting, safety features, and distribution controls.' },
+      { level: 'Standard / Specification', description: 'Provides recognized expectations for data encoding, exchange formats, print quality, and interoperability.' },
+      { level: 'Guidance / Interpretation', description: 'Explains regulatory expectations or practical implementation approaches for tracing, verification, suspect product handling, and reporting.' },
+      { level: 'Internal Execution Artifact', description: 'Turns the expectation into work: SOPs, quality agreements, master data, trading partner agreements, VRS configuration, exception procedures.' },
+    ],
+    keySources: [
+      { source: 'DSCSA / FD&C Act \u00A7582', type: 'Law', jurisdiction: 'US', relevance: 'Authority for product identifiers, transaction data, ATP, verification, and reporting' },
+      { source: 'FMD Directive 2011/62/EU', type: 'Law', jurisdiction: 'EU', relevance: 'Authority for safety features and anti-counterfeiting on medicinal products' },
+      { source: 'Delegated Regulation (EU) 2016/161', type: 'Regulation', jurisdiction: 'EU', relevance: 'MAH responsibilities for UI uploads, EMVS, and decommissioning protocols' },
+      { source: '21 CFR 201.25', type: 'Regulation', jurisdiction: 'US', relevance: 'Linear barcode encoding NDC \u2014 runs concurrently with DSCSA' },
+      { source: '21 CFR 205', type: 'Regulation', jurisdiction: 'US', relevance: 'Federal floor for state wholesale distributor licensing' },
+      { source: 'GS1 General Specifications / EPCIS', type: 'Standard', jurisdiction: 'Both', relevance: 'Global standard for product identification and interoperable event-based data exchange' },
+      { source: 'FDA Product Identifiers Under DSCSA QA', type: 'Guidance', jurisdiction: 'US', relevance: 'Identifier composition, encoding, and human-readable expectations' },
+      { source: 'FDA Standardization of Data and Documentation Practices for Product Tracing', type: 'Guidance', jurisdiction: 'US', relevance: 'Format and content for T3 transaction information, history, and statement' },
+      { source: 'FDA Standards for Interoperable Exchange of Information for Tracing', type: 'Guidance', jurisdiction: 'US', relevance: 'Underpins \u00A7582(g) interoperability requirements' },
+      { source: 'FDA Wholesale Distributor Verification Requirement for Saleable Returned Drug Product', type: 'Guidance', jurisdiction: 'US', relevance: 'Operational rules for VRS-based saleable return verification' },
+      { source: 'FDA DSCSA Implementation: Identification of Suspect Product and Notification', type: 'Guidance', jurisdiction: 'US', relevance: 'Suspect product handling and FDA Form 3911' },
+      { source: 'FDA DSCSA Annual Reporting by Wholesale Distributors and 3PLs', type: 'Guidance', jurisdiction: 'US', relevance: '\u00A7582(d)(3) and \u00A7584 reporting cadence and content' },
+      { source: 'EMA / European Commission Q&A on Safety Features', type: 'Guidance', jurisdiction: 'EU', relevance: 'Authoritative interpretation of Delegated Regulation 2016/161' },
+      { source: 'EMVO User Requirements Specification and Onboarding', type: 'Reference', jurisdiction: 'EU', relevance: 'Hub-side onboarding requirements' },
+      { source: 'EU GDP 2013/C 343/01 Chapter 5 \u2014 Operations', type: 'Guideline', jurisdiction: 'EU', relevance: 'Storage, segregation, and operational standards' },
+      { source: 'ISO/IEC 16022 (Data Matrix) / ISO/IEC 15415 (print quality)', type: 'Standard', jurisdiction: 'Both', relevance: 'Symbology specification and print-quality grading' },
+    ],
+    confidenceNote:
+      'Source list reflects Brian / ISC Stage 3 classification and requires final citation-format review before implementation. Source coverage is oriented toward supply chain relevance, not exhaustive regulatory citation. View full source details in Sources & Standards.',
+  },
+
+  whatItTouchesNext: {
+    connectedTopics: [
+      { topicName: 'Packaging', slug: 'packaging', connectionReason: 'Codes need to remain intact and readable across normal conditions of use, including cartoning friction and cold-chain environmental stress. Print-quality grading per ISO/IEC 15415. Aggregation requires case-level and pallet-level barcoding. EU FMD anti-tampering device interaction with serialization at pack closure.' },
+      { topicName: 'Labeling & Artwork', slug: 'labeling-artwork', connectionReason: 'Dual barcoding \u2014 linear (21 CFR 201.25) plus 2D Data Matrix (DSCSA) \u2014 must be accommodated on the artwork. Bar code zone reservation and clear-zone management. Human-readable text formatting. Multilingual EU labels with UI placement constraints. Small-footprint exemption claims under 21 CFR 201.25 are typically reviewed against demonstrated technological infeasibility \u2014 design or overwrap alternatives are usually expected to be considered first.' },
+      { topicName: 'Distribution & 3PLs', slug: 'distribution-3pls', connectionReason: 'FEFO logic typically operates alongside DSCSA verification at the distribution interface. ATP verification at every transaction. 3PL warehouse-level aggregation maintenance. Saleable return verification \u2014 VRS for US, decommissioning logic for EU.' },
+      { topicName: 'Returns', slug: 'returns', connectionReason: 'Saleable returns are typically associated with the original transaction information and statement before return to saleable inventory. VRS for US saleable returns under \u00A7582(c)(4)(D). EU FMD \u2014 once decommissioned at dispense, product cannot be re-dispensed.' },
+      { topicName: 'Recalls', slug: 'recalls', connectionReason: 'Decommissioning UI in repositories (EU); 24-hour verification protocol (US). Serialization data is a pre-built recall communication tool \u2014 package-level identification supports targeted recall. 21 CFR Part 7 plus serialized data improves speed and completeness of recall execution.' },
+      { topicName: 'Importer / Distributor Responsibilities', slug: 'importer-distributor-responsibilities', connectionReason: 'Verifying ATP status and ensuring environmental conditions during transit are logged and reviewed before release. The importer does not displace the trading-partner obligation. Distributor obligations anchored in \u00A7582(b) plus 21 CFR 205.' },
+      { topicName: 'Release & Disposition Handoffs', slug: 'release-disposition-handoffs', connectionReason: 'Physical receipt data from 3PL must be provided to QA to support final batch disposition. QA release of a serialized batch typically ties to the SGTIN range associated with the released lot. Handoff from CMO / CDMO to NDA holder includes serialized batch record plus master data plus reconciliation. T3 origination at first commercial transaction \u2014 data integrity at this point is foundational. Reject, rework, retain, and sample handling is a serial-level reconciliation activity.' },
+    ],
+    handoffs: [
+      { from: 'Quality', to: 'Supply Chain', description: 'Serialized batch disposition and release status \u2014 distribution authorization and T3 origination eligibility' },
+      { from: 'Regulatory', to: 'Supply Chain', description: 'NDC / product code registration and ATP registration \u2014 master data foundation for serialization operations' },
+      { from: 'CDMO / CMO', to: 'Supply Chain', description: 'Serialized batch record, master data, and reconciliation \u2014 data integrity at the manufacturing-to-distribution interface' },
+      { from: 'Supply Chain', to: '3PL / Distributor', description: 'Trading partner connectivity and T3 data streams \u2014 receipt, storage, and downstream transmission of transaction data' },
+      { from: 'Serialization Provider', to: 'Supply Chain', description: 'Hub connectivity, country reporting, and exception alerts \u2014 operational visibility into serialization data flows' },
+    ],
+    commonPitfalls: [
+      'EPCIS event posting that lags physical movement creates traceability gaps.',
+      'Electronic segregation without validation equivalent to physical segregation can result in inspection findings.',
+      'Paper release that does not propagate to the 3PL system status creates manual workaround pressure.',
+      'Suspect product investigations sit with the entity that takes ownership, not with the 3PL.',
+      'Delegating EMVS upload execution to a CDMO does not transfer the underlying responsibility.',
+      'Returning unverified stock to active inventory during a system outage creates a saleable-return verification gap.',
+    ],
+    askNextPrompts: [
+      'Have product identifiers, artwork space, and print-quality expectations been coordinated before packaging execution?',
+      'Are transaction data flows tested with the first commercial trading partners?',
+      'Are saleable return and suspect-product paths understood before post-commercial operations begin?',
+      'Are serialized batch records, master data, and QA release status aligned before distribution?',
+      'Is EMVO onboarding on the critical path for EU launch timing?',
+    ],
+  },
+};
+
+const SERIALIZATION_HEADER = {
+  summary:
+    'Serialization is the product identification, data exchange, verification, and exception-management layer that connects packaging execution to commercial distribution across the pharmaceutical supply chain.',
+  ownershipPosture:
+    'Shared ownership. Supply chain typically owns serialized data exchange, trading partner connectivity, master data coordination, serial number management, saleable return verification support, and recall execution data. Quality, Regulatory, IT, CDMO / CMO, 3PL / Distributor, Serialization Provider, and MAH / NDA Holder own adjacent decisions that determine whether serialization is compliant, connected, and operational.',
+  primaryHandoff:
+    'Supply Chain \u2194 Quality \u2194 Regulatory \u2194 CDMO / CMO \u2194 3PL / Distributor \u2194 Serialization Provider',
+  sourceCue:
+    'Source-backed orientation \u00B7 DSCSA / FD&C \u00A7582 \u00B7 EU FMD / Delegated Regulation (EU) 2016/161 \u00B7 GS1 / EPCIS \u00B7 FDA / EMA / ISO references listed below',
+};
+
 /* ─── Metadata ────────────────────────────────────────────────────── */
 
 interface PageProps {
@@ -541,6 +740,23 @@ export default async function TopicPage({ params }: PageProps) {
           primaryHandoff={PACKAGING_HEADER.primaryHandoff}
           sourceCue={PACKAGING_HEADER.sourceCue}
           content={PACKAGING_CONTENT}
+        />
+      </ContextEmphasis>
+    );
+  }
+
+  /* ── Serialization: populated content ─────────────────────────── */
+  if (topic.slug === 'serialization') {
+    return (
+      <ContextEmphasis>
+        <TopicPageLayout
+          slug={topic.slug}
+          title={topic.title}
+          summary={SERIALIZATION_HEADER.summary}
+          ownershipPosture={SERIALIZATION_HEADER.ownershipPosture}
+          primaryHandoff={SERIALIZATION_HEADER.primaryHandoff}
+          sourceCue={SERIALIZATION_HEADER.sourceCue}
+          content={SERIALIZATION_CONTENT}
         />
       </ContextEmphasis>
     );

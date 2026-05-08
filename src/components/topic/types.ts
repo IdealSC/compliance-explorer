@@ -116,6 +116,8 @@ export interface WhatItTouchesNextContent {
   connectedTopics: ConnectedTopic[];
   /** 2–3 cross-functional handoff descriptions. */
   handoffs: OwnershipHandoff[];
+  /** Common pitfalls — operational orientation callouts. */
+  commonPitfalls?: string[];
   /** 2–3 "what to ask next" question prompts. */
   askNextPrompts: string[];
 }
