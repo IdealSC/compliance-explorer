@@ -6,7 +6,14 @@ import {
   Users,
   Library,
   Workflow,
+  ArrowRight,
+  Globe,
+  Building2,
+  Clock,
+  ChevronRight,
 } from 'lucide-react';
+
+/* ─── Data ─────────────────────────────────────────────────────────── */
 
 interface EntryDoor {
   href: string;
@@ -64,7 +71,7 @@ const entryDoors: EntryDoor[] = [
     icon: Library,
   },
   {
-    href: '/map',
+    href: '/map/workstreams',
     label: 'Supply Chain Workstreams',
     description:
       'Orient by practical supply chain workstream: packaging, serialization, cold chain, distribution, returns, recalls, shortages, and outsourced manufacturing.',
@@ -74,217 +81,244 @@ const entryDoors: EntryDoor[] = [
   },
 ];
 
+const landscapeColumns = [
+  {
+    phase: 'Plan',
+    topics: [
+      'Supply planning',
+      'Shortages and supply continuity',
+      'Commercial readiness handoffs',
+    ],
+  },
+  {
+    phase: 'Source',
+    topics: [
+      'Supplier qualification touchpoints',
+      'CDMO and 3PL relationships',
+      'Importer and distributor role clarity',
+    ],
+  },
+  {
+    phase: 'Make',
+    topics: [
+      'Packaging',
+      'Labeling and artwork',
+      'Serialization',
+      'Release and disposition handoffs',
+    ],
+  },
+  {
+    phase: 'Deliver',
+    topics: [
+      'Distribution',
+      'Cold chain',
+      'Returns',
+      'Recalls',
+      'Controlled temperature transport',
+    ],
+  },
+];
+
+const commonPaths = [
+  {
+    question: 'What does supply chain actually own here?',
+    route: '/ownership',
+  },
+  {
+    question: 'Does this apply in the US, EU, or both?',
+    route: '/applicability',
+  },
+  {
+    question: 'What changes before and after commercial approval?',
+    route: '/applicability/lifecycle',
+  },
+  {
+    question: 'What is the source behind this expectation?',
+    route: '/sources',
+  },
+  {
+    question: 'What related topics should I understand next?',
+    route: '/topics',
+  },
+];
+
+/* ─── Page ─────────────────────────────────────────────────────────── */
+
 export default function HomePage() {
   return (
-    <div className="space-y-16">
-      {/* Hero */}
-      <section className="pt-8 sm:pt-12">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight max-w-3xl">
-          The regulatory landscape for biopharma supply chain execution.
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          A focused orientation tool for supply chain leaders moving from
-          clinical development toward commercial execution. Understand what
-          your function is accountable for, where ownership crosses into
-          Quality, Regulatory, Manufacturing, Distribution, Legal, and
-          partners, and which sources shape the work.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Link
-            href="/map"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
-          >
-            Start with the Landscape Map
-          </Link>
-          <Link
-            href="/topics"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            Browse Topics
-          </Link>
-          <Link
-            href="/applicability"
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
-          >
-            See What Applies to Us
-          </Link>
-        </div>
-      </section>
-
-      {/* Entry Doors */}
-      <section>
-        <h2 className="text-xl font-semibold tracking-tight mb-6">
-          Choose the lens that matches the question in front of you.
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {entryDoors.map((door) => {
-            const Icon = door.icon;
-            return (
-              <Link
-                key={door.label}
-                href={door.href}
-                className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:shadow-md"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-semibold text-base">{door.label}</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                  {door.description}
-                </p>
-                <p className="mt-3 text-xs text-muted-foreground/80 italic">
-                  Best for: &ldquo;{door.bestFor}&rdquo;
-                </p>
-                <span className="mt-4 text-sm font-medium text-primary group-hover:underline">
-                  {door.cta} →
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Landscape Preview */}
-      <section>
-        <h2 className="text-xl font-semibold tracking-tight mb-2">
-          What the regulated supply chain touches
-        </h2>
-        <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
-          Biopharma supply chain execution sits inside multiple regulatory
-          neighborhoods. This map gives you a practical way to see the terrain.
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              phase: 'Plan',
-              topics: [
-                'Supply planning',
-                'Shortages and supply continuity',
-                'Commercial readiness handoffs',
-              ],
-            },
-            {
-              phase: 'Source',
-              topics: [
-                'Supplier qualification touchpoints',
-                'CDMO and 3PL relationships',
-                'Importer and distributor role clarity',
-              ],
-            },
-            {
-              phase: 'Make',
-              topics: [
-                'Packaging',
-                'Labeling and artwork',
-                'Serialization',
-                'Release and disposition handoffs',
-              ],
-            },
-            {
-              phase: 'Deliver',
-              topics: [
-                'Distribution',
-                'Cold chain',
-                'Returns',
-                'Recalls',
-                'Controlled temperature transport',
-              ],
-            },
-          ].map(({ phase, topics }) => (
-            <div
-              key={phase}
-              className="rounded-xl border border-border bg-card p-5"
-            >
-              <h3 className="font-semibold text-sm mb-3">{phase}</h3>
-              <ul className="space-y-1.5">
-                {topics.map((topic) => (
-                  <li
-                    key={topic}
-                    className="text-sm text-muted-foreground leading-snug"
-                  >
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="mt-4">
-          <Link
-            href="/map"
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            View Full Landscape Map →
-          </Link>
-        </div>
-      </section>
-
-      {/* Common Paths */}
-      <section>
-        <h2 className="text-xl font-semibold tracking-tight mb-6">
-          Common questions this tool helps answer
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              question: 'What does supply chain actually own here?',
-              route: '/ownership',
-            },
-            {
-              question: 'Does this apply in the US, EU, or both?',
-              route: '/applicability',
-            },
-            {
-              question:
-                'What changes before and after commercial approval?',
-              route: '/applicability',
-            },
-            {
-              question: 'What is the source behind this expectation?',
-              route: '/sources',
-            },
-            {
-              question: 'What related topics should I understand next?',
-              route: '/topics',
-            },
-          ].map(({ question, route }) => (
-            <Link
-              key={question}
-              href={route}
-              className="flex items-start gap-3 rounded-lg border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-sm"
-            >
-              <span className="text-sm text-muted-foreground leading-relaxed">
-                &ldquo;{question}&rdquo;
-              </span>
+    <div className="home-page">
+      {/* ── 1. Hero Orientation ────────────────────────────────────── */}
+      <section className="home-hero">
+        <div className="home-container">
+          <h1 className="home-hero-headline">
+            The regulatory landscape for biopharma supply chain execution.
+          </h1>
+          <p className="home-hero-body">
+            A focused orientation tool for supply chain leaders moving from
+            clinical development toward commercial execution. Understand what
+            your function is accountable for, where ownership crosses into
+            Quality, Regulatory, Manufacturing, Distribution, Legal, and
+            partners, and which sources shape the work.
+          </p>
+          <div className="home-hero-actions">
+            <Link href="/map" className="home-btn-primary">
+              Start with the Landscape Map
+              <ArrowRight className="home-btn-icon" aria-hidden="true" />
             </Link>
-          ))}
+            <Link href="/topics" className="home-btn-secondary">
+              Browse Topics
+            </Link>
+            <Link href="/applicability" className="home-btn-tertiary">
+              See What Applies to Us
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Source Credibility */}
-      <section className="rounded-xl border border-border bg-muted/30 p-6 sm:p-8">
-        <h2 className="text-lg font-semibold tracking-tight mb-2">
-          Source-backed, but built for orientation.
-        </h2>
-        <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-          Compliance Explorer connects topics to relevant regulators,
-          standards, and source materials. Sources are visible when needed,
-          but the primary experience is designed for fast orientation and
-          cross-functional supply chain leadership.
-        </p>
-        <p className="mt-4 text-xs text-muted-foreground/70">
-          FDA · EMA · European Commission · USP · ICH · GDP / GMP references
-          · Product and distribution standards
-        </p>
-        <div className="mt-4">
-          <Link
-            href="/sources"
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            View Source Library →
-          </Link>
+      {/* ── 2. Operating Context Display ───────────────────────────── */}
+      <section className="home-section">
+        <div className="home-container">
+          <div className="home-context-bar">
+            <div className="home-context-header">
+              <span className="home-context-label">Set your operating context</span>
+            </div>
+            <div className="home-context-pills">
+              <span className="home-context-pill">
+                <Globe className="home-context-pill-icon" aria-hidden="true" />
+                US + EU
+              </span>
+              <span className="home-context-pill">
+                <Building2 className="home-context-pill-icon" aria-hidden="true" />
+                NDA Holder
+              </span>
+              <span className="home-context-pill">
+                <Clock className="home-context-pill-icon" aria-hidden="true" />
+                Pre-commercial
+              </span>
+            </div>
+            <p className="home-context-supporting">
+              Your context changes which requirements are emphasized, who owns
+              the work, and which handoffs matter most. You can change this
+              anytime.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Six Entry Doors ─────────────────────────────────────── */}
+      <section className="home-section">
+        <div className="home-container">
+          <h2 className="home-section-headline">
+            Choose the lens that matches the question in front of you.
+          </h2>
+          <div className="home-doors-grid">
+            {entryDoors.map((door) => {
+              const Icon = door.icon;
+              return (
+                <Link
+                  key={door.label}
+                  href={door.href}
+                  className="home-door-card"
+                >
+                  <div className="home-door-header">
+                    <div className="home-door-icon-wrap">
+                      <Icon className="home-door-icon" aria-hidden="true" />
+                    </div>
+                    <h3 className="home-door-label">{door.label}</h3>
+                  </div>
+                  <p className="home-door-description">{door.description}</p>
+                  <p className="home-door-best-for">
+                    Best for: &ldquo;{door.bestFor}&rdquo;
+                  </p>
+                  <span className="home-door-cta">
+                    {door.cta}
+                    <ChevronRight className="home-door-cta-icon" aria-hidden="true" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. Landscape Preview ───────────────────────────────────── */}
+      <section className="home-section home-landscape-section">
+        <div className="home-container">
+          <h2 className="home-section-headline">
+            What the regulated supply chain touches
+          </h2>
+          <p className="home-section-subline">
+            Biopharma supply chain execution sits inside multiple regulatory
+            neighborhoods. This map gives you a practical way to see the terrain
+            without turning the product into a compliance database.
+          </p>
+          <div className="home-landscape-grid">
+            {landscapeColumns.map(({ phase, topics }) => (
+              <div key={phase} className="home-landscape-column">
+                <h3 className="home-landscape-phase">{phase}</h3>
+                <ul className="home-landscape-topics">
+                  {topics.map((topic) => (
+                    <li key={topic} className="home-landscape-topic">
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="home-section-cta-wrap">
+            <Link href="/map" className="home-section-cta">
+              View Full Landscape Map
+              <ArrowRight className="home-btn-icon" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Common Question-Based Paths ─────────────────────────── */}
+      <section className="home-section">
+        <div className="home-container">
+          <h2 className="home-section-headline">
+            Common questions this tool helps answer
+          </h2>
+          <div className="home-paths-grid">
+            {commonPaths.map(({ question, route }) => (
+              <Link key={question} href={route} className="home-path-card">
+                <span className="home-path-question">
+                  &ldquo;{question}&rdquo;
+                </span>
+                <ChevronRight
+                  className="home-path-arrow"
+                  aria-hidden="true"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. Source Credibility Strip ─────────────────────────────── */}
+      <section className="home-section">
+        <div className="home-container">
+          <div className="home-credibility-strip">
+            <h2 className="home-credibility-headline">
+              Source-backed, but built for orientation.
+            </h2>
+            <p className="home-credibility-body">
+              Compliance Explorer connects topics to relevant regulators,
+              standards, and source materials. Sources are visible when needed,
+              but the primary experience is designed for fast orientation and
+              cross-functional supply chain leadership.
+            </p>
+            <p className="home-credibility-sources">
+              FDA · EMA · European Commission · USP · ICH · GDP / GMP
+              references · Product and distribution standards
+            </p>
+            <Link href="/sources/library" className="home-section-cta">
+              View Source Library
+              <ArrowRight className="home-btn-icon" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

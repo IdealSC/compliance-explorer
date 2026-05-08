@@ -129,6 +129,528 @@
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   HOME PAGE — Phase 5.1-B "Quiet Authority" Design System
+   Premium executive field guide styling for the public home page.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.home-page {
+  --home-accent: oklch(0.38 0.05 250);
+  --home-accent-light: oklch(0.38 0.05 250 / 8%);
+  --home-accent-hover: oklch(0.32 0.06 250);
+  --home-surface: oklch(0.985 0.003 250);
+  --home-surface-raised: oklch(1 0 0);
+  --home-divider: oklch(0.92 0.003 250);
+  --home-text: oklch(0.18 0.005 250);
+  --home-text-secondary: oklch(0.48 0.01 250);
+  --home-text-tertiary: oklch(0.60 0.008 250);
+}
+
+/* ── Page wrapper ──────────────────────────────────────────────── */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 6rem;
+}
+
+/* ── Container ─────────────────────────────────────────────────── */
+.home-container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+  .home-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* ── 1. Hero ───────────────────────────────────────────────────── */
+.home-hero {
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+  background: linear-gradient(
+    180deg,
+    var(--home-surface) 0%,
+    oklch(0.97 0.006 250) 100%
+  );
+  border-bottom: 1px solid var(--home-divider);
+}
+@media (min-width: 640px) {
+  .home-hero {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.home-hero-headline {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--home-text);
+  max-width: 40rem;
+}
+@media (min-width: 640px) {
+  .home-hero-headline {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .home-hero-headline {
+    font-size: 3.125rem;
+  }
+}
+
+.home-hero-body {
+  margin-top: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--home-text-secondary);
+  max-width: 38rem;
+}
+
+.home-hero-actions {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────── */
+.home-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: white;
+  background-color: var(--home-accent);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px oklch(0 0 0 / 8%);
+}
+.home-btn-primary:hover {
+  background-color: var(--home-accent-hover);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 12%);
+}
+
+.home-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--home-text);
+  background-color: var(--home-surface-raised);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.home-btn-secondary:hover {
+  border-color: var(--home-accent);
+  background-color: var(--home-accent-light);
+}
+
+.home-btn-tertiary {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--home-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: oklch(0.48 0.01 250 / 40%);
+  transition: color 0.2s ease;
+}
+.home-btn-tertiary:hover {
+  color: var(--home-accent);
+}
+
+.home-btn-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Sections ──────────────────────────────────────────────────── */
+.home-section {
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 640px) {
+  .home-section {
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.home-section-headline {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--home-text);
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 640px) {
+  .home-section-headline {
+    font-size: 1.5rem;
+  }
+}
+
+.home-section-subline {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--home-text-secondary);
+  max-width: 38rem;
+  margin-bottom: 2rem;
+}
+
+.home-section-cta-wrap {
+  margin-top: 1.5rem;
+}
+
+.home-section-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--home-accent);
+  transition: color 0.15s ease;
+}
+.home-section-cta:hover {
+  color: var(--home-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── 2. Operating Context ──────────────────────────────────────── */
+.home-context-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--home-surface-raised);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.75rem;
+}
+
+.home-context-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-context-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--home-text-tertiary);
+}
+
+.home-context-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.home-context-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--home-text);
+  background: var(--home-surface);
+  border: 1px solid var(--home-divider);
+  border-radius: 2rem;
+}
+
+.home-context-pill-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--home-text-tertiary);
+  flex-shrink: 0;
+}
+
+.home-context-supporting {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--home-text-tertiary);
+  max-width: 36rem;
+}
+
+/* ── 3. Entry Door Cards ───────────────────────────────────────── */
+.home-doors-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 640px) {
+  .home-doors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .home-doors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-door-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--home-surface-raised);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease, transform 0.15s ease;
+}
+.home-door-card:hover {
+  border-color: var(--home-accent);
+  box-shadow: 0 4px 16px oklch(0 0 0 / 6%), 0 1px 4px oklch(0 0 0 / 4%);
+  transform: translateY(-1px);
+}
+
+.home-door-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-door-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--home-accent-light);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.home-door-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--home-accent);
+}
+
+.home-door-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--home-text);
+}
+
+.home-door-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--home-text-secondary);
+  flex: 1;
+}
+
+.home-door-best-for {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--home-text-tertiary);
+  line-height: 1.5;
+}
+
+.home-door-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--home-accent);
+  transition: gap 0.15s ease;
+}
+.home-door-card:hover .home-door-cta {
+  gap: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-door-cta-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* ── 4. Landscape Preview ──────────────────────────────────────── */
+.home-landscape-section {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    oklch(0.975 0.004 250) 30%,
+    oklch(0.975 0.004 250) 70%,
+    transparent 100%
+  );
+}
+
+.home-landscape-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .home-landscape-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .home-landscape-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.home-landscape-column {
+  padding: 1.25rem;
+  background: var(--home-surface-raised);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.75rem;
+}
+
+.home-landscape-phase {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--home-accent);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--home-divider);
+}
+
+.home-landscape-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.home-landscape-topic {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--home-text-secondary);
+  padding-left: 0.75rem;
+  position: relative;
+}
+.home-landscape-topic::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--home-divider);
+}
+
+/* ── 5. Common Paths ───────────────────────────────────────────── */
+.home-paths-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 640px) {
+  .home-paths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .home-paths-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-path-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--home-surface-raised);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.625rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.home-path-card:hover {
+  border-color: var(--home-accent);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 5%);
+}
+
+.home-path-question {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--home-text-secondary);
+  font-style: italic;
+}
+
+.home-path-arrow {
+  width: 1rem;
+  height: 1rem;
+  color: var(--home-text-tertiary);
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+.home-path-card:hover .home-path-arrow {
+  color: var(--home-accent);
+}
+
+/* ── 6. Source Credibility Strip ────────────────────────────────── */
+.home-credibility-strip {
+  padding: 2rem 2rem;
+  background: var(--home-surface);
+  border: 1px solid var(--home-divider);
+  border-radius: 0.75rem;
+}
+@media (min-width: 640px) {
+  .home-credibility-strip {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+.home-credibility-headline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--home-text);
+  margin-bottom: 0.625rem;
+}
+
+.home-credibility-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--home-text-secondary);
+  max-width: 38rem;
+}
+
+.home-credibility-sources {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--home-text-tertiary);
+  letter-spacing: 0.01em;
+}
+
+.home-credibility-strip .home-section-cta {
+  margin-top: 1.25rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   END — Home Page Design System
+   ═══════════════════════════════════════════════════════════════════ */
+
 /* ── Accessibility: focus-visible ring for all interactive elements ── */
 button:focus-visible,
 a:focus-visible,
