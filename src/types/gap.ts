@@ -1,6 +1,5 @@
 /**
  * Gap — From the "Gaps & Questions" sheet.
- * 10 fields.
  */
 export interface Gap {
   gapId: string;                         // GAP-001 …
@@ -13,4 +12,9 @@ export interface Gap {
   status: string | null;                 // Open | Closed
   linkedMatrixRowIdFilter: string | null;
   appTreatment: string | null;
+
+  // ── Source Provenance (governance-ready) ───────────────────
+  sourceFile: string | null;
+  lastReviewedDate: string | null;
+  confidenceLevel: string | null;         // High | Medium | Low
 }

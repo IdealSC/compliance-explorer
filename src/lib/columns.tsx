@@ -147,6 +147,27 @@ export const COL_LIFECYCLE_STAGE: ColumnDef<Requirement> = {
   cell: ({ getValue }) => textXs(getValue<string | null>()),
 };
 
+export const COL_OWNER: ColumnDef<Requirement> = {
+  accessorKey: 'exampleBusinessOwner',
+  header: 'Owner',
+  size: 160,
+  cell: ({ getValue }) => textXs(getValue<string | null>()),
+};
+
+export const COL_ACTION_REQUIRED_STATUS: ColumnDef<Requirement> = {
+  accessorKey: 'actionRequired',
+  header: 'Action Required',
+  size: 220,
+  cell: ({ getValue }) => textXsClamp2(getValue<string | null>()),
+};
+
+export const COL_OPERATIONAL_PROCESS: ColumnDef<Requirement> = {
+  accessorKey: 'operationalProcessImpacted',
+  header: 'Process Impacted',
+  size: 180,
+  cell: ({ getValue }) => textXsClamp2(getValue<string | null>()),
+};
+
 /* ── Pre-composed column sets for each view ──────────────── */
 
 /** Default: All Requirements view */
@@ -168,4 +189,19 @@ export const COLUMNS_LAUNCH_CRITICAL: ColumnDef<Requirement>[] = [
   COL_ID, COL_DOMAIN, COL_JURISDICTION, COL_LIFECYCLE_STAGE, COL_SUMMARY,
   COL_REQUIRED_ACTION, COL_REQUIRED_CONTROL, COL_REQUIRED_EVIDENCE,
   COL_BUSINESS_FUNCTION, COL_SEVERITY, COL_NEEDS_REVIEW,
+];
+
+/** Obligation Matrix — full regulatory chain: law → control → evidence → owner → action */
+export const COLUMNS_OBLIGATION_MATRIX: ColumnDef<Requirement>[] = [
+  COL_ID, COL_LAW, COL_REQUIREMENT_AREA, COL_SUMMARY,
+  COL_REQUIRED_CONTROL, COL_REQUIRED_EVIDENCE,
+  COL_BUSINESS_FUNCTION, COL_OWNER, COL_ACTION_REQUIRED_STATUS,
+  COL_OPERATIONAL_PROCESS, COL_SEVERITY, COL_LAUNCH_CRITICAL,
+];
+
+/** Business Function view — emphasizes owner/action/evidence */
+export const COLUMNS_BUSINESS_FUNCTION: ColumnDef<Requirement>[] = [
+  COL_ID, COL_LAW, COL_REQUIREMENT_AREA,
+  COL_REQUIRED_ACTION, COL_REQUIRED_CONTROL, COL_REQUIRED_EVIDENCE,
+  COL_LIFECYCLE_STAGE, COL_SEVERITY, COL_LAUNCH_CRITICAL,
 ];

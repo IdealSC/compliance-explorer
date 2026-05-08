@@ -1,0 +1,54 @@
+# Compliance Operating Map — CI Workflow
+#
+# Runs on push to main and pull requests.
+# Uses safe JSON/demo configuration — no database or OIDC secrets required.
+#
+# Steps:
+#   1. Install dependencies
+#   2. TypeScript type check
+#   3. Build (Next.js)
+#   4. Smoke test
+#
+# This workflow does NOT deploy. Deployment is handled by the
+# deployment platform (Vercel, Azure, etc.) after CI passes.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+
+    env:
+      DATA_SOURCE: json
+      NEXT_PUBLIC_DATA_SOURCE: json
+      DEMO_AUTH_ENABLED: 'true'
+      NODE_ENV: development
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript type check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Smoke test
+        run: npm run smoke-test

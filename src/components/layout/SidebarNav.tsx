@@ -12,41 +12,131 @@ import {
   Shield,
   Menu,
   X,
+  Network,
+  Users,
+  GitCompare,
+  CircleAlert,
+  BookOpen,
+  History,
+  ClipboardList,
+  ScrollText,
+  FileDiff,
+  CheckSquare,
+  BarChart3,
+  ClipboardCheck,
+  FileSpreadsheet,
+  Database,
+  ActivitySquare,
+  Gauge,
+  Clock,
+  Inbox,
+  Sparkles,
+  ShieldCheck,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { DemoUserPanel } from '@/components/auth/DemoUserPanel';
 import * as React from 'react';
 
-const navItems = [
-  { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/supply-chain', label: 'Supply Chain', icon: Truck },
-  { href: '/launch-critical', label: 'Launch-Critical', icon: Rocket },
-  { href: '/risks', label: 'Highest Risk', icon: AlertTriangle },
-  { href: '/evidence', label: 'Evidence', icon: FileCheck },
-  { href: '/requirements', label: 'All Requirements', icon: List },
+interface NavItem {
+  href: string;
+  label: string;
+  icon: React.ElementType;
+}
+
+interface NavSection {
+  title: string | null; // null = no section header (top-level)
+  items: NavItem[];
+}
+
+const navSections: NavSection[] = [
+  {
+    title: null,
+    items: [
+      { href: '/', label: 'Operating Map', icon: LayoutDashboard },
+    ],
+  },
+  {
+    title: 'Explore',
+    items: [
+      { href: '/obligations', label: 'Obligation Matrix', icon: Network },
+      { href: '/business-functions', label: 'Business Functions', icon: Users },
+      { href: '/crosswalk', label: 'Standards Crosswalk', icon: GitCompare },
+      { href: '/requirements', label: 'All Requirements', icon: List },
+    ],
+  },
+  {
+    title: 'Monitor',
+    items: [
+      { href: '/executive-dashboard', label: 'Executive Dashboard', icon: Gauge },
+      { href: '/action-center', label: 'Action Center', icon: ClipboardCheck },
+      { href: '/reports', label: 'Reports & Exports', icon: FileSpreadsheet },
+      { href: '/controls-evidence', label: 'Controls & Evidence Ownership', icon: Shield },
+      { href: '/risks', label: 'Risk Register', icon: AlertTriangle },
+    ],
+  },
+  {
+    title: 'Curated Views',
+    items: [
+      { href: '/supply-chain', label: 'Supply Chain', icon: Truck },
+      { href: '/launch-critical', label: 'Launch-Critical', icon: Rocket },
+    ],
+  },
+  {
+    title: 'Governance',
+    items: [
+      { href: '/regulatory-updates', label: 'Regulatory Updates', icon: ScrollText },
+      { href: '/impact-analysis', label: 'Impact Analysis', icon: BarChart3 },
+      { href: '/draft-mapping', label: 'Draft Workspace', icon: FileDiff },
+      { href: '/review-approval', label: 'Review & Approval', icon: CheckSquare },
+      { href: '/version-history', label: 'Version History', icon: History },
+      { href: '/as-of-trace', label: 'As-Of Trace', icon: Clock },
+      { href: '/audit-log', label: 'Audit Log', icon: ClipboardList },
+      { href: '/source-intake', label: 'Source Intake', icon: Inbox },
+      { href: '/source-registry', label: 'Source Registry', icon: Database },
+      { href: '/data-quality', label: 'Data Quality & Validation', icon: ActivitySquare },
+      { href: '/ai-suggestions', label: 'AI Suggestions', icon: Sparkles },
+      { href: '/validation-workbench', label: 'Validation Workbench', icon: ShieldCheck },
+    ],
+  },
+  {
+    title: 'Legacy Reference',
+    items: [
+      { href: '/evidence', label: 'Evidence Register (Legacy)', icon: FileCheck },
+      { href: '/gaps', label: 'Gaps & Actions (Legacy)', icon: CircleAlert },
+      { href: '/sources', label: 'Source Inventory (Legacy)', icon: BookOpen },
+    ],
+  },
 ];
 
 function NavLinks({ pathname }: { pathname: string }) {
   return (
     <>
-      {navItems.map(({ href, label, icon: Icon }) => {
-        const isActive = pathname === href;
-        return (
-          <Link
-            key={href}
-            href={href}
-            className={cn(
-              'flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
-              isActive
-                ? 'bg-primary/10 text-primary'
-                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
-            )}
-            aria-current={isActive ? 'page' : undefined}
-          >
-            <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
-            {label}
-          </Link>
-        );
-      })}
+      {navSections.map((section, si) => (
+        <div key={si}>
+          {section.title && (
+            <div className="nav-section-label">{section.title}</div>
+          )}
+          {section.items.map(({ href, label, icon: Icon }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
+                  isActive
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+                )}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+      ))}
     </>
   );
 }
@@ -77,7 +167,7 @@ export function SidebarNav() {
           {mobileOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
         </button>
         <Shield className="h-5 w-5 text-primary" aria-hidden="true" />
-        <span className="text-sm font-semibold">Compliance Explorer</span>
+        <span className="text-sm font-semibold">Compliance Operating Map</span>
       </div>
 
       {/* Mobile overlay */}
@@ -102,11 +192,7 @@ export function SidebarNav() {
         <nav className="flex-1 space-y-1 px-3 py-4" aria-label="Main navigation">
           <NavLinks pathname={pathname} />
         </nav>
-        <div className="border-t border-border px-5 py-4">
-          <p className="text-xs text-muted-foreground">
-            Pilot v1.0 · Not a validated GxP system
-          </p>
-        </div>
+        <DemoUserPanel />
       </aside>
 
       {/* Desktop sidebar — always visible */}
@@ -118,22 +204,18 @@ export function SidebarNav() {
         <div className="flex items-center gap-2 border-b border-border px-5 py-5">
           <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
           <div>
-            <p className="text-base font-semibold leading-tight">Compliance Explorer</p>
-            <p className="text-xs text-muted-foreground">Regulatory matrix pilot</p>
+            <p className="text-base font-semibold leading-tight">Compliance Operating Map</p>
+            <p className="text-xs text-muted-foreground">Regulatory intelligence pilot</p>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-1 px-3 py-4">
+        <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
           <NavLinks pathname={pathname} />
         </nav>
 
-        {/* Footer */}
-        <div className="border-t border-border px-5 py-4">
-          <p className="text-xs text-muted-foreground">
-            Pilot v1.0 · Not a validated GxP system
-          </p>
-        </div>
+        {/* User panel */}
+        <DemoUserPanel />
       </aside>
     </>
   );

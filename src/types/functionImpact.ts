@@ -1,6 +1,6 @@
 /**
  * FunctionImpact — From the "Function Impact" sheet.
- * 10 fields. One row per business function.
+ * One row per business function.
  */
 export interface FunctionImpact {
   functionImpactId: string;               // FI-001 …
@@ -13,4 +13,9 @@ export interface FunctionImpact {
   primaryScorPhases: string | null;
   digitalSystemEvidenceDependencies: string | null;
   linkedMatrixRowIdFilter: string | null;
+
+  // ── Source Provenance (governance-ready) ───────────────────
+  sourceFile: string | null;
+  lastReviewedDate: string | null;
+  confidenceLevel: string | null;         // High | Medium | Low
 }

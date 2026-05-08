@@ -1,0 +1,80 @@
+[
+  {
+    "versionId": "VER-001",
+    "stableReferenceId": "CM-0001",
+    "versionNumber": "1.0",
+    "recordStatus": "superseded",
+    "effectiveDate": "2025-01-15",
+    "supersededDate": "2025-09-01",
+    "changeSummary": "Initial record creation. FD&C Act § 506C(j) supply chain resilience planning obligation.",
+    "approvedBy": "Compliance Approver",
+    "approvedAt": "2025-01-15T09:00:00Z",
+    "previousVersionId": null,
+    "sourceReference": "FD&C Act § 506C(j)"
+  },
+  {
+    "versionId": "VER-002",
+    "stableReferenceId": "CM-0001",
+    "versionNumber": "1.1",
+    "recordStatus": "superseded",
+    "effectiveDate": "2025-09-01",
+    "supersededDate": "2026-03-15",
+    "changeSummary": "Clarified resilience plans must cover API and critical excipient supply chains.",
+    "approvedBy": "Head of Quality",
+    "approvedAt": "2025-08-28T14:30:00Z",
+    "previousVersionId": "VER-001",
+    "sourceReference": "FDA Guidance: Drug Shortage Prevention (August 2025)"
+  },
+  {
+    "versionId": "VER-003",
+    "stableReferenceId": "CM-0001",
+    "versionNumber": "2.0",
+    "recordStatus": "active",
+    "effectiveDate": "2026-03-15",
+    "supersededDate": null,
+    "changeSummary": "Expanded required evidence. Severity upgraded to High. Added digital system owner.",
+    "approvedBy": "Head of Compliance",
+    "approvedAt": "2026-03-12T16:45:00Z",
+    "previousVersionId": "VER-002",
+    "sourceReference": "FDA Warning Letter WL-2025-4782"
+  },
+  {
+    "versionId": "VER-004",
+    "stableReferenceId": "CM-0045",
+    "versionNumber": "1.0",
+    "recordStatus": "superseded",
+    "effectiveDate": "2025-02-01",
+    "supersededDate": "2026-01-10",
+    "changeSummary": "Initial record. EU GDP Chapter 9 transportation requirements.",
+    "approvedBy": "Compliance Approver",
+    "approvedAt": "2025-02-01T10:00:00Z",
+    "previousVersionId": null,
+    "sourceReference": "EU GDP Guidelines 2013/C 343/01, Chapter 9"
+  },
+  {
+    "versionId": "VER-005",
+    "stableReferenceId": "CM-0045",
+    "versionNumber": "2.0",
+    "recordStatus": "active",
+    "effectiveDate": "2026-01-10",
+    "supersededDate": null,
+    "changeSummary": "Aligned with WHO TRS 1025 temperature mapping. Added real-time monitoring.",
+    "approvedBy": "Distribution Compliance Manager",
+    "approvedAt": "2026-01-08T11:20:00Z",
+    "previousVersionId": "VER-004",
+    "sourceReference": "WHO TRS 1025, Annex 11"
+  },
+  {
+    "versionId": "VER-006",
+    "stableReferenceId": "CM-0001",
+    "versionNumber": "2.1",
+    "recordStatus": "draft",
+    "effectiveDate": null,
+    "supersededDate": null,
+    "changeSummary": "Draft: Proposed AI-assisted supply risk monitoring per EU AI Act. Pending legal review.",
+    "approvedBy": null,
+    "approvedAt": null,
+    "previousVersionId": "VER-003",
+    "sourceReference": "EU AI Act, Article 14"
+  }
+]

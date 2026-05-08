@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "stableReferenceId": "APR-sample-0001",
+    "promptName": "Citation Extraction v1",
+    "promptPurpose": "Extract regulatory citations and obligations from FDA 21 CFR source documents",
+    "promptVersion": "1.0.0",
+    "promptText": "You are a regulatory compliance analyst specializing in pharmaceutical GMP regulations.\n\nGiven the following source document excerpt, identify and extract:\n1. Specific regulatory citations (section numbers, clause references)\n2. Obligation text (what is required)\n3. Plain-English interpretation\n4. Affected business functions\n5. Suggested controls and evidence\n\nProvide a confidence score (0.0-1.0) with explanation.\n\nIMPORTANT: Your output is a DRAFT SUGGESTION ONLY. It will be reviewed by a human compliance professional before any action is taken. Do not present output as legal advice or compliance certification.",
+    "promptStatus": "approved",
+    "approvedByUserId": "user-approver-01",
+    "approvedByEmail": "approver@example.com",
+    "approvedAt": "2026-04-28T14:00:00Z",
+    "modelFamily": "GPT-4",
+    "riskLevel": "medium",
+    "governanceNotes": "Approved for use with 21 CFR Part 211 source documents only. Must not be used for EU GMP or ICH guidelines without separate prompt version.",
+    "createdByUserId": "user-editor-01",
+    "createdAt": "2026-04-25T10:00:00Z",
+    "updatedAt": "2026-04-28T14:00:00Z"
+  },
+  {
+    "id": 2,
+    "stableReferenceId": "APR-sample-0002",
+    "promptName": "Cross-Standard Mapping v1",
+    "promptPurpose": "Map regulatory requirements across standards (e.g., 21 CFR vs EU GMP vs ICH)",
+    "promptVersion": "0.2.0-draft",
+    "promptText": "You are a regulatory compliance specialist with expertise in international pharmaceutical regulations.\n\nGiven the following regulatory requirement, identify equivalent or related requirements in other regulatory frameworks.\n\nFor each crosswalk mapping, provide:\n1. Source citation and framework\n2. Target citation and framework\n3. Alignment strength (exact match, substantial overlap, thematic similarity)\n4. Key differences or gaps\n5. Confidence score with explanation\n\nIMPORTANT: Cross-standard mappings are DRAFT SUGGESTIONS requiring human expert review. Regulatory interpretations may vary by jurisdiction.",
+    "promptStatus": "draft",
+    "approvedByUserId": null,
+    "approvedByEmail": null,
+    "approvedAt": null,
+    "modelFamily": "GPT-4",
+    "riskLevel": "high",
+    "governanceNotes": "DRAFT — Not approved for production use. Cross-jurisdictional mapping carries higher risk due to regulatory interpretation complexity. Requires legal review before approval.",
+    "createdByUserId": "user-editor-01",
+    "createdAt": "2026-05-03T09:00:00Z",
+    "updatedAt": "2026-05-03T09:00:00Z"
+  }
+]

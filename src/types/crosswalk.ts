@@ -1,6 +1,6 @@
 /**
  * Crosswalk — From the "Crosswalk Summary" sheet.
- * 10 fields. Maps regulatory themes across multiple requirements.
+ * Maps regulatory themes across multiple requirements.
  */
 export interface Crosswalk {
   crosswalkId: string;                    // CW-001 …
@@ -13,4 +13,9 @@ export interface Crosswalk {
   primaryPersonaViewer: string | null;
   relatedAppView: string | null;
   linkedMatrixRowIdsFilterLogic: string | null;
+
+  // ── Source Provenance (governance-ready) ───────────────────
+  sourceFile: string | null;
+  lastReviewedDate: string | null;
+  confidenceLevel: string | null;         // High | Medium | Low
 }

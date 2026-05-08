@@ -1,11 +1,35 @@
 /**
  * Requirement — Primary object from the Compliance Matrix sheet.
- * 61 fields mapped 1:1 from workbook columns.
  * Matrix Row ID (e.g., CM-0001) is the unique identifier.
+ *
+ * ┌────────────────────────────────────────────────────────────────┐
+ * │  DATA GOVERNANCE TIERS                                        │
+ * │                                                               │
+ * │  🔒 REGULATORY REFERENCE DATA (Controlled)                   │
+ * │     Immutable source-of-truth fields derived from laws,       │
+ * │     regulations, standards, and guidance documents.           │
+ * │     Changes require Compliance Approver authorization         │
+ * │     and produce a new version record.                         │
+ * │                                                               │
+ * │  ✏️  OPERATIONAL COMPLIANCE DATA (Editable)                   │
+ * │     Company-specific operational state: owners, status,       │
+ * │     action items, implementation progress. Editable by        │
+ * │     Business Owners and Compliance Editors.                   │
+ * │                                                               │
+ * │  📊 APP DISPLAY & FILTERING (Computed/UI)                     │
+ * │     Derived fields for UI rendering, filtering, and           │
+ * │     persona-based navigation. Not independently governed.     │
+ * └────────────────────────────────────────────────────────────────┘
  */
 export interface Requirement {
+
+  // ═══════════════════════════════════════════════════════════════
+  // 🔒 REGULATORY REFERENCE DATA — Controlled, version-tracked
+  //    Do not modify without Compliance Approver authorization.
+  // ═══════════════════════════════════════════════════════════════
+
   // ── Identity ──────────────────────────────────────────────
-  matrixRowId: string;                              // CM-0001 … CM-0110
+  matrixRowId: string;                              // CM-0001 … CM-0110 (stable reference ID)
   rowType: string | null;                           // "Framework source row" | "Crosswalk source row"
 
   // ── Regulatory Classification ─────────────────────────────
@@ -26,8 +50,8 @@ export interface Requirement {
   level5GranularObligation: string | null;          // Narrative
 
   // ── Requirement Content ───────────────────────────────────
-  exactRequirementOrSourceLanguage: string | null;  // Long narrative
-  plainEnglishInterpretation: string | null;        // Long narrative
+  exactRequirementOrSourceLanguage: string | null;  // Long narrative — source regulatory text
+  plainEnglishInterpretation: string | null;        // Long narrative — controlled interpretation
 
   // ── Applicability ─────────────────────────────────────────
   whoMustComply: string | null;
@@ -35,7 +59,7 @@ export interface Requirement {
   exampleBusinessOwner: string | null;
   operationalProcessImpacted: string | null;
 
-  // ── Actions & Controls ────────────────────────────────────
+  // ── Actions & Controls (source-derived) ───────────────────
   requiredAction: string | null;
   requiredControl: string | null;
   requiredEvidenceDocumentation: string | null;
@@ -53,11 +77,11 @@ export interface Requirement {
   dependencies: string | null;
   potentialConflictsOrAmbiguities: string | null;
 
-  // ── Risk & Severity ───────────────────────────────────────
+  // ── Risk & Severity (source-derived) ──────────────────────
   riskOfNonCompliance: string | null;               // Long narrative
   severityPriority: string | null;                  // Critical | High | Medium
 
-  // ── Implementation ────────────────────────────────────────
+  // ── Implementation Guidance (source-derived) ──────────────
   implementationNotes: string | null;
   practicalExampleForBusinessLeader: string | null;
 
@@ -67,7 +91,30 @@ export interface Requirement {
   confidenceLevel: string | null;                   // High | Medium | Low
   openQuestionsMissingInformation: string | null;
 
-  // ── Review & Validation (app-oriented fields) ─────────────
+  // ── Version & Lifecycle (governance-ready) ────────────────
+  /** Semantic version of this regulatory reference record, e.g. "1.0" */
+  versionNumber: string | null;
+  /** Lifecycle status of this reference record */
+  recordStatus: string | null;                      // "active" | "draft" | "pending_review" | "superseded" | "archived"
+  /** Date the source law/standard was officially published */
+  publicationDate: string | null;                   // ISO date
+  /** Date the obligation became legally binding */
+  effectiveDate: string | null;                     // ISO date
+  /** Date this record was replaced by a newer version */
+  supersededDate: string | null;                    // ISO date
+  /** matrixRowId of the prior version of this record */
+  previousVersionId: string | null;
+  /** Summary of what changed from the prior version */
+  changeSummary: string | null;
+  /** Reason the change was made (e.g., new guidance, correction) */
+  changeReason: string | null;
+
+  // ═══════════════════════════════════════════════════════════════
+  // ✏️  OPERATIONAL COMPLIANCE DATA — Editable by authorized users
+  //    Company-specific status, assignments, and review state.
+  // ═══════════════════════════════════════════════════════════════
+
+  // ── Review & Validation ────────────────────────────────────
   reviewStatus: string | null;
   accuracyEnhancementNote: string | null;
   externalVerificationUrl: string | null;
@@ -76,7 +123,11 @@ export interface Requirement {
   actionRequired: string | null;
   validationDate: string | null;
 
-  // ── App Display & Filtering ───────────────────────────────
+  // ═══════════════════════════════════════════════════════════════
+  // 📊 APP DISPLAY & FILTERING — Computed / UI-oriented
+  //    Derived fields for rendering, navigation, and filtering.
+  // ═══════════════════════════════════════════════════════════════
+
   primaryPersonaViewer: string | null;              // "Supply Chain Leader" | "Quality Leader"
   lifecycleStage: string | null;                    // e.g., "Planning / Resilience"
   processType: string | null;

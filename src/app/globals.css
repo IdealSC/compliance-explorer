@@ -129,6 +129,42 @@
   }
 }
 
+/* ── Accessibility: focus-visible ring for all interactive elements ── */
+button:focus-visible,
+a:focus-visible,
+[role="tab"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+/* ── Responsive: prevent long titles from breaking layout ─────── */
+.truncate-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* ── Responsive: ensure drawers don't clip on mobile ─────────── */
+@media (max-width: 640px) {
+  [data-radix-dialog-content] {
+    max-height: calc(100dvh - 60px) !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* ── Responsive: filter bars wrap cleanly on mobile ──────────── */
+@media (max-width: 640px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 /* ── Sticky first column for wide tables ─────────────────── */
 .table-sticky-first-col th:first-child,
 .table-sticky-first-col td:first-child {
@@ -164,4 +200,175 @@
   background: var(--muted-foreground);
   border-radius: 4px;
   opacity: 0.4;
+}
+
+/* ── Operating Map flow connectors ───────────────────────── */
+.flow-connector {
+  position: relative;
+}
+.flow-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 20px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--muted-foreground) 0,
+    var(--muted-foreground) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.4;
+}
+.flow-connector:last-child::after {
+  display: none;
+}
+
+/* ── Flow card hover glow ────────────────────────────────── */
+.flow-card {
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.flow-card:hover {
+  box-shadow: 0 0 0 1px var(--primary), 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── Nav section labels ──────────────────────────────────── */
+.nav-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  padding: 16px 12px 4px;
+  user-select: none;
+}
+.nav-section-label:first-child {
+  padding-top: 0;
+}
+
+/* ── Quick-view card ─────────────────────────────────────── */
+.quick-view-card {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+.quick-view-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Function card ───────────────────────────────────────── */
+.function-card {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+}
+.function-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.function-card[data-active="true"] {
+  border-color: var(--primary);
+  background-color: oklch(from var(--primary) l c h / 5%);
+  box-shadow: 0 0 0 1px var(--primary), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Print styles ───────────────────────────────────────── */
+@media print {
+  /* Hide navigation chrome and interactive-only UI */
+  aside,
+  nav,
+  .sidebar-nav,
+  [data-sidebar],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Hide mobile top bar in print */
+  [role="banner"] {
+    display: none !important;
+  }
+
+  /* Hide filter buttons, export buttons, and interactive controls */
+  button:not(.print-keep),
+  [role="tab"],
+  select,
+  .filter-bar,
+  .quick-view-card,
+  .flow-connector::after {
+    display: none !important;
+  }
+
+  /* KEEP governance and sample-data banners visible (compliance traceability) */
+  [data-sample-banner],
+  [data-governance-banner] {
+    display: flex !important;
+    border-width: 1px !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Full-width main content */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Remove flex height lock from app shell */
+  body,
+  html,
+  #__next,
+  .flex.h-screen {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Clean backgrounds */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Readable table sizing */
+  table {
+    font-size: 9px !important;
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Prevent cards from breaking across pages */
+  [data-slot="card"],
+  .rounded-xl,
+  .rounded-lg {
+    break-inside: avoid;
+  }
+
+  /* Report metadata header for print */
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .print-header p {
+    font-size: 10px;
+    color: #666;
+    margin: 2px 0;
+  }
+
+  /* Footer disclaimer */
+  .print-footer {
+    display: block !important;
+    border-top: 1px solid #999;
+    padding-top: 8px;
+    margin-top: 16px;
+    font-size: 8px;
+    color: #999;
+  }
 }

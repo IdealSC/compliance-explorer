@@ -1,0 +1,745 @@
+[
+  {
+    "id": "DQ-001",
+    "issueTitle": "Missing source reference for DSCSA Section 582 obligation",
+    "issueDescription": "Obligation CM-0001 references DSCSA Section 582 but has no linked source record in the Source Registry.",
+    "issueType": "missing_source_reference",
+    "category": "source",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0001",
+    "affectedEntityLabel": "DSCSA Section 582 — Transaction Data Exchange",
+    "businessFunction": "Supply Chain",
+    "owner": "VP Supply Chain",
+    "relatedObligationIds": [
+      "CM-0001"
+    ],
+    "relatedControlIds": [
+      "CTRL-001"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-001",
+      "EVD-002"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [
+      "RIA-001"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "owner-actions"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "medium",
+    "legalReviewRequired": true,
+    "recommendedAction": "Locate and register the official DSCSA Section 582 source document in the Source Registry. Link to obligation CM-0001.",
+    "riskIfUnresolved": "Obligation cannot be traced to authoritative source text. Audit finding risk.",
+    "detectedAt": "2026-04-15",
+    "lastReviewedAt": null,
+    "dueDate": "2026-06-01",
+    "notes": null
+  },
+  {
+    "id": "DQ-002",
+    "issueTitle": "Incomplete metadata on EU AI Act source record",
+    "issueDescription": "Source record SRC-005 is missing publication date and effective date fields.",
+    "issueType": "missing_metadata",
+    "category": "source",
+    "severity": "medium",
+    "status": "open",
+    "affectedEntityType": "source",
+    "affectedEntityId": "SRC-005",
+    "affectedEntityLabel": "EU AI Act (Regulation 2024/1689)",
+    "businessFunction": "Compliance",
+    "owner": "Compliance Director",
+    "relatedObligationIds": [
+      "CM-0045",
+      "CM-0046"
+    ],
+    "relatedControlIds": [
+      "CTRL-005"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-009"
+    ],
+    "relatedSourceIds": [
+      "SRC-005"
+    ],
+    "relatedImpactAnalysisIds": [
+      "RIA-003"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "source-registry"
+    ],
+    "sourceReference": "SRC-005",
+    "confidenceLevel": "low",
+    "legalReviewRequired": false,
+    "recommendedAction": "Complete publication date and effective date metadata for SRC-005.",
+    "riskIfUnresolved": "Incomplete source metadata undermines validation readiness.",
+    "detectedAt": "2026-04-18",
+    "lastReviewedAt": "2026-04-20",
+    "dueDate": "2026-05-15",
+    "notes": null
+  },
+  {
+    "id": "DQ-003",
+    "issueTitle": "Low confidence mapping for ICH Q12 obligation",
+    "issueDescription": "Obligation CM-0072 has a confidence level of low. The plain-English interpretation may not accurately reflect the source language.",
+    "issueType": "low_confidence",
+    "category": "obligation",
+    "severity": "high",
+    "status": "in_review",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0072",
+    "affectedEntityLabel": "ICH Q12 — Post-Approval Change Management",
+    "businessFunction": "Quality",
+    "owner": "Quality Director",
+    "relatedObligationIds": [
+      "CM-0072"
+    ],
+    "relatedControlIds": [
+      "CTRL-008"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-013",
+      "EVD-014"
+    ],
+    "relatedSourceIds": [
+      "SRC-008"
+    ],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "obligation-matrix"
+    ],
+    "sourceReference": "SRC-008",
+    "confidenceLevel": "low",
+    "legalReviewRequired": true,
+    "recommendedAction": "Engage legal/regulatory SME to validate the plain-English interpretation against source language.",
+    "riskIfUnresolved": "Misinterpreted obligation could lead to incorrect controls and evidence requirements.",
+    "detectedAt": "2026-04-10",
+    "lastReviewedAt": "2026-04-25",
+    "dueDate": "2026-05-20",
+    "notes": "Flagged during Phase 1.3 impact analysis."
+  },
+  {
+    "id": "DQ-004",
+    "issueTitle": "Obligation CM-0088 missing linked control",
+    "issueDescription": "High-severity obligation CM-0088 has no linked compliance control in the Controls layer.",
+    "issueType": "missing_control",
+    "category": "obligation",
+    "severity": "critical",
+    "status": "open",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0088",
+    "affectedEntityLabel": "EU GMP Annex 1 — Contamination Control Strategy",
+    "businessFunction": "Quality",
+    "owner": "Quality Director",
+    "relatedObligationIds": [
+      "CM-0088"
+    ],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [
+      "SRC-009"
+    ],
+    "relatedImpactAnalysisIds": [
+      "RIA-004"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "deficient-controls"
+    ],
+    "sourceReference": "SRC-009",
+    "confidenceLevel": "medium",
+    "legalReviewRequired": false,
+    "recommendedAction": "Create a compliance control for contamination control strategy and link to CM-0088.",
+    "riskIfUnresolved": "Critical obligation has no operational control. Regulatory inspection finding risk.",
+    "detectedAt": "2026-04-12",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-10",
+    "notes": null
+  },
+  {
+    "id": "DQ-005",
+    "issueTitle": "Control CTRL-003 missing required evidence",
+    "issueDescription": "Control CTRL-003 (Cold Chain Monitoring) is linked to EVD-005 and EVD-006, but EVD-005 has status missing.",
+    "issueType": "missing_evidence",
+    "category": "control_evidence",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "evidence",
+    "affectedEntityId": "EVD-005",
+    "affectedEntityLabel": "Cold Chain Validation Protocol",
+    "businessFunction": "Supply Chain",
+    "owner": "VP Supply Chain",
+    "relatedObligationIds": [
+      "CM-0015"
+    ],
+    "relatedControlIds": [
+      "CTRL-003"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-005",
+      "EVD-006"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "evidence-gaps"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "high",
+    "legalReviewRequired": false,
+    "recommendedAction": "Initiate collection of Cold Chain Validation Protocol evidence. Assign to evidence owner.",
+    "riskIfUnresolved": "Control cannot demonstrate effectiveness without supporting evidence.",
+    "detectedAt": "2026-04-14",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-25",
+    "notes": null
+  },
+  {
+    "id": "DQ-006",
+    "issueTitle": "Evidence EVD-016 expired",
+    "issueDescription": "Evidence item EVD-016 (Annual GMP Self-Inspection Report) has expired status. Retention period may have lapsed.",
+    "issueType": "expired_evidence",
+    "category": "control_evidence",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "evidence",
+    "affectedEntityId": "EVD-016",
+    "affectedEntityLabel": "Annual GMP Self-Inspection Report",
+    "businessFunction": "Quality",
+    "owner": "Quality Director",
+    "relatedObligationIds": [],
+    "relatedControlIds": [
+      "CTRL-010"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-016"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "evidence-gaps"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "high",
+    "legalReviewRequired": false,
+    "recommendedAction": "Recollect or renew the Annual GMP Self-Inspection Report. Update evidence status.",
+    "riskIfUnresolved": "Expired evidence cannot support linked control in an audit.",
+    "detectedAt": "2026-04-20",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-15",
+    "notes": null
+  },
+  {
+    "id": "DQ-007",
+    "issueTitle": "Control CTRL-002 is deficient",
+    "issueDescription": "Control CTRL-002 (Serialization System Validation) has deficient status and high risk level.",
+    "issueType": "deficient_control",
+    "category": "control_evidence",
+    "severity": "critical",
+    "status": "open",
+    "affectedEntityType": "control",
+    "affectedEntityId": "CTRL-002",
+    "affectedEntityLabel": "Serialization System Validation",
+    "businessFunction": "Supply Chain",
+    "owner": "VP Supply Chain",
+    "relatedObligationIds": [
+      "CM-0001",
+      "CM-0003"
+    ],
+    "relatedControlIds": [
+      "CTRL-002"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-003",
+      "EVD-004"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [
+      "RIA-001"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "deficient-controls"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "high",
+    "legalReviewRequired": false,
+    "recommendedAction": "Complete serialization system revalidation. Execute IQ/OQ/PQ protocol.",
+    "riskIfUnresolved": "DSCSA compliance gap. FDA enforcement risk.",
+    "detectedAt": "2026-04-08",
+    "lastReviewedAt": "2026-04-22",
+    "dueDate": "2026-05-30",
+    "notes": "Linked to ACT-001."
+  },
+  {
+    "id": "DQ-008",
+    "issueTitle": "Draft change DC-002 stalled in review",
+    "issueDescription": "Draft regulatory change DC-002 has been in review stage for over 30 days without progression.",
+    "issueType": "stalled_draft",
+    "category": "governance",
+    "severity": "medium",
+    "status": "open",
+    "affectedEntityType": "draft_change",
+    "affectedEntityId": "DC-002",
+    "affectedEntityLabel": "DSCSA Enhanced Verification Requirements Update",
+    "businessFunction": "Compliance",
+    "owner": "Compliance Director",
+    "relatedObligationIds": [
+      "CM-0001",
+      "CM-0003"
+    ],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [
+      "RIA-001"
+    ],
+    "relatedDraftChangeIds": [
+      "DC-002"
+    ],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": true,
+    "recommendedAction": "Escalate draft DC-002 for review completion. Assign reviewer and set deadline.",
+    "riskIfUnresolved": "Regulatory update not reflected in active reference data. Compliance gap risk.",
+    "detectedAt": "2026-04-25",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-20",
+    "notes": null
+  },
+  {
+    "id": "DQ-009",
+    "issueTitle": "Stale review on 12 obligations",
+    "issueDescription": "12 obligations have not been reviewed in the last 180 days. lastReviewedDate is either null or older than 2025-11-01.",
+    "issueType": "stale_review",
+    "category": "obligation",
+    "severity": "medium",
+    "status": "planned",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0020",
+    "affectedEntityLabel": "Multiple obligations (batch)",
+    "businessFunction": "Compliance",
+    "owner": "Compliance Director",
+    "relatedObligationIds": [
+      "CM-0020",
+      "CM-0025",
+      "CM-0030",
+      "CM-0035",
+      "CM-0040",
+      "CM-0050"
+    ],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "audit-reference"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": false,
+    "recommendedAction": "Schedule periodic review cycle for all obligations older than 180 days.",
+    "riskIfUnresolved": "Stale obligations may not reflect current regulatory requirements.",
+    "detectedAt": "2026-05-01",
+    "lastReviewedAt": null,
+    "dueDate": "2026-06-15",
+    "notes": "Batch issue covering multiple records."
+  },
+  {
+    "id": "DQ-010",
+    "issueTitle": "Legal review required for EU AI Act impact analysis",
+    "issueDescription": "Impact analysis RIA-003 covers EU AI Act changes but has not undergone formal legal review.",
+    "issueType": "legal_review_needed",
+    "category": "governance",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "impact_analysis",
+    "affectedEntityId": "RIA-003",
+    "affectedEntityLabel": "EU AI Act Implementation Impact",
+    "businessFunction": "Legal",
+    "owner": "General Counsel",
+    "relatedObligationIds": [
+      "CM-0045",
+      "CM-0046"
+    ],
+    "relatedControlIds": [
+      "CTRL-005"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-009"
+    ],
+    "relatedSourceIds": [
+      "SRC-005"
+    ],
+    "relatedImpactAnalysisIds": [
+      "RIA-003"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "regulatory-impact"
+    ],
+    "sourceReference": "SRC-005",
+    "confidenceLevel": "low",
+    "legalReviewRequired": true,
+    "recommendedAction": "Engage legal counsel for formal review of EU AI Act impact assessment.",
+    "riskIfUnresolved": "Impact analysis may contain incorrect legal interpretations.",
+    "detectedAt": "2026-04-22",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-25",
+    "notes": null
+  },
+  {
+    "id": "DQ-011",
+    "issueTitle": "Version gap: CM-0045 has no version history",
+    "issueDescription": "Obligation CM-0045 has versionNumber 1.0 but no corresponding entry in the Version History log.",
+    "issueType": "version_gap",
+    "category": "governance",
+    "severity": "low",
+    "status": "deferred",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0045",
+    "affectedEntityLabel": "EU AI Act — Algorithmic Transparency",
+    "businessFunction": "Compliance",
+    "owner": "Compliance Director",
+    "relatedObligationIds": [
+      "CM-0045"
+    ],
+    "relatedControlIds": [
+      "CTRL-005"
+    ],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [
+      "SRC-005"
+    ],
+    "relatedImpactAnalysisIds": [
+      "RIA-003"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "audit-reference"
+    ],
+    "sourceReference": "SRC-005",
+    "confidenceLevel": "medium",
+    "legalReviewRequired": false,
+    "recommendedAction": "Create initial version history entry for CM-0045 in the Version History log.",
+    "riskIfUnresolved": "Incomplete audit trail for obligation lifecycle.",
+    "detectedAt": "2026-04-28",
+    "lastReviewedAt": null,
+    "dueDate": null,
+    "notes": "Low priority — version history is informational at pilot stage."
+  },
+  {
+    "id": "DQ-012",
+    "issueTitle": "Unmapped business function: Risk",
+    "issueDescription": "The Risk function appears in function selectors but has no sample obligations, controls, evidence, or actions assigned.",
+    "issueType": "empty_business_function_mapping",
+    "category": "business_function",
+    "severity": "low",
+    "status": "planned",
+    "affectedEntityType": "business_function",
+    "affectedEntityId": "fn-risk",
+    "affectedEntityLabel": "Risk",
+    "businessFunction": "Risk",
+    "owner": "Chief Risk Officer",
+    "relatedObligationIds": [],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": false,
+    "recommendedAction": "Add sample obligation, control, and evidence records for the Risk function, or add clear empty-state messaging.",
+    "riskIfUnresolved": "Users selecting Risk function filter see empty results with no explanation.",
+    "detectedAt": "2026-05-01",
+    "lastReviewedAt": null,
+    "dueDate": null,
+    "notes": "Known sample data limitation."
+  },
+  {
+    "id": "DQ-013",
+    "issueTitle": "Legacy Evidence Register page naming confusion",
+    "issueDescription": "The /evidence route (Evidence Register) and /controls-evidence Evidence tab cover overlapping concepts with different data models.",
+    "issueType": "duplicate_or_legacy_route_confusion",
+    "category": "ux_navigation",
+    "severity": "medium",
+    "status": "planned",
+    "affectedEntityType": "route",
+    "affectedEntityId": "/evidence",
+    "affectedEntityLabel": "Evidence Register (Legacy) vs Controls & Evidence",
+    "businessFunction": "Compliance",
+    "owner": "Product Owner",
+    "relatedObligationIds": [],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": false,
+    "recommendedAction": "Rename /evidence sidebar label to Evidence Register (Legacy). Add clarifying subtitle or tooltip.",
+    "riskIfUnresolved": "Users may confuse two different evidence views, leading to incorrect data interpretation.",
+    "detectedAt": "2026-05-01",
+    "lastReviewedAt": null,
+    "dueDate": null,
+    "notes": "Carried forward from Phase 1.4 QA review."
+  },
+  {
+    "id": "DQ-014",
+    "issueTitle": "Evidence EVD-011 rejected — needs re-collection",
+    "issueDescription": "Evidence item EVD-011 has rejected status. The related control CTRL-006 cannot demonstrate effectiveness.",
+    "issueType": "rejected_evidence",
+    "category": "control_evidence",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "evidence",
+    "affectedEntityId": "EVD-011",
+    "affectedEntityLabel": "Supplier Qualification Audit Records",
+    "businessFunction": "Procurement",
+    "owner": "VP Procurement",
+    "relatedObligationIds": [],
+    "relatedControlIds": [
+      "CTRL-006"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-011"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "evidence-gaps"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "high",
+    "legalReviewRequired": false,
+    "recommendedAction": "Re-collect supplier qualification audit records. Address rejection reasons before resubmission.",
+    "riskIfUnresolved": "Supplier oversight control has no valid supporting evidence.",
+    "detectedAt": "2026-04-18",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-20",
+    "notes": null
+  },
+  {
+    "id": "DQ-015",
+    "issueTitle": "Crosswalk area CW-003 has weak linkage",
+    "issueDescription": "Crosswalk area CW-003 references standards that are not fully mapped to obligations or controls.",
+    "issueType": "broken_crosswalk",
+    "category": "obligation",
+    "severity": "medium",
+    "status": "open",
+    "affectedEntityType": "crosswalk",
+    "affectedEntityId": "CW-003",
+    "affectedEntityLabel": "GDP/GMP Crosswalk — Cold Chain Standards",
+    "businessFunction": "Supply Chain",
+    "owner": "VP Supply Chain",
+    "relatedObligationIds": [
+      "CM-0015"
+    ],
+    "relatedControlIds": [
+      "CTRL-003"
+    ],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": "medium",
+    "legalReviewRequired": false,
+    "recommendedAction": "Complete standard-to-obligation mapping for cold chain crosswalk area CW-003.",
+    "riskIfUnresolved": "Incomplete crosswalk reduces traceability across regulatory frameworks.",
+    "detectedAt": "2026-04-22",
+    "lastReviewedAt": null,
+    "dueDate": "2026-06-01",
+    "notes": null
+  },
+  {
+    "id": "DQ-016",
+    "issueTitle": "Audit gap: no audit events for CTRL-007",
+    "issueDescription": "Control CTRL-007 has no entries in the Audit Log. All control lifecycle changes should be tracked.",
+    "issueType": "audit_gap",
+    "category": "governance",
+    "severity": "low",
+    "status": "deferred",
+    "affectedEntityType": "control",
+    "affectedEntityId": "CTRL-007",
+    "affectedEntityLabel": "Returns Processing Compliance Control",
+    "businessFunction": "Operations",
+    "owner": "VP Operations",
+    "relatedObligationIds": [],
+    "relatedControlIds": [
+      "CTRL-007"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-009"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": "high",
+    "legalReviewRequired": false,
+    "recommendedAction": "Ensure audit log captures control lifecycle events for CTRL-007.",
+    "riskIfUnresolved": "Incomplete audit trail for control changes.",
+    "detectedAt": "2026-04-30",
+    "lastReviewedAt": null,
+    "dueDate": null,
+    "notes": "Low priority at pilot stage."
+  },
+  {
+    "id": "DQ-017",
+    "issueTitle": "Source SRC-003 requires legal review",
+    "issueDescription": "Source record SRC-003 (21 CFR Part 211) is linked to multiple high-risk obligations but has not undergone formal legal review.",
+    "issueType": "legal_review_needed",
+    "category": "source",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "source",
+    "affectedEntityId": "SRC-003",
+    "affectedEntityLabel": "21 CFR Part 211 — cGMP for Finished Pharmaceuticals",
+    "businessFunction": "Legal",
+    "owner": "General Counsel",
+    "relatedObligationIds": [
+      "CM-0055",
+      "CM-0060"
+    ],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [
+      "SRC-003"
+    ],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "source-registry"
+    ],
+    "sourceReference": "SRC-003",
+    "confidenceLevel": "medium",
+    "legalReviewRequired": true,
+    "recommendedAction": "Schedule legal review of SRC-003 source material and linked obligation interpretations.",
+    "riskIfUnresolved": "Obligations derived from unreviewed source may contain interpretation errors.",
+    "detectedAt": "2026-04-15",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-30",
+    "notes": null
+  },
+  {
+    "id": "DQ-018",
+    "issueTitle": "Executive Leadership function has no mapped obligations",
+    "issueDescription": "The Executive Leadership business function appears in selectors but has zero obligations, controls, or evidence assigned.",
+    "issueType": "empty_business_function_mapping",
+    "category": "business_function",
+    "severity": "low",
+    "status": "planned",
+    "affectedEntityType": "business_function",
+    "affectedEntityId": "fn-exec",
+    "affectedEntityLabel": "Executive Leadership",
+    "businessFunction": "Executive Leadership",
+    "owner": "CEO",
+    "relatedObligationIds": [],
+    "relatedControlIds": [],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": false,
+    "recommendedAction": "Add sample records or clear empty-state messaging for Executive Leadership function.",
+    "riskIfUnresolved": "Users see empty results with no explanation when filtering by this function.",
+    "detectedAt": "2026-05-01",
+    "lastReviewedAt": null,
+    "dueDate": null,
+    "notes": "Known sample data limitation. Does not mean this function has no real-world obligations."
+  },
+  {
+    "id": "DQ-019",
+    "issueTitle": "Obligation CM-0003 missing evidence linkage",
+    "issueDescription": "Obligation CM-0003 (DSCSA Verification) has a linked control but no evidence requirements mapped.",
+    "issueType": "missing_evidence",
+    "category": "obligation",
+    "severity": "high",
+    "status": "open",
+    "affectedEntityType": "obligation",
+    "affectedEntityId": "CM-0003",
+    "affectedEntityLabel": "DSCSA — Product Verification Requirements",
+    "businessFunction": "Supply Chain",
+    "owner": "VP Supply Chain",
+    "relatedObligationIds": [
+      "CM-0003"
+    ],
+    "relatedControlIds": [
+      "CTRL-002"
+    ],
+    "relatedEvidenceIds": [],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [
+      "RIA-001"
+    ],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [
+      "obligation-matrix"
+    ],
+    "sourceReference": null,
+    "confidenceLevel": "medium",
+    "legalReviewRequired": false,
+    "recommendedAction": "Define and link evidence requirements for obligation CM-0003 product verification.",
+    "riskIfUnresolved": "Cannot demonstrate compliance without evidence trail.",
+    "detectedAt": "2026-04-16",
+    "lastReviewedAt": null,
+    "dueDate": "2026-05-25",
+    "notes": null
+  },
+  {
+    "id": "DQ-020",
+    "issueTitle": "Unmapped business function: Procurement oversight gaps",
+    "issueDescription": "Procurement function has 2 controls and 3 evidence items but no linked impact analyses or regulatory updates.",
+    "issueType": "unmapped_business_function",
+    "category": "business_function",
+    "severity": "medium",
+    "status": "open",
+    "affectedEntityType": "business_function",
+    "affectedEntityId": "fn-procurement",
+    "affectedEntityLabel": "Procurement",
+    "businessFunction": "Procurement",
+    "owner": "VP Procurement",
+    "relatedObligationIds": [],
+    "relatedControlIds": [
+      "CTRL-006"
+    ],
+    "relatedEvidenceIds": [
+      "EVD-011",
+      "EVD-012"
+    ],
+    "relatedSourceIds": [],
+    "relatedImpactAnalysisIds": [],
+    "relatedDraftChangeIds": [],
+    "relatedReportIds": [],
+    "sourceReference": null,
+    "confidenceLevel": null,
+    "legalReviewRequired": false,
+    "recommendedAction": "Review whether active regulatory updates affect Procurement and link relevant impact analyses.",
+    "riskIfUnresolved": "Procurement may miss regulatory changes that affect supplier oversight obligations.",
+    "detectedAt": "2026-05-02",
+    "lastReviewedAt": null,
+    "dueDate": "2026-06-15",
+    "notes": null
+  }
+]

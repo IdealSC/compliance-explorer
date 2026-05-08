@@ -1,0 +1,225 @@
+[
+  {
+    "id": "RIA-001",
+    "relatedUpdateId": "RU-001",
+    "updateTitle": "EU AI Act — Regulatory Compliance for AI in Pharma",
+    "sourceName": "EU AI Act (Regulation 2024/1689)",
+    "sourceType": "regulation",
+    "regulator": "European Commission",
+    "jurisdiction": "EU",
+    "changeType": "new",
+    "publicationDate": "2024-07-12",
+    "effectiveDate": "2026-08-01",
+    "impactStatus": "in_progress",
+    "impactSeverity": "high",
+    "impactedObligationIds": ["CM-0001", "CM-0005", "CM-0012"],
+    "impactedCrosswalkIds": ["CW-001"],
+    "impactedStandards": [
+      {"standardName": "ISO 42001 AI Management System", "mappingImpact": "New standard mapping required for AI-assisted supply chain decisions", "reviewStatus": "under_review"},
+      {"standardName": "ICH Q9 Quality Risk Management", "mappingImpact": "Risk assessment methodology must account for AI-driven quality decisions", "reviewStatus": "not_reviewed"}
+    ],
+    "impactedControls": [
+      {"controlName": "AI Model Validation Protocol", "controlImpact": "New control required for high-risk AI systems in pharma supply chain", "owner": "Head of Digital Quality", "requiredAction": "Develop AI validation SOP aligned with Article 9", "riskIfNotUpdated": "Non-compliance with EU AI Act by August 2026"},
+      {"controlName": "Algorithmic Audit Trail", "controlImpact": "Existing audit trail must capture AI decision rationale", "owner": "Data Integrity Officer", "requiredAction": "Extend audit log schema to include AI decision metadata", "riskIfNotUpdated": "Failure to demonstrate human oversight per Article 14"}
+    ],
+    "impactedEvidence": [
+      {"evidenceItem": "AI System Risk Classification Register", "evidenceImpact": "New evidence artifact required", "businessOwner": "Head of Digital Quality", "requiredUpdate": "Create register classifying all AI systems by risk tier", "timing": "By Q1 2026"},
+      {"evidenceItem": "Human Oversight Documentation", "evidenceImpact": "New evidence artifact required", "businessOwner": "Operations Director", "requiredUpdate": "Document human oversight mechanisms for each high-risk AI system", "timing": "By Q2 2026"}
+    ],
+    "impactedBusinessFunctions": [
+      {"functionName": "Supply Chain", "impactSummary": "AI-assisted demand forecasting and supplier risk scoring must comply with transparency requirements", "requiredActions": ["Map all AI tools in supply chain", "Classify AI risk tiers", "Document human oversight for high-risk systems"], "owner": "VP Supply Chain", "riskIfNotCompleted": "AI tools may need to be disabled if not compliant by effective date", "dependencies": ["Legal interpretation of 'high-risk' classification for pharma supply chain AI"]},
+      {"functionName": "Quality", "impactSummary": "AI-driven quality inspection and release testing systems require conformity assessment", "requiredActions": ["Identify AI systems in QC/QA", "Perform conformity assessment", "Update quality manual"], "owner": "Head of Quality", "riskIfNotCompleted": "Regulatory action on AI-assisted batch release decisions", "dependencies": ["EU AI Act implementing regulations", "Notified body availability"]},
+      {"functionName": "Legal", "impactSummary": "Legal review required for AI Act applicability across all EU operations", "requiredActions": ["Complete Article 6 risk classification analysis", "Review existing AI vendor contracts for compliance obligations"], "owner": "General Counsel", "riskIfNotCompleted": "Unclear liability allocation for AI system failures", "dependencies": []},
+      {"functionName": "Compliance", "impactSummary": "Compliance monitoring program must include AI Act obligations", "requiredActions": ["Add AI Act to regulatory monitoring scope", "Develop AI compliance training program"], "owner": "Chief Compliance Officer", "riskIfNotCompleted": "Unmonitored regulatory obligation", "dependencies": ["Legal risk classification complete"]}
+    ],
+    "impactedOwners": [
+      {"action": "Complete AI system inventory across supply chain operations", "owner": "VP Supply Chain", "businessFunction": "Supply Chain", "dueDate": "2026-03-01", "dependency": null, "riskIfNotCompleted": "Cannot classify AI risk tiers without complete inventory", "status": "in_progress"},
+      {"action": "Perform Article 6 high-risk classification analysis", "owner": "General Counsel", "businessFunction": "Legal", "dueDate": "2026-02-15", "dependency": null, "riskIfNotCompleted": "Compliance scope undefined", "status": "not_started"},
+      {"action": "Develop AI validation SOP for high-risk systems", "owner": "Head of Digital Quality", "businessFunction": "Quality", "dueDate": "2026-05-01", "dependency": "Legal risk classification", "riskIfNotCompleted": "No validation framework for AI systems", "status": "not_started"},
+      {"action": "Update compliance monitoring to include EU AI Act", "owner": "Chief Compliance Officer", "businessFunction": "Compliance", "dueDate": "2026-04-01", "dependency": "Legal risk classification", "riskIfNotCompleted": "AI Act obligations not tracked", "status": "not_started"}
+    ],
+    "impactedRisks": [
+      {"riskDescription": "AI systems used in supply chain may be classified as high-risk under EU AI Act", "previousLevel": null, "proposedLevel": "High", "mitigationRequired": "Complete AI risk classification and implement conformity assessment"},
+      {"riskDescription": "Insufficient human oversight documentation for AI-driven decisions", "previousLevel": "Low", "proposedLevel": "High", "mitigationRequired": "Implement Article 14 human oversight requirements"}
+    ],
+    "requiredActions": ["Complete AI system inventory", "Perform Article 6 risk classification", "Develop AI validation SOP", "Update compliance monitoring scope", "Review AI vendor contracts"],
+    "recommendedNextSteps": ["Engage EU AI Act legal specialist", "Benchmark against peer pharma AI compliance programs", "Establish cross-functional AI governance committee"],
+    "governanceReview": {
+      "legalReviewRequired": true,
+      "confidenceLevel": "Medium",
+      "openQuestions": ["Does Article 6 classify pharma supply chain forecasting as high-risk?", "What is the timeline for EU implementing regulations specific to pharma AI?"],
+      "requiredApprover": "General Counsel",
+      "reviewStatus": "in_progress",
+      "relatedDraftChangeIds": ["DRC-002", "DRC-003"],
+      "relatedVersionIds": [],
+      "relatedAuditEventIds": ["AUD-014"]
+    },
+    "sourceReference": "https://eur-lex.europa.eu/eli/reg/2024/1689",
+    "createdAt": "2026-04-20T10:00:00Z",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  {
+    "id": "RIA-002",
+    "relatedUpdateId": "RU-002",
+    "updateTitle": "DSCSA Section 582 — Enhanced Serialization Verification",
+    "sourceName": "Drug Supply Chain Security Act, Section 582",
+    "sourceType": "law",
+    "regulator": "FDA",
+    "jurisdiction": "US",
+    "changeType": "amendment",
+    "publicationDate": "2025-11-27",
+    "effectiveDate": "2026-06-01",
+    "impactStatus": "needs_review",
+    "impactSeverity": "critical",
+    "impactedObligationIds": ["CM-0001", "CM-0045"],
+    "impactedCrosswalkIds": ["CW-003"],
+    "impactedStandards": [
+      {"standardName": "GS1 EPCIS 2.0", "mappingImpact": "Serialization event reporting must align with updated EPCIS standards", "reviewStatus": "reviewed"},
+      {"standardName": "FDA DSCSA Guidance (2025)", "mappingImpact": "Verification router requirements updated for enhanced verification", "reviewStatus": "under_review"}
+    ],
+    "impactedControls": [
+      {"controlName": "Serialization Verification Protocol", "controlImpact": "Must support enhanced verification with 24-hour response requirement", "owner": "Serialization Manager", "requiredAction": "Upgrade verification system to meet 24-hour SLA", "riskIfNotUpdated": "FDA enforcement action — inability to distribute product"},
+      {"controlName": "Trading Partner Qualification", "controlImpact": "All trading partners must be verified through FDA-authorized systems", "owner": "Head of Distribution", "requiredAction": "Complete trading partner verification by June 2026", "riskIfNotUpdated": "Loss of authorized trading partner status"}
+    ],
+    "impactedEvidence": [
+      {"evidenceItem": "Trading Partner Verification Records", "evidenceImpact": "Existing records must be updated to include enhanced verification data", "businessOwner": "Serialization Manager", "requiredUpdate": "Add enhanced verification fields to all trading partner records", "timing": "By May 2026"},
+      {"evidenceItem": "Serialization System Validation Report", "evidenceImpact": "Revalidation required after system upgrade", "businessOwner": "IT Validation Lead", "requiredUpdate": "Execute IQ/OQ/PQ for upgraded serialization system", "timing": "By April 2026"}
+    ],
+    "impactedBusinessFunctions": [
+      {"functionName": "Supply Chain", "impactSummary": "Distribution operations must implement enhanced verification at all points of dispensing", "requiredActions": ["Upgrade serialization systems", "Train warehouse staff on enhanced verification", "Update SOPs for verification exceptions"], "owner": "VP Supply Chain", "riskIfNotCompleted": "Product distribution halted for non-compliance", "dependencies": ["IT system upgrade completion"]},
+      {"functionName": "Procurement", "impactSummary": "All upstream suppliers must demonstrate DSCSA compliance", "requiredActions": ["Audit supplier serialization capabilities", "Update supplier qualification criteria"], "owner": "Head of Procurement", "riskIfNotCompleted": "Supply disruption from non-compliant suppliers", "dependencies": ["Supplier audit schedule"]},
+      {"functionName": "Operations", "impactSummary": "Packaging and labeling operations must support updated serialization requirements", "requiredActions": ["Update packaging line serialization equipment", "Validate aggregation processes"], "owner": "Operations Director", "riskIfNotCompleted": "Non-compliant product cannot enter US distribution", "dependencies": ["Equipment vendor support"]}
+    ],
+    "impactedOwners": [
+      {"action": "Upgrade serialization verification system to support 24-hour SLA", "owner": "IT Director", "businessFunction": "Operations", "dueDate": "2026-04-15", "dependency": null, "riskIfNotCompleted": "Cannot meet FDA enhanced verification timeline", "status": "in_progress"},
+      {"action": "Complete trading partner verification for all active partners", "owner": "Head of Distribution", "businessFunction": "Supply Chain", "dueDate": "2026-05-15", "dependency": "System upgrade", "riskIfNotCompleted": "Trading partners cannot transact", "status": "not_started"},
+      {"action": "Audit top 20 suppliers for DSCSA readiness", "owner": "Head of Procurement", "businessFunction": "Procurement", "dueDate": "2026-03-31", "dependency": null, "riskIfNotCompleted": "Unknown supplier compliance gaps", "status": "in_progress"}
+    ],
+    "impactedRisks": [
+      {"riskDescription": "Product distribution halted due to serialization non-compliance", "previousLevel": "Medium", "proposedLevel": "Critical", "mitigationRequired": "Complete system upgrade and trading partner verification before June 2026"},
+      {"riskDescription": "Supply chain disruption from non-compliant upstream suppliers", "previousLevel": "Low", "proposedLevel": "High", "mitigationRequired": "Supplier DSCSA audit program"}
+    ],
+    "requiredActions": ["Upgrade serialization system", "Complete trading partner verification", "Audit supplier DSCSA readiness", "Update distribution SOPs", "Revalidate serialization system"],
+    "recommendedNextSteps": ["Engage FDA for pre-implementation guidance", "Join industry DSCSA readiness working group", "Establish weekly DSCSA compliance war room through June 2026"],
+    "governanceReview": {
+      "legalReviewRequired": true,
+      "confidenceLevel": "High",
+      "openQuestions": ["Will FDA grant enforcement discretion for good-faith compliance efforts?"],
+      "requiredApprover": "VP Supply Chain",
+      "reviewStatus": "in_progress",
+      "relatedDraftChangeIds": ["DRC-006", "DRC-007"],
+      "relatedVersionIds": ["VER-003"],
+      "relatedAuditEventIds": ["AUD-002", "AUD-003"]
+    },
+    "sourceReference": "https://www.fda.gov/drugs/drug-supply-chain-security-act-dscsa",
+    "createdAt": "2026-03-15T08:00:00Z",
+    "reviewedBy": "VP Supply Chain",
+    "reviewedAt": "2026-04-01T14:00:00Z"
+  },
+  {
+    "id": "RIA-003",
+    "relatedUpdateId": "RU-003",
+    "updateTitle": "ICH Q12 — Lifecycle Management Updates",
+    "sourceName": "ICH Q12 Technical and Regulatory Considerations",
+    "sourceType": "guidance",
+    "regulator": "ICH",
+    "jurisdiction": "Global",
+    "changeType": "guidance",
+    "publicationDate": "2025-12-01",
+    "effectiveDate": "2026-09-01",
+    "impactStatus": "not_started",
+    "impactSeverity": "medium",
+    "impactedObligationIds": ["CM-0005", "CM-0012"],
+    "impactedCrosswalkIds": ["CW-002"],
+    "impactedStandards": [
+      {"standardName": "ICH Q8 Pharmaceutical Development", "mappingImpact": "Design space definitions may need updating for lifecycle consistency", "reviewStatus": "not_reviewed"},
+      {"standardName": "ICH Q10 Pharmaceutical Quality System", "mappingImpact": "PQS change management procedures must align with Q12 PACMP framework", "reviewStatus": "not_reviewed"}
+    ],
+    "impactedControls": [
+      {"controlName": "Post-Approval Change Management Protocol", "controlImpact": "PACMP must be updated to align with ICH Q12 established conditions framework", "owner": "Head of Regulatory Affairs", "requiredAction": "Develop PACMP aligned with Q12 established conditions", "riskIfNotUpdated": "Post-approval changes may require unnecessary prior approval"}
+    ],
+    "impactedEvidence": [
+      {"evidenceItem": "Established Conditions Register", "evidenceImpact": "New evidence artifact — register of all established conditions per product", "businessOwner": "Head of Regulatory Affairs", "requiredUpdate": "Create established conditions register for each marketed product", "timing": "By Q3 2026"}
+    ],
+    "impactedBusinessFunctions": [
+      {"functionName": "Quality", "impactSummary": "Quality system must incorporate established conditions framework for change categorization", "requiredActions": ["Update change control SOP", "Train quality staff on established conditions concept", "Map existing products to established conditions"], "owner": "Head of Quality", "riskIfNotCompleted": "Inefficient change management — unnecessary regulatory submissions", "dependencies": ["Regulatory Affairs established conditions mapping"]},
+      {"functionName": "Compliance", "impactSummary": "Compliance monitoring must track ICH Q12 implementation across all marketed products", "requiredActions": ["Add ICH Q12 to compliance calendar", "Monitor regional adoption timelines"], "owner": "Chief Compliance Officer", "riskIfNotCompleted": "Missed regional implementation deadlines", "dependencies": []}
+    ],
+    "impactedOwners": [
+      {"action": "Map established conditions for top 5 marketed products", "owner": "Head of Regulatory Affairs", "businessFunction": "Quality", "dueDate": "2026-06-30", "dependency": null, "riskIfNotCompleted": "Cannot leverage Q12 flexibility for post-approval changes", "status": "not_started"},
+      {"action": "Update change control SOP to incorporate established conditions", "owner": "Head of Quality", "businessFunction": "Quality", "dueDate": "2026-08-01", "dependency": "Established conditions mapping", "riskIfNotCompleted": "Change control process not aligned with ICH Q12", "status": "not_started"}
+    ],
+    "impactedRisks": [
+      {"riskDescription": "Post-approval changes delayed due to misalignment with ICH Q12 framework", "previousLevel": null, "proposedLevel": "Medium", "mitigationRequired": "Implement PACMP and established conditions framework before Q12 effective date"}
+    ],
+    "requiredActions": ["Map established conditions for marketed products", "Update change control SOP", "Develop PACMP framework", "Monitor regional Q12 adoption"],
+    "recommendedNextSteps": ["Attend ICH Q12 implementation workshop", "Pilot established conditions mapping on one product", "Benchmark peer pharma Q12 readiness"],
+    "governanceReview": {
+      "legalReviewRequired": false,
+      "confidenceLevel": "Medium",
+      "openQuestions": ["Which regional regulators will adopt Q12 first?", "How will established conditions interact with existing CBE-30/PAS categories?"],
+      "requiredApprover": "Head of Regulatory Affairs",
+      "reviewStatus": "not_started",
+      "relatedDraftChangeIds": ["DRC-001"],
+      "relatedVersionIds": [],
+      "relatedAuditEventIds": ["AUD-005"]
+    },
+    "sourceReference": "https://www.ich.org/page/quality-guidelines",
+    "createdAt": "2026-04-25T09:00:00Z",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  {
+    "id": "RIA-004",
+    "relatedUpdateId": "RU-004",
+    "updateTitle": "EU GMP Annex 1 — Contamination Control Strategy Requirements",
+    "sourceName": "EU GMP Annex 1: Manufacture of Sterile Medicinal Products (2022 Revision)",
+    "sourceType": "regulation",
+    "regulator": "EMA / PIC/S",
+    "jurisdiction": "EU / PIC/S",
+    "changeType": "amendment",
+    "publicationDate": "2022-08-25",
+    "effectiveDate": "2025-08-25",
+    "impactStatus": "complete",
+    "impactSeverity": "high",
+    "impactedObligationIds": ["CM-0012"],
+    "impactedCrosswalkIds": [],
+    "impactedStandards": [
+      {"standardName": "ISO 14644 Cleanroom Standards", "mappingImpact": "Environmental monitoring requirements updated to align with Annex 1 CCS", "reviewStatus": "reviewed"},
+      {"standardName": "PDA TR-13 Fundamentals of Aseptic Processing", "mappingImpact": "Aseptic process simulation requirements reinforced", "reviewStatus": "reviewed"}
+    ],
+    "impactedControls": [
+      {"controlName": "Contamination Control Strategy", "controlImpact": "Holistic CCS required covering all contamination vectors", "owner": "Head of Quality", "requiredAction": "Complete CCS documentation covering all sterile manufacturing areas", "riskIfNotUpdated": "Critical GMP non-compliance finding during inspection"}
+    ],
+    "impactedEvidence": [
+      {"evidenceItem": "Contamination Control Strategy Document", "evidenceImpact": "Must be comprehensive, covering personnel, equipment, facility, materials", "businessOwner": "Head of Quality", "requiredUpdate": "Finalize CCS v2.0 incorporating all Annex 1 requirements", "timing": "Complete — Q4 2025"}
+    ],
+    "impactedBusinessFunctions": [
+      {"functionName": "Quality", "impactSummary": "CCS implementation complete. Ongoing monitoring and periodic review required.", "requiredActions": ["Annual CCS review", "Trend environmental monitoring data"], "owner": "Head of Quality", "riskIfNotCompleted": "CCS drift — non-compliance at next inspection", "dependencies": []},
+      {"functionName": "Operations", "impactSummary": "Manufacturing operations aligned with Annex 1 CCS requirements", "requiredActions": ["Maintain CCS compliance during routine operations"], "owner": "Operations Director", "riskIfNotCompleted": "Contamination event in sterile manufacturing", "dependencies": []}
+    ],
+    "impactedOwners": [
+      {"action": "Complete annual CCS review", "owner": "Head of Quality", "businessFunction": "Quality", "dueDate": "2026-08-25", "dependency": null, "riskIfNotCompleted": "CCS may not reflect current manufacturing state", "status": "not_started"}
+    ],
+    "impactedRisks": [
+      {"riskDescription": "CCS not maintained — compliance gap at next regulatory inspection", "previousLevel": "High", "proposedLevel": "Medium", "mitigationRequired": "Annual CCS review and update cycle established"}
+    ],
+    "requiredActions": ["Complete annual CCS review", "Maintain environmental monitoring program"],
+    "recommendedNextSteps": ["Schedule annual CCS review for August 2026", "Benchmark CCS against latest PIC/S guidance"],
+    "governanceReview": {
+      "legalReviewRequired": false,
+      "confidenceLevel": "High",
+      "openQuestions": [],
+      "requiredApprover": "Head of Quality",
+      "reviewStatus": "complete",
+      "relatedDraftChangeIds": ["DRC-004"],
+      "relatedVersionIds": ["VER-003"],
+      "relatedAuditEventIds": ["AUD-015"]
+    },
+    "sourceReference": "https://health.ec.europa.eu/document/download/b1f4cc60-e898-4de1-ad5f-8b6a1f4b5244",
+    "createdAt": "2026-01-10T11:00:00Z",
+    "reviewedBy": "Head of Quality",
+    "reviewedAt": "2026-02-01T16:00:00Z"
+  }
+]

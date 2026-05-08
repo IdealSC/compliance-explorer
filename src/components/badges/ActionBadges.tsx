@@ -1,0 +1,54 @@
+import { cn } from '@/lib/utils';
+
+const PRIORITY_STYLES: Record<string, string> = {
+  low: 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400',
+  medium: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400',
+  high: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400',
+  critical: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
+};
+
+const STATUS_STYLES: Record<string, string> = {
+  not_started: 'bg-slate-100 text-slate-600 dark:bg-slate-800/50 dark:text-slate-400',
+  in_progress: 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400',
+  blocked: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
+  completed: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+  overdue: 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400',
+};
+
+interface ActionPriorityBadgeProps {
+  priority: string;
+  className?: string;
+}
+
+export function ActionPriorityBadge({ priority, className }: ActionPriorityBadgeProps) {
+  return (
+    <span
+      className={cn(
+        'inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider',
+        PRIORITY_STYLES[priority] || 'bg-gray-100 text-gray-600',
+        className
+      )}
+    >
+      {priority}
+    </span>
+  );
+}
+
+interface ActionStatusBadgeProps {
+  status: string;
+  className?: string;
+}
+
+export function ActionStatusBadge({ status, className }: ActionStatusBadgeProps) {
+  return (
+    <span
+      className={cn(
+        'inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider',
+        STATUS_STYLES[status] || 'bg-gray-100 text-gray-600',
+        className
+      )}
+    >
+      {status.replace(/_/g, ' ')}
+    </span>
+  );
+}
