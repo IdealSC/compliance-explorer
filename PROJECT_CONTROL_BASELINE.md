@@ -143,6 +143,7 @@ These components must not be removed, weakened, or bypassed:
 | 5.1 | IA shell, home page, topic template, Packaging, applicability overlay, admin separation | ✅ Complete |
 | 5.2-A | Topic content production protocol | ✅ Complete |
 | 5.2-B | Serialization topic draft packet (Stage 1) | ✅ Complete |
+| 5.2-C | Serialization source-anchored draft packet (Stage 2) | ✅ Complete |
 
 ---
 
@@ -233,7 +234,8 @@ The Compliance Operating Map is **governance-ready for controlled production pil
 | Phase 5.1-E | Applicability context overlay. Operating context selector (jurisdiction, entity role, lifecycle stage). URL query params, localStorage persistence, dynamic header chips, CSS emphasis/de-emphasis, unmapped context fallback. Admin exclusion. 0 regulatory content changes. Commit `ce665e3`. | System |
 | Phase 5.1-F | Admin separation fix. Public nav hidden on admin routes via AppShell pathname guard. Context selector already excluded. Visual separation verified. 1 file changed (AppShell.tsx). 0 regulatory content changes. Commit `4fa6f74`. | System |
 | **Phase 5.2-A** | **Topic content production protocol.** Created TOPIC_CONTENT_PRODUCTION_PROTOCOL.md defining 7-stage content lifecycle (Stage 0–6), AI-assisted drafting rules, Antigravity implementation constraints, fidelity audit requirements, commit discipline, gap handling, scope creep prevention, and 13-topic queue. 0 code changes. 0 topic content changes. 0 regulatory content changes. Commit `21d4a75`. | System |
-| Phase 5.2-B | Serialization topic draft packet (Stage 1). Created TOPIC_SERIALIZATION_DRAFT_PACKET.md with drafting inputs checklist, source inventory placeholder, ownership boundary questions, applicability questions, regulatory chain structure, related topic map, context-sensitive issues, open questions, and draft approval checklist. 0 code changes. 0 topic content populated. 0 regulatory interpretation added. | System |
+| Phase 5.2-B | Serialization topic draft packet (Stage 1). Created TOPIC_SERIALIZATION_DRAFT_PACKET.md with drafting inputs checklist, source inventory placeholder, ownership boundary questions, applicability questions, regulatory chain structure, related topic map, context-sensitive issues, open questions, and draft approval checklist. 0 code changes. 0 topic content populated. 0 regulatory interpretation added. Commit `3e3eae5`. | System |
+| Phase 5.2-C | Serialization source-anchored draft packet (Stage 2). Updated TOPIC_SERIALIZATION_DRAFT_PACKET.md with Brian / ISC source notes and interpretation inputs. 17 sources inventoried, 12 supply chain ownership themes, 6 adjacent ownership subsections, US/EU jurisdiction notes, 6 entity role profiles, 5 lifecycle stages, 7 related topics, 7 editorial risk notes, 3 operational risk questions, 12 regulatory/source-landscape gaps, drafting implications mapped. 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. | System |
 
 ---
 
