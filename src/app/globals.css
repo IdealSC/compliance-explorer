@@ -1773,3 +1773,403 @@ select:focus-visible,
   font-weight: 600;
   color: var(--topic-accent);
 }
+
+/* ── Topic context highlight callout ──────────────────────────────── */
+
+.topic-context-highlight {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid hsl(221 83% 53% / 0.5);
+  background: hsl(221 83% 53% / 0.06);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.topic-context-highlight-text {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(220 14% 30%);
+}
+
+.topic-context-highlight::before {
+  content: 'Highlighted for your context';
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(221 83% 53%);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Unmapped context fallback note ───────────────────────────────── */
+
+.topic-unmapped-context-note {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid hsl(220 13% 86%);
+  border-left: 3px solid hsl(220 14% 70%);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: hsl(220 14% 97%);
+}
+
+.topic-unmapped-context-heading {
+  margin: 0 0 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: hsl(220 14% 50%);
+}
+
+.topic-unmapped-context-text {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: hsl(220 14% 40%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Phase 5.1-E: Operating Context Bar
+   ═══════════════════════════════════════════════════════════════════ */
+
+.context-bar {
+  position: sticky;
+  top: 4rem; /* below the 64px nav bar */
+  z-index: 35;
+  border-bottom: 1px solid hsl(220 13% 91%);
+  background: hsl(220 14% 97% / 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.context-bar-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.context-bar-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(220 9% 46%);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── Desktop / Mobile switching ───────────────────────────────────── */
+
+.context-bar-desktop {
+  display: flex;
+}
+.context-bar-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .context-bar-desktop {
+    display: none;
+  }
+  .context-bar-mobile {
+    display: block;
+  }
+}
+
+/* ── Chips ─────────────────────────────────────────────────────────── */
+
+.context-chips {
+  display: flex;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.context-chips--mobile {
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.context-chip-wrapper {
+  position: relative;
+}
+
+.context-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(220 9% 36%);
+  background: white;
+  border: 1px solid hsl(220 13% 87%);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.context-chip:hover {
+  background: hsl(220 14% 95%);
+  border-color: hsl(220 13% 78%);
+  color: hsl(220 9% 24%);
+}
+
+.context-chip--active {
+  border-color: hsl(221 83% 53%);
+  background: hsl(221 83% 53% / 0.06);
+  color: hsl(221 83% 40%);
+  box-shadow: 0 0 0 1px hsl(221 83% 53% / 0.15);
+}
+
+.context-chip-chevron {
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 0.5;
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.context-chip-chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown ─────────────────────────────────────────────────────── */
+
+.context-dropdown {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  left: 0;
+  min-width: 14rem;
+  background: white;
+  border: 1px solid hsl(220 13% 87%);
+  border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px hsl(220 13% 20% / 0.08),
+    0 2px 4px -2px hsl(220 13% 20% / 0.05);
+  padding: 0.25rem;
+  z-index: 50;
+  animation: context-dropdown-enter 0.12s ease-out;
+}
+
+@keyframes context-dropdown-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes context-dropdown-enter {
+    from { opacity: 1; }
+    to { opacity: 1; }
+  }
+}
+
+.context-dropdown-label {
+  padding: 0.375rem 0.625rem 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: hsl(220 9% 50%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.context-dropdown-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 450;
+  color: hsl(220 9% 28%);
+  background: transparent;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s ease;
+}
+
+.context-dropdown-option:hover {
+  background: hsl(220 14% 95%);
+}
+
+.context-dropdown-option--selected {
+  background: hsl(221 83% 53% / 0.08);
+  color: hsl(221 83% 40%);
+  font-weight: 550;
+}
+
+.context-dropdown-check {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(221 83% 53%);
+}
+
+/* ── Reset button ─────────────────────────────────────────────────── */
+
+.context-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(220 9% 50%);
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: color 0.1s ease;
+  white-space: nowrap;
+}
+
+.context-reset:hover {
+  color: hsl(221 83% 53%);
+}
+
+.context-reset-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* ── First-visit prompt ───────────────────────────────────────────── */
+
+.context-prompt {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.25rem 1rem 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: hsl(220 9% 55%);
+}
+
+/* ── Mobile summary ───────────────────────────────────────────────── */
+
+.context-mobile-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.context-mobile-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: hsl(220 9% 46%);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.context-mobile-values {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(220 9% 28%);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.context-mobile-change {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(221 83% 53%);
+  white-space: nowrap;
+}
+
+.context-mobile-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 0.25rem 0 0;
+}
+
+.context-mobile-done {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(221 83% 53%);
+  background: transparent;
+  border: 1px solid hsl(221 83% 53% / 0.3);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.context-mobile-done:hover {
+  background: hsl(221 83% 53% / 0.06);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Phase 5.1-E: Context Emphasis Treatment
+   ═══════════════════════════════════════════════════════════════════ */
+
+.context-emphasis-wrapper {
+  /* no style by default — structural wrapper only */
+}
+
+.context-emphasis-highlight {
+  border-left: 3px solid hsl(221 83% 53% / 0.5);
+  background: hsl(221 83% 53% / 0.04);
+  padding-left: 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease;
+}
+
+.context-emphasis-deemphasized {
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+/* Don't deemphasize on hover — let users re-read */
+.context-emphasis-deemphasized:hover {
+  opacity: 0.85;
+}
+
+/* Table rows with emphasis */
+tr.context-emphasis-highlight {
+  border-left: none;
+  padding-left: 0;
+  background: hsl(221 83% 53% / 0.06);
+}
+
+tr.context-emphasis-highlight td {
+  background: hsl(221 83% 53% / 0.04);
+}
+
+/* Cards with emphasis */
+.topic-entity-role-card.context-emphasis-highlight,
+.topic-lifecycle-card.context-emphasis-highlight {
+  border-color: hsl(221 83% 53% / 0.35);
+  box-shadow: 0 0 0 1px hsl(221 83% 53% / 0.1);
+}
+
+/* Jurisdiction blocks with emphasis */
+.topic-jurisdiction-block.context-emphasis-highlight {
+  margin-left: -0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .context-emphasis-highlight,
+  .context-emphasis-deemphasized {
+    transition: none;
+  }
+}

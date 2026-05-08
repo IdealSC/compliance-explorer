@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { TopicPageLayout } from '@/components/topic';
 import type { TopicPageContent } from '@/components/topic';
+import { ContextEmphasis } from '@/components/context';
 
 /* ─── Approved topic inventory (TOPIC_PAGE_TEMPLATE.md §10) ──────── */
 
@@ -531,28 +532,32 @@ export default async function TopicPage({ params }: PageProps) {
   /* ── Packaging: populated content ─────────────────────────────── */
   if (topic.slug === 'packaging') {
     return (
-      <TopicPageLayout
-        slug={topic.slug}
-        title={topic.title}
-        summary={PACKAGING_HEADER.summary}
-        ownershipPosture={PACKAGING_HEADER.ownershipPosture}
-        primaryHandoff={PACKAGING_HEADER.primaryHandoff}
-        sourceCue={PACKAGING_HEADER.sourceCue}
-        content={PACKAGING_CONTENT}
-      />
+      <ContextEmphasis>
+        <TopicPageLayout
+          slug={topic.slug}
+          title={topic.title}
+          summary={PACKAGING_HEADER.summary}
+          ownershipPosture={PACKAGING_HEADER.ownershipPosture}
+          primaryHandoff={PACKAGING_HEADER.primaryHandoff}
+          sourceCue={PACKAGING_HEADER.sourceCue}
+          content={PACKAGING_CONTENT}
+        />
+      </ContextEmphasis>
     );
   }
 
   /* ── All other topics: neutral placeholder ────────────────────── */
   return (
-    <TopicPageLayout
-      slug={topic.slug}
-      title={topic.title}
-      summary="This page is being aligned to the approved topic page template."
-      ownershipPosture="Template placeholder — ownership content requires approved topic content."
-      primaryHandoff="Template placeholder — handoff content requires approved topic content."
-      sourceCue="Source-backed orientation · references require approved topic content"
-      content={{}}
-    />
+    <ContextEmphasis>
+      <TopicPageLayout
+        slug={topic.slug}
+        title={topic.title}
+        summary="This page is being aligned to the approved topic page template."
+        ownershipPosture="Template placeholder — ownership content requires approved topic content."
+        primaryHandoff="Template placeholder — handoff content requires approved topic content."
+        sourceCue="Source-backed orientation · references require approved topic content"
+        content={{}}
+      />
+    </ContextEmphasis>
   );
 }

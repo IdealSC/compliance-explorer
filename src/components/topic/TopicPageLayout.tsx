@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import {
-  Globe,
-  Building2,
-  Clock,
   ChevronRight,
   ArrowRight,
   ExternalLink,
 } from 'lucide-react';
+import { DynamicContextChips } from './DynamicContextChips';
 
 import type {
   TopicPageProps,
@@ -219,7 +217,7 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
         <h4 className="topic-subsection-label">By jurisdiction</h4>
 
         {/* US */}
-        <div className="topic-jurisdiction-block">
+        <div className="topic-jurisdiction-block" data-context-jurisdiction="us">
           <h5 className="topic-jurisdiction-heading">United States</h5>
           {data.jurisdictionUSIntro && (
             <p className="topic-jurisdiction-intro">
@@ -241,7 +239,7 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
         </div>
 
         {/* EU */}
-        <div className="topic-jurisdiction-block">
+        <div className="topic-jurisdiction-block" data-context-jurisdiction="eu">
           <h5 className="topic-jurisdiction-heading">European Union</h5>
           {data.jurisdictionEUIntro && (
             <p className="topic-jurisdiction-intro">
@@ -264,7 +262,7 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
 
         {/* Consistent across */}
         {data.jurisdictionConsistent && data.jurisdictionConsistent.length > 0 && (
-          <div className="topic-jurisdiction-block">
+          <div className="topic-jurisdiction-block" data-context-jurisdiction="consistent">
             <h5 className="topic-jurisdiction-heading">
               What stays consistent across US and EU
             </h5>
@@ -283,7 +281,7 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
           <h4 className="topic-subsection-label">By entity role</h4>
           <div className="topic-entity-role-cards">
             {data.entityRoles.map(({ role, description, focusAreas }) => (
-              <div key={role} className="topic-entity-role-card">
+              <div key={role} className="topic-entity-role-card" data-context-entity-role={role.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-')}>
                 <h5 className="topic-entity-role-name">{role}</h5>
                 <p className="topic-entity-role-desc">{description}</p>
                 {focusAreas && (
@@ -306,7 +304,7 @@ function SectionApplicability({ data }: { data?: ApplicabilityContent }) {
           <h4 className="topic-subsection-label">By lifecycle stage</h4>
           <div className="topic-lifecycle-cards">
             {data.lifecycleStages.map(({ stage, description, focusAreas }) => (
-              <div key={stage} className="topic-lifecycle-card">
+              <div key={stage} className="topic-lifecycle-card" data-context-stage={stage.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-')}>
                 <h5 className="topic-lifecycle-card-name">{stage}</h5>
                 <p className="topic-lifecycle-card-desc">{description}</p>
                 {focusAreas && (
@@ -382,7 +380,7 @@ function SectionRegulatoryChain({
               <tbody>
                 {data.keySources.map(
                   ({ source, type, jurisdiction, relevance }) => (
-                    <tr key={source}>
+                    <tr key={source} data-context-source-jurisdiction={jurisdiction ?? ''}>
                       <td>{source}</td>
                       <td>
                         <span className="topic-source-type-badge">
@@ -521,21 +519,8 @@ export function TopicPageLayout({
         <h1 className="topic-title">{title}</h1>
         <p className="topic-summary">{summary}</p>
 
-        {/* Context chips */}
-        <div className="topic-context-chips">
-          <span className="topic-context-chip">
-            <Globe className="topic-chip-icon" aria-hidden="true" />
-            US + EU
-          </span>
-          <span className="topic-context-chip">
-            <Building2 className="topic-chip-icon" aria-hidden="true" />
-            NDA Holder
-          </span>
-          <span className="topic-context-chip">
-            <Clock className="topic-chip-icon" aria-hidden="true" />
-            Pre-commercial
-          </span>
-        </div>
+        {/* Context chips — dynamic from operating context */}
+        <DynamicContextChips />
 
         {/* Ownership posture + handoff + source cue */}
         <div className="topic-header-meta">
