@@ -472,3 +472,4 @@ This Stage 3 review packet is not approved topic content. It must not be impleme
 |---|---|---|
 | Phase 5.2-D | Stage 3 review packet created from Stage 2 draft packet. All review decisions defaulted to "Needs Brian / ISC decision." | System |
 | Phase 5.2-D1 | Added Stage 3 decision rubric: 5 decision labels, 6-question framework, default classification guidance, conservative decision rule, and review table usage note. No review decisions pre-classified. | System |
+| Phase 5.2-D3 | Aligned with Brian / ISC updated Stage 3 review packet. Rows 5.14 (VAWD/NABP DSAC) and 6.7 (EMVO onboarding) reclassified from Approved to Revise. Counts corrected to 135 Approved, 17 Revise. See `Serialization_Stage3_Classification.md` for the authoritative 176-row classification table. | System |

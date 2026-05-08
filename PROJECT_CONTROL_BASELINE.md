@@ -147,6 +147,7 @@ These components must not be removed, weakened, or bypassed:
 | 5.2-D | Serialization Stage 3 review packet | ✅ Complete |
 | 5.2-D1 | Stage 3 decision rubric addendum | ✅ Complete |
 | 5.2-D2 | Serialization Stage 3 classification table | ✅ Complete |
+| 5.2-D3 | Serialization Stage 3 classification alignment | ✅ Complete |
 
 ---
 
@@ -241,7 +242,8 @@ The Compliance Operating Map is **governance-ready for controlled production pil
 | Phase 5.2-C | Serialization source-anchored draft packet (Stage 2). Updated TOPIC_SERIALIZATION_DRAFT_PACKET.md with Brian / ISC source notes and interpretation inputs. 17 sources inventoried, 12 supply chain ownership themes, 6 adjacent ownership subsections, US/EU jurisdiction notes, 6 entity role profiles, 5 lifecycle stages, 7 related topics, 7 editorial risk notes, 3 operational risk questions, 12 regulatory/source-landscape gaps, drafting implications mapped. 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. Commit `6d53c73`. | System |
 | Phase 5.2-D | Serialization Stage 3 review packet. Created TOPIC_SERIALIZATION_STAGE_3_REVIEW.md for Brian / ISC line-by-line review decisions. All review decisions defaulted to "Needs Brian / ISC decision." 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. Commit `7d0c19b`. | System |
 | Phase 5.2-D1 | Added Stage 3 decision rubric to Serialization review packet. 5 decision labels, 6-question framework, default classification guidance with examples, conservative decision rule, and review table usage note. No review decisions pre-classified. 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. Commit `8b26508`. | System |
-| Phase 5.2-D2 | Created Serialization_Stage3_Classification.md as the unified Stage 3 classification table using Brian / ISC review guidance. 176 rows classified across 8 sections. 137 Approved, 15 Revise, 10 Keep internal, 10 Source gap, 4 Exclude. 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. | System |
+| Phase 5.2-D2 | Created Serialization_Stage3_Classification.md as the unified Stage 3 classification table using Brian / ISC review guidance. 176 rows classified across 8 sections. 137 Approved, 15 Revise, 10 Keep internal, 10 Source gap, 4 Exclude. 0 code changes. 0 public topic content changed. 0 regulatory interpretation approved for publication. Commit `98edcc1`. | System |
+| Phase 5.2-D3 | Aligned the Serialization Stage 3 classification table with Brian / ISC's updated review packet. Counts corrected to 135 Approved, 17 Revise, 10 Keep internal, 10 Source gap, and 4 Exclude across 176 rows. Rows 5.14 (VAWD/NABP DSAC) and 6.7 (EMVO onboarding) reclassified from Approved to Revise. No app code changed. No public topic content changed. No regulatory interpretation was approved for publication. | System |
 
 ---
 

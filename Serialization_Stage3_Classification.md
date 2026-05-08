@@ -156,7 +156,7 @@ The Brian / ISC Classification Brief is treated as the authoritative editorial i
 | 5 — Entity roles | Licensed US Distributor: saleable return verification per §582(c)(4)(D) | Approved | Standard framing. |
 | 5 — Entity roles | Licensed US Distributor: suspect product handling per §582(c)(4) | Approved | Standard framing. |
 | 5 — Entity roles | Licensed US Distributor: §582(d)(3) annual reporting | Approved | Standard framing. |
-| 5 — Entity roles | Licensed US Distributor: VAWD / NABP DSAC accreditation often required commercially | Approved | Useful orientation — distinguishes federal from commercial requirements. |
+| 5 — Entity roles | Licensed US Distributor: VAWD / NABP DSAC accreditation often required commercially | Revise | Reframe: "VAWD / NABP DSAC accreditation often appears in customer or contracting requirements as a commercial expectation, rather than as a federal regulatory requirement." |
 | 5 — Entity roles | Importer: must verify imported batches qualitative / quantitative analysis (EU); physically segregate third-country product | Revise | Reframe: "For EU markets, importers typically verify qualitative and quantitative analysis of imported batches and segregate product received from third countries not intended for the local market." |
 | 5 — Entity roles | Importer: for US, FDA importer of record; trading-partner obligation lies with the entity introducing product into US commerce | Approved | Important clarification on US importer role. |
 | 5 — Entity roles | Importer: pre-launch importation requires PLAIR for non-approved product | Approved | Standard framing. |
@@ -181,7 +181,7 @@ The Brian / ISC Classification Brief is treated as the authoritative editorial i
 | 6 — Lifecycle | Pre-commercial: master data setup — GTIN / GLN via GDSN; EPCIS onboarding | Approved | Core pre-commercial activity. |
 | 6 — Lifecycle | Pre-commercial: NDC application; product hierarchy decisions (case-level and pallet aggregation) | Approved | Core pre-commercial activity. |
 | 6 — Lifecycle | Pre-commercial: line qualification — vendor selection, IQ / OQ / PQ | Approved | Core pre-commercial activity. |
-| 6 — Lifecycle | Pre-commercial: service provider selection and integration; EMVO onboarding 3–6 months and launch-blocking | Approved | High-value orientation — flag the launch-blocking nature. |
+| 6 — Lifecycle | Pre-commercial: service provider selection and integration; EMVO onboarding 3–6 months and launch-blocking | Revise | Reframe: "Service provider selection and integration; EMVO onboarding typically takes 3–6 months and can become a critical path item for launch timing." |
 | 6 — Lifecycle | Pre-commercial: ATP registration / FDA Establishment Registration | Approved | Core pre-commercial activity. |
 | 6 — Lifecycle | Pre-commercial: pilot runs through full T3 path | Approved | Core pre-commercial activity. |
 | 6 — Lifecycle | Pre-commercial: quality agreements with CMO / CDMO covering serialization | Approved | Core pre-commercial activity. |
@@ -272,8 +272,8 @@ The Brian / ISC Classification Brief is treated as the authoritative editorial i
 
 | Decision | Count | Notes |
 |---|---:|---|
-| Approved | 137 | Core orientation content. |
-| Revise | 15 | Heavy "must" or legalistic wording requiring reframe. |
+| Approved | 135 | Core orientation content. |
+| Revise | 17 | Heavy "must" or legalistic wording requiring reframe; includes commercial-expectation and critical-path timing reframes. |
 | Keep internal | 10 | NotebookLM interjections and operational risk questions. |
 | Source gap | 10 | Time-sensitive enforcement, revision, or industry-data items. |
 | Exclude | 4 | Non-US/EU jurisdiction items. |
