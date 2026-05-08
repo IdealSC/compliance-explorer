@@ -259,6 +259,7 @@ The Compliance Operating Map is **governance-ready for controlled production pil
 | Phase 5.2-O | Implemented `/topics/labeling-artwork` from `TOPIC_LABELING_ARTWORK.md` using the existing topic page template. No src/data files changed. No source, citation, or obligation records were added. Fidelity audit required before closure. | System |
 | Phase 5.2-P | Created the Labeling & Artwork topic closure record after implementation of `/topics/labeling-artwork` at commit `8b4c4db`. No app code changed. No regulatory records changed. | System |
 | Phase 5.2-Q | Created `TOPIC_PRODUCTION_PATTERN_LOCK.md` to lock the repeatable controlled topic-production pattern after Packaging, Serialization, and Labeling & Artwork were implemented. No app code changed. No regulatory records changed. | System |
+| Phase 5.2-R | Selected Distribution & 3PLs as the next controlled topic candidate and created `TOPIC_DISTRIBUTION_3PLS_DRAFT_PACKET.md` for Stage 1 draft preparation. No app code changed. No public topic content changed. No regulatory interpretation was added. | System |
 
 ---
 
