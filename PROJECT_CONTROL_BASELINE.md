@@ -257,6 +257,7 @@ The Compliance Operating Map is **governance-ready for controlled production pil
 | Phase 5.2-M | Created `TOPIC_LABELING_ARTWORK.md` as a controlled draft topic file derived from the Labeling & Artwork Stage 3 classification. No app code changed. `/topics/labeling-artwork` remains placeholder-only. No public implementation occurred. | System |
 | Phase 5.2-N | Created `TOPIC_LABELING_ARTWORK_REVIEW_REPORT.md` to review the controlled Labeling & Artwork topic draft before implementation. No app code changed. `/topics/labeling-artwork` remains placeholder-only. No public implementation occurred. | System |
 | Phase 5.2-O | Implemented `/topics/labeling-artwork` from `TOPIC_LABELING_ARTWORK.md` using the existing topic page template. No src/data files changed. No source, citation, or obligation records were added. Fidelity audit required before closure. | System |
+| Phase 5.2-P | Created the Labeling & Artwork topic closure record after implementation of `/topics/labeling-artwork` at commit `8b4c4db`. No app code changed. No regulatory records changed. | System |
 
 ---
 
