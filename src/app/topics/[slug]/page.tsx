@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TopicPageLayout } from '@/components/topic';
 import type { TopicPageContent } from '@/components/topic';
 import { ContextEmphasis } from '@/components/context';
+import { LABELING_ARTWORK_CONTENT, LABELING_ARTWORK_HEADER } from './labeling-artwork-content';
 
 /* ─── Approved topic inventory (TOPIC_PAGE_TEMPLATE.md §10) ──────── */
 
@@ -757,6 +758,23 @@ export default async function TopicPage({ params }: PageProps) {
           primaryHandoff={SERIALIZATION_HEADER.primaryHandoff}
           sourceCue={SERIALIZATION_HEADER.sourceCue}
           content={SERIALIZATION_CONTENT}
+        />
+      </ContextEmphasis>
+    );
+  }
+
+  /* ── Labeling & Artwork: populated content ─────────────────────── */
+  if (topic.slug === 'labeling-artwork') {
+    return (
+      <ContextEmphasis>
+        <TopicPageLayout
+          slug={topic.slug}
+          title={topic.title}
+          summary={LABELING_ARTWORK_HEADER.summary}
+          ownershipPosture={LABELING_ARTWORK_HEADER.ownershipPosture}
+          primaryHandoff={LABELING_ARTWORK_HEADER.primaryHandoff}
+          sourceCue={LABELING_ARTWORK_HEADER.sourceCue}
+          content={LABELING_ARTWORK_CONTENT}
         />
       </ContextEmphasis>
     );
