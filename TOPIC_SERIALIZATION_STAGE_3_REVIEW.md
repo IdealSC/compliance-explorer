@@ -14,6 +14,142 @@ This Stage 3 review packet is not approved topic content. It must not be impleme
 
 ---
 
+## Stage 3 Decision Rubric
+
+Stage 3 is not a legal interpretation exercise from scratch. It is a publication-readiness review of Brian / ISC input notes.
+
+For each item, Brian / ISC should decide whether the note is safe, useful, source-supported, and appropriately worded for public topic content.
+
+### Decision Labels
+
+Use exactly one of these five labels for each review item:
+
+#### Approved for public topic copy
+
+Use when the note is accurate enough, source-supported enough, and appropriately worded for the public Serialization page.
+
+#### Revise before public use
+
+Use when the idea is useful, but the wording is too strong, too legalistic, too detailed, too adversarial, or needs senior-leader orientation language.
+
+#### Keep internal only
+
+Use when the note is useful for editorial judgment, QA stress-testing, risk awareness, or implementation planning, but should not appear publicly.
+
+#### Source gap — verify before use
+
+Use when the idea may be right, but the source, currency, enforcement posture, or exact citation needs verification before publication.
+
+#### Exclude
+
+Use when the item is out of scope for this product, too detailed, not useful to the target user, or would expand the app beyond the approved orientation model.
+
+---
+
+### Six Questions for Each Note
+
+1. **Is it source-backed?**
+   - If yes, it may be approved or revised.
+   - If no or uncertain, mark `Source gap — verify before use`.
+
+2. **Is it useful to a senior supply chain leader?**
+   - If yes, keep considering.
+   - If no, mark `Exclude` or `Keep internal only`.
+
+3. **Is it phrased as orientation rather than legal determination?**
+   - If yes, it may be public.
+   - If no, mark `Revise before public use`.
+
+4. **Does it avoid overclaiming?**
+   - If yes, it may be public.
+   - If it uses strong legal language such as "violation," "liable," "adulterated," "must comply," or "critical violation," mark `Revise before public use` or `Keep internal only` unless Brian intentionally approves that language.
+
+5. **Does it fit the Serialization topic?**
+   - If yes, keep.
+   - If it belongs more naturally in Packaging, Returns, Recalls, Distribution, or Importer / Distributor Responsibilities, cross-link, move, or exclude.
+
+6. **Is it current enough?**
+   - If current enforcement posture matters, mark `Source gap — verify before use` unless Brian / ISC has verified currency.
+
+---
+
+### Suggested Default Classification Guidance
+
+> The following default classifications are guidance for Brian / ISC review. They do not approve content automatically.
+
+#### Usually Approve for Public Topic Copy
+
+- Core DSCSA / FD&C Act §582 source anchoring for US serialization.
+- Core FMD / Delegated Regulation (EU) 2016/161 source anchoring for EU safety features.
+- GS1 / EPCIS as standards-related context.
+- US vs EU model distinction: US track-and-trace / transaction data model vs EU verification and decommissioning model.
+- Serialization connections to Packaging, Distribution & 3PLs, Returns, Recalls, and Release & Disposition.
+- Supply chain ownership themes such as readiness, partner connectivity, master data coordination, serial range planning, and exception visibility.
+
+#### Usually Revise Before Public Use
+
+- Notes using strong "must" language.
+- Lifecycle notes that could read like legal applicability determinations.
+- Entity-role notes that should be softened into senior-leader orientation language.
+- Highly detailed technical notes that need simplification for public topic copy.
+
+Example transformation:
+
+> **Original:** Must affix product identifiers and initiate the TI / TS data stream.
+>
+> **Public-oriented direction:** For a US NDA holder or manufacturer role, serialization typically includes ensuring product identifiers are applied and that transaction data can move with the first commercial transaction.
+
+Another example:
+
+> **Original:** Not applicable for serialization or track-and-trace requirements.
+>
+> **Public-oriented direction:** Serialization is usually not central in preclinical supply unless the company is voluntarily using serialization-like controls for chain-of-custody or future readiness.
+
+#### Usually Keep Internal Only
+
+- NotebookLM / adversarial stress-test notes.
+- Notes using phrases such as: "direct violation," "technically adulterated," "liable," "FDA will reject," "critical DSCSA violation."
+
+Suggested public-safe transformation:
+
+> **Common pitfall:** Assuming electronic segregation, release status, or exception handling is sufficient without confirming that the process is controlled, validated where appropriate, and reflected consistently across partner systems.
+
+#### Usually Mark Source Gap — Verify Before Use
+
+- FDA DSCSA Compliance Policy after post-November 2024 stabilization / exemption windows.
+- Current FDA enforcement posture for §582(g).
+- Recent Warning Letter / 483 themes.
+- Current GS1 EPCIS revision in production use.
+- EU Commission / EMA Q&A current revisions.
+- Industry VRS volume and exception-rate trends.
+- State Board of Pharmacy enforcement actions.
+- ATP de-listing precedents.
+
+#### Usually Exclude or Defer
+
+- LATAM serialization coverage.
+- Russia / EAEU Chestny ZNAK.
+- China NMPA serialization.
+- Saudi Arabia RSD.
+
+Reason: These may be valuable later, but they are outside the current US/EU Serialization topic scope unless Brian intentionally expands jurisdiction scope.
+
+---
+
+### Conservative Decision Rule
+
+When uncertain, choose the more conservative label.
+
+- **Approved for public topic copy** — only when clearly safe.
+- **Revise before public use** — when useful but wording needs work.
+- **Keep internal only** — when useful but too sharp, sensitive, or operationally specific.
+- **Source gap — verify before use** — when source currency or exact citation is uncertain.
+- **Exclude** — when outside current scope.
+
+---
+
+> **How to use the review tables below:** Use the Stage 3 Decision Rubric above to replace "Needs Brian / ISC decision" with one of the five approved decision labels during Brian / ISC review.
+
 ## 1. Source Inventory Review
 
 | Source | Brian-Provided Status | Proposed Use | Review Decision | Notes |
@@ -335,3 +471,4 @@ This Stage 3 review packet is not approved topic content. It must not be impleme
 | Date | Change | Author |
 |---|---|---|
 | Phase 5.2-D | Stage 3 review packet created from Stage 2 draft packet. All review decisions defaulted to "Needs Brian / ISC decision." | System |
+| Phase 5.2-D1 | Added Stage 3 decision rubric: 5 decision labels, 6-question framework, default classification guidance, conservative decision rule, and review table usage note. No review decisions pre-classified. | System |
