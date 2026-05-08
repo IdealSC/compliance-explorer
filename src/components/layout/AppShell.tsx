@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { usePathname } from 'next/navigation';
 import { PublicNav } from './PublicNav';
 import {
   OperatingContextProvider,
@@ -8,6 +9,15 @@ import {
 } from '@/components/context';
 
 export function AppShell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isAdmin = pathname.startsWith('/admin');
+
+  /* Admin routes use their own layout (AdminSidebar + content area).
+     Skip public nav, context bar, and the public content wrapper. */
+  if (isAdmin) {
+    return <>{children}</>;
+  }
+
   return (
     <React.Suspense fallback={null}>
       <OperatingContextProvider>
