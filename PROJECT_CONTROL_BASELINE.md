@@ -253,6 +253,7 @@ The Compliance Operating Map is **governance-ready for controlled production pil
 | Phase 5.2-I | Selected Labeling & Artwork as the next controlled topic candidate and created `TOPIC_LABELING_ARTWORK_DRAFT_PACKET.md` for Stage 1 draft preparation. No app code changed. No public topic content changed. No regulatory interpretation was added. | System |
 | Phase 5.2-J | Populated the Labeling & Artwork draft packet with Brian / ISC source notes, ownership inputs, applicability notes, related-topic inputs, NotebookLM stress-test outputs, and source gaps. Labeling & Artwork advanced to Stage 2 — Source-Anchored Draft Packet. No app code changed. No public topic content changed. No regulatory interpretation was approved for publication. | System |
 | Phase 5.2-K | Created `TOPIC_LABELING_ARTWORK_STAGE_3_REVIEW.md` for Brian / ISC Stage 3 review of Labeling & Artwork inputs. No app code changed. No public topic content changed. No regulatory interpretation was approved for publication. | System |
+| Phase 5.2-L | Populated the Labeling & Artwork Stage 3 classification packet using Brian / ISC decision rules and 18 specific overrides. 128 rows classified: 92 Approved, 21 Revise, 6 Keep internal, 8 Source gap, 1 Exclude. No app code changed. No public topic content changed. No regulatory interpretation was approved for publication. | System |
 
 ---
 
